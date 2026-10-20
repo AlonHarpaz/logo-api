@@ -2,6 +2,8 @@
 
 Free, keyless logo API. One URL per domain.
 
+Hosted at **[logoapi.sh](https://logoapi.sh)**. Try it: [logoapi.sh/stripe.com.svg](https://logoapi.sh/stripe.com.svg)
+
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 [![Tests](https://github.com/AlonHarpaz/logo-api/actions/workflows/tests.yml/badge.svg)](https://github.com/AlonHarpaz/logo-api/actions/workflows/tests.yml)
 
