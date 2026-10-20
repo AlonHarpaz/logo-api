@@ -1,0 +1,2 @@
+# Takedown blocklist: one domain per line (e.g. example.com). Lines starting with # are ignored.
+# Domains listed here are skipped by build.py.
