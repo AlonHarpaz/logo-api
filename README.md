@@ -1,4 +1,4 @@
-# LogoAPI
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/logoapi-lo-inverse.svg"><img src="assets/logoapi-lo.svg" height="40" alt="LogoAPI"></picture>
 
 Free, keyless logo API. One URL per domain.
 
