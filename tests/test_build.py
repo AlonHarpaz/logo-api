@@ -193,6 +193,87 @@ class OverrideTests(unittest.TestCase):
         self.assertEqual([e["name"] for e in es], ["Vercel", "OpenAI", "A"])
 
 
+class CuratedTableTests(unittest.TestCase):
+    def test_new_name_overrides(self):
+        es = [{"domain": "apache.org", "name": "x"}, {"domain": "sencha.com", "name": "y"}]
+        build.apply_overrides(es)
+        self.assertEqual([e["name"] for e in es], ["Apache", "Sencha"])
+
+    def test_drop_preferred_si(self):
+        es = [{"domain": "elastic.co"}, {"domain": "a.com"}]
+        self.assertEqual(build.drop_preferred_si(es), [{"domain": "a.com"}])
+        self.assertEqual(build.drop_preferred_si(es, set()), es)
+
+    def test_si_prefer_resolves_shared_host(self):
+        items = [{"title": "Kibana", "hex": "111111", "source": "https://www.elastic.co/brand"},
+                 {"title": "Elastic", "hex": "005571", "source": "https://www.elastic.co/brand"},
+                 {"title": "Other", "hex": "222222", "source": "https://x.com"},
+                 {"title": "Y1", "hex": "333333", "source": "https://y.com"},
+                 {"title": "Y2", "hex": "333333", "source": "https://y.com"}]
+        slugs = {"Kibana": ["kibana"], "Elastic": ["elastic"], "Other": ["other"], "Y1": ["y1"], "Y2": ["y2"]}
+        es, _ = build.build_si_entries(items, slugs, set(), set(), prefer={"elastic.co"})
+        self.assertEqual([(e["domain"], e["name"], e["slug"]) for e in es],
+                         [("elastic.co", "Elastic", "elastic"), ("x.com", "Other", "other")])
+        es, _ = build.build_si_entries(items, slugs, set(), set(), prefer=set())
+        self.assertEqual([e["domain"] for e in es], ["x.com"])
+
+    def test_prefer_simple_icons_main_wiring(self):
+        import json, shutil
+        tmp = tempfile.mkdtemp()
+        old = (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.cached, build.BLOCKLIST, build.DOMAIN_ALIASES)
+        try:
+            logos = [{"name": "Elastic Old", "shortname": "elastic", "url": "https://elastic.co",
+                      "files": ["elastic.svg"]}]
+            si = [{"title": "Kibana", "slug": "kibana", "hex": "005571", "source": "https://www.elastic.co/brand"},
+                  {"title": "Elastic", "slug": "elastic", "hex": "005571", "source": "https://www.elastic.co/brand"}]
+            build.EXTRAS, build.DIST = os.path.join(tmp, "none"), os.path.join(tmp, "dist")
+            build.DIST_TMP, build.BLOCKLIST = os.path.join(tmp, "dist.tmp"), os.path.join(tmp, "nob")
+            build.DOMAIN_ALIASES = {}
+            build.fetch = lambda url: (json.dumps(si).encode() if url == build.SI_JSON else
+                                       json.dumps(logos).encode() if url == build.LOGOS_JSON else b"")
+            svg = os.path.join(tmp, "x.svg")
+            with open(svg, "w") as f:
+                f.write('<svg viewBox="0 0 1 1"><path d="M9 9"/></svg>')
+            build.cached = lambda f, base=None, cache_dir=None: svg
+            build.main()
+            index = json.load(open(os.path.join(build.DIST, "index.json")))
+            self.assertEqual([(e["domain"], e["origin"], e["name"], e["slug"]) for e in index],
+                             [("elastic.co", "simple-icons", "Elastic", "elastic")])
+        finally:
+            (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.cached, build.BLOCKLIST, build.DOMAIN_ALIASES) = old
+            shutil.rmtree(tmp, ignore_errors=True)
+
+    def make_dist(self, tmp, names):
+        os.makedirs(os.path.join(tmp, "icon"))
+        for n, body in names.items():
+            for sub in ("", "icon"):
+                with open(os.path.join(tmp, sub, n + ".svg"), "w") as f:
+                    f.write(body + sub)
+
+    def test_alias_copies_entry_and_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            self.make_dist(tmp, {"t.com": "T", "al.com": "OLD"})
+            t = {"domain": "t.com", "name": "Tee", "origin": "gilbarbara", "slug": "tee",
+                 "files": {"wordmark": "tee.svg", "icon": "tee.svg"}, "source": "s"}
+            old = {"domain": "al.com", "name": "Old", "origin": "extras", "files": {}}
+            idx = [t, old, {"domain": "z.com", "name": "Z"}]
+            build.apply_aliases(idx, tmp, {"al.com": "t.com"})
+            by = {e["domain"]: e for e in idx}
+            self.assertEqual(len(idx), 3)
+            self.assertEqual(by["al.com"], dict(t, domain="al.com"))
+            self.assertIsNot(by["al.com"]["files"], t["files"])
+            self.assertEqual(open(os.path.join(tmp, "al.com.svg")).read(), "T")
+            self.assertEqual(open(os.path.join(tmp, "icon", "al.com.svg")).read(), "Ticon")
+
+    def test_alias_missing_target(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            self.make_dist(tmp, {"al.com": "OLD"})
+            idx = [{"domain": "al.com", "name": "Old"}]
+            build.apply_aliases(idx, tmp, {"al.com": "gone.com"})
+            self.assertEqual(idx, [{"domain": "al.com", "name": "Old"}])
+            self.assertEqual(open(os.path.join(tmp, "al.com.svg")).read(), "OLD")
+
+
 class SimpleIconsTests(unittest.TestCase):
     SLUGS = {"Foo": ["foo"], "Bar": ["bar"], "Baz": ["baz"], "Dup": ["dup", "dup_two"], "Amb": ["a1", "a2"]}
 
