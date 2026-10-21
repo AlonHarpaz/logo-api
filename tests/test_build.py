@@ -298,5 +298,123 @@ class SimpleIconsTests(unittest.TestCase):
         self.assertEqual(build.inject_fill(b"<svg/>", "zz"), b"<svg/>")
 
 
+class ExtrasTests(unittest.TestCase):
+    def test_wordmark_and_icon(self):
+        es, sk = build.build_extras_entries(["a.com.svg", "a.com-icon.svg"], set())
+        self.assertEqual(es[0]["files"], {"wordmark": "a.com.svg", "icon": "a.com-icon.svg"})
+        self.assertEqual(es[0]["origin"], "extras")
+        self.assertEqual(sk, [])
+
+    def test_icon_falls_back_to_wordmark(self):
+        es, _ = build.build_extras_entries(["a.com.svg"], set())
+        self.assertEqual(es[0]["files"], {"wordmark": "a.com.svg", "icon": "a.com.svg"})
+
+    def test_wordmark_falls_back_to_icon(self):
+        es, _ = build.build_extras_entries(["a.com-icon.svg"], set())
+        self.assertEqual(es[0]["files"], {"wordmark": "a.com-icon.svg", "icon": "a.com-icon.svg"})
+
+    def test_blocklist(self):
+        es, sk = build.build_extras_entries(["a.com.svg", "b.com.svg"], {"a.com"})
+        self.assertEqual([e["domain"] for e in es], ["b.com"])
+        self.assertEqual(sk, ["a.com.svg"])
+
+    def test_unsafe_names(self):
+        bad = ["..svg", ".svg", "../x.com.svg", "A.com.svg", "a b.com.svg", "www.a.com.svg", "a..com.svg"]
+        es, sk = build.build_extras_entries(bad, set())
+        self.assertEqual(es, [])
+        self.assertEqual(sorted(sk), sorted(bad))
+
+    def test_name_from_sources(self):
+        with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False) as f:
+            f.write("| Domain | Name | File |\n| --- | --- | --- |\n| elal.com | El Al | elal.com.svg |\n")
+        try:
+            names = build.load_extras_names(f.name)
+        finally:
+            os.unlink(f.name)
+        self.assertEqual(names, {"elal.com": "El Al"})
+        es, _ = build.build_extras_entries(["elal.com.svg", "foo.com.svg"], set(), names)
+        self.assertEqual([e["name"] for e in es], ["Foo", "El Al"][::-1] if False else ["El Al", "Foo"])
+
+    def test_override_skips_extras(self):
+        es = [{"domain": "vercel.com", "name": "X", "origin": "extras"},
+              {"domain": "openai.com", "name": "Y", "origin": "gilbarbara"}]
+        build.apply_overrides(es)
+        self.assertEqual([e["name"] for e in es], ["X", "OpenAI"])
+
+    def test_name_escaped_pipe(self):
+        with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False) as f:
+            f.write("| a.com | A \\| B | a.com.svg | https://x | d | n |\n")
+        try:
+            self.assertEqual(build.load_extras_names(f.name), {"a.com": "A | B"})
+        finally:
+            os.unlink(f.name)
+
+    def test_extra_overrides_simple_icons_only(self):
+        import json, shutil
+        tmp = tempfile.mkdtemp()
+        old = (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.cached, build.BLOCKLIST)
+        try:
+            ex = os.path.join(tmp, "extras")
+            os.makedirs(ex)
+            with open(os.path.join(ex, "b.com.svg"), "w") as f:
+                f.write('<svg viewBox="0 0 1 1"><path d="M0 0"/></svg>')
+            si = [{"title": "B", "slug": "b", "hex": "FF0000", "source": "https://b.com"}]
+            build.EXTRAS, build.DIST = ex, os.path.join(tmp, "dist")
+            build.DIST_TMP, build.BLOCKLIST = os.path.join(tmp, "dist.tmp"), os.path.join(tmp, "none")
+            build.fetch = lambda url: (json.dumps(si).encode() if url == build.SI_JSON else
+                                       b"[]" if url == build.LOGOS_JSON else b"")
+            siy = os.path.join(tmp, "si.svg")
+            with open(siy, "w") as f:
+                f.write('<svg viewBox="0 0 1 1"><path d="M9 9"/></svg>')
+            build.cached = lambda f, base=None, cache_dir=None: siy
+            build.main()
+            index = json.load(open(os.path.join(build.DIST, "index.json")))
+            self.assertEqual([(e["domain"], e["origin"]) for e in index], [("b.com", "extras")])
+            out = open(os.path.join(build.DIST, "b.com.svg")).read()
+            self.assertIn("M0 0", out)
+            self.assertNotIn("M9 9", out)
+            self.assertNotIn("fill=", out)
+        finally:
+            (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.cached, build.BLOCKLIST) = old
+            shutil.rmtree(tmp, ignore_errors=True)
+
+    def test_non_svg_ignored(self):
+        es, sk = build.build_extras_entries(["SOURCES.md", "a.com.png"], set())
+        self.assertEqual((es, sk), ([], []))
+
+    def test_precedence_in_main(self):
+        import json, shutil
+        tmp = tempfile.mkdtemp()
+        try:
+            ex = os.path.join(tmp, "extras")
+            os.makedirs(ex)
+            with open(os.path.join(ex, "a.com.svg"), "w") as f:
+                f.write('<svg width="1" height="1" viewBox="0 0 1 1"><path d="M0 0"/></svg>')
+            gil = [{"name": "A", "shortname": "a", "url": "https://a.com", "files": ["a.svg"]}]
+            si = [{"title": "A", "slug": "a", "hex": "000000", "source": "https://a.com"}]
+            old = (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.cached, build.BLOCKLIST)
+            build.EXTRAS, build.DIST = ex, os.path.join(tmp, "dist")
+            build.DIST_TMP, build.BLOCKLIST = os.path.join(tmp, "dist.tmp"), os.path.join(tmp, "none")
+
+            def fake_fetch(url):
+                if url == build.LOGOS_JSON:
+                    return json.dumps(gil).encode()
+                if url == build.SI_JSON:
+                    return json.dumps(si).encode()
+                return b""
+            build.fetch = fake_fetch
+            build.cached = lambda f, base=None, cache_dir=None: os.path.join(tmp, "up.svg")
+            with open(os.path.join(tmp, "up.svg"), "w") as f:
+                f.write("<svg viewBox='0 0 1 1'><path d='M9 9'/></svg>")
+            build.main()
+            index = json.load(open(os.path.join(build.DIST, "index.json")))
+            self.assertEqual([(e["domain"], e["origin"]) for e in index], [("a.com", "extras")])
+            self.assertIn("M0 0", open(os.path.join(build.DIST, "a.com.svg")).read())
+            self.assertIn("M0 0", open(os.path.join(build.DIST, "icon", "a.com.svg")).read())
+        finally:
+            (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.cached, build.BLOCKLIST) = old
+            shutil.rmtree(tmp, ignore_errors=True)
+
+
 if __name__ == "__main__":
     unittest.main()
