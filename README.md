@@ -72,7 +72,7 @@ curl -s https://logoapi.sh/index.json | jq 'length'
 
 ## Coverage
 
-3,710 domains: 1,283 from gilbarbara/logos, 2,013 from simple-icons and 414 hand-curated extras. Cloud, SaaS and open source tools are well covered. Banks and retail are thin.
+3,637 domains: 1,283 from gilbarbara/logos, 2,013 from simple-icons and 341 hand-curated extras. Cloud, SaaS and open source tools are well covered. Banks and retail are thin.
 
 The logos come from two sources, each pinned to one commit in `build.py`:
 
