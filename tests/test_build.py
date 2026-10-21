@@ -243,6 +243,52 @@ class CuratedTableTests(unittest.TestCase):
             (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.cached, build.BLOCKLIST, build.DOMAIN_ALIASES) = old
             shutil.rmtree(tmp, ignore_errors=True)
 
+    def test_missing_preferred(self):
+        self.assertEqual(build.missing_preferred([{"domain": "elastic.co"}]), [])
+        self.assertEqual(build.missing_preferred([{"domain": "a.com"}]), ["elastic.co"])
+        self.assertEqual(build.missing_preferred([], {"b.com", "a.com"}), ["a.com", "b.com"])
+
+    def test_main_fails_when_preferred_missing(self):
+        import json, shutil
+        tmp = tempfile.mkdtemp()
+        old = (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.BLOCKLIST)
+        try:
+            build.EXTRAS, build.DIST = os.path.join(tmp, "none"), os.path.join(tmp, "dist")
+            build.DIST_TMP, build.BLOCKLIST = os.path.join(tmp, "dist.tmp"), os.path.join(tmp, "nob")
+            os.makedirs(build.DIST)
+            build.fetch = lambda url: b"[]" if url in (build.SI_JSON, build.LOGOS_JSON) else b""
+            with self.assertRaises(SystemExit) as cm:
+                build.main()
+            self.assertEqual(cm.exception.code, 1)
+            self.assertTrue(os.path.isdir(build.DIST))
+            self.assertFalse(os.path.exists(build.DIST_TMP))
+        finally:
+            (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.BLOCKLIST) = old
+            shutil.rmtree(tmp, ignore_errors=True)
+
+    def test_main_alias_copies_overridden_name(self):
+        import json, shutil
+        tmp = tempfile.mkdtemp()
+        old = (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.cached, build.BLOCKLIST,
+               build.DOMAIN_ALIASES, build.NAME_OVERRIDES, build.PREFER_SIMPLE_ICONS)
+        try:
+            logos = [{"name": "Raw", "shortname": "t", "url": "https://t.com", "files": ["t.svg"]}]
+            build.EXTRAS, build.DIST = os.path.join(tmp, "none"), os.path.join(tmp, "dist")
+            build.DIST_TMP, build.BLOCKLIST = os.path.join(tmp, "dist.tmp"), os.path.join(tmp, "nob")
+            build.DOMAIN_ALIASES, build.NAME_OVERRIDES, build.PREFER_SIMPLE_ICONS = {"al.com": "t.com"}, {"t.com": "Tee"}, set()
+            build.fetch = lambda url: json.dumps(logos).encode() if url == build.LOGOS_JSON else b"[]"
+            svg = os.path.join(tmp, "x.svg")
+            with open(svg, "w") as f:
+                f.write('<svg viewBox="0 0 1 1"><path d="M9 9"/></svg>')
+            build.cached = lambda f, base=None, cache_dir=None: svg
+            build.main()
+            index = json.load(open(os.path.join(build.DIST, "index.json")))
+            self.assertEqual([(e["domain"], e["name"]) for e in index], [("al.com", "Tee"), ("t.com", "Tee")])
+        finally:
+            (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.cached, build.BLOCKLIST,
+             build.DOMAIN_ALIASES, build.NAME_OVERRIDES, build.PREFER_SIMPLE_ICONS) = old
+            shutil.rmtree(tmp, ignore_errors=True)
+
     def make_dist(self, tmp, names):
         os.makedirs(os.path.join(tmp, "icon"))
         for n, body in names.items():
@@ -380,6 +426,11 @@ class SimpleIconsTests(unittest.TestCase):
 
 
 class ExtrasTests(unittest.TestCase):
+    def setUp(self):
+        old = build.PREFER_SIMPLE_ICONS
+        build.PREFER_SIMPLE_ICONS = set()
+        self.addCleanup(setattr, build, "PREFER_SIMPLE_ICONS", old)
+
     def test_wordmark_and_icon(self):
         es, sk = build.build_extras_entries(["a.com.svg", "a.com-icon.svg"], set())
         self.assertEqual(es[0]["files"], {"wordmark": "a.com.svg", "icon": "a.com-icon.svg"})

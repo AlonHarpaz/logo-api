@@ -138,6 +138,12 @@ def drop_preferred_si(entries, prefer=None):
     return [e for e in entries if e["domain"] not in prefer]
 
 
+def missing_preferred(si_entries, prefer=None):
+    """Sorted PREFER_SIMPLE_ICONS domains that simple-icons did not produce."""
+    prefer = PREFER_SIMPLE_ICONS if prefer is None else prefer
+    return sorted(prefer - {e["domain"] for e in si_entries})
+
+
 def apply_aliases(index, dist_dir, aliases=None):
     """Make each alias domain a copy of its target's entry and SVGs."""
     aliases = DOMAIN_ALIASES if aliases is None else aliases
@@ -508,6 +514,11 @@ def main():
     si_items = json.loads(fetch(SI_JSON).decode("utf-8"))
     slugs = parse_slugs(fetch(SI_SLUGS).decode("utf-8"))
     si_entries, si_stats = build_si_entries(si_items, slugs, blocked, {e["domain"] for e in entries})
+    lost = missing_preferred(si_entries)
+    if lost:
+        print("error: no simple-icons entry for preferred domain(s): " + ", ".join(lost), file=sys.stderr)
+        print("build failed, dist/ left untouched", file=sys.stderr)
+        sys.exit(1)
     extras_names = sorted(os.listdir(EXTRAS)) if os.path.isdir(EXTRAS) else []
     ex_entries, ex_skipped = build_extras_entries(extras_names, blocked, load_extras_names(os.path.join(EXTRAS, "SOURCES.md")))
     won = {e["domain"] for e in ex_entries}
@@ -565,6 +576,7 @@ def main():
         index.append(e)
         ex_written += 1
     index.sort(key=lambda e: e["domain"])
+    apply_overrides(index)
     apply_aliases(index, DIST_TMP)
     print("extras domains written: %d (skipped %d)" % (ex_written, len(ex_skipped)))
     print("domains written: %d" % written)
@@ -578,7 +590,6 @@ def main():
         shutil.rmtree(DIST_TMP, ignore_errors=True)
         print("build failed, dist/ left untouched", file=sys.stderr)
         sys.exit(1)
-    apply_overrides(index)
     with open(os.path.join(DIST_TMP, "index.json"), "w", encoding="utf-8") as f:
         json.dump(index, f, indent=1, sort_keys=True, ensure_ascii=False)
         f.write("\n")
