@@ -119,9 +119,10 @@ def normalize_svg(data):
 
 
 def apply_overrides(entries, overrides=None):
+    """Set curated names. Extras entries keep their own name from SOURCES.md."""
     overrides = NAME_OVERRIDES if overrides is None else overrides
     for e in entries:
-        if e["domain"] in overrides:
+        if e.get("origin") != "extras" and e["domain"] in overrides:
             e["name"] = overrides[e["domain"]]
     return entries
 
@@ -289,7 +290,7 @@ def load_extras_names(path):
         for line in f:
             if not line.startswith("|"):
                 continue
-            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            cells = [c.strip().replace("\\|", "|") for c in re.split(r"(?<!\\)\|", line.strip().strip("|"))]
             if len(cells) >= 2 and cells[1] and cells[0] not in ("Domain", "---") and valid_domain(cells[0]):
                 out[cells[0]] = cells[1]
     return out
