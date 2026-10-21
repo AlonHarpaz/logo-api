@@ -427,8 +427,9 @@ class RootNameTests(unittest.TestCase):
     def test_name_equals_label_slugified(self):
         self.assertEqual(self._pick("mastercard.com", [("Maestro", "maestro"), ("MasterCard", "x")]), "MasterCard")
 
-    def test_name_contains_label(self):
-        self.assertEqual(self._pick("apache.org", [("Kafka", "kafka"), ("Apache Foundation", "af")]), "Apache Foundation")
+    def test_name_contains_label_not_preferred(self):
+        self.assertEqual(self._pick("elastic.co", [("Elasticsearch", "elasticsearch"), ("Elastic", "elastic-x")]), "Elastic")
+        self.assertEqual(self._pick("elastic.co", [("Elasticsearch", "es"), ("Kibana", "kb")]), "Elasticsearch")
 
     def test_fallback_first(self):
         self.assertEqual(self._pick("x.com", [("One", "one"), ("Two", "two")]), "One")
@@ -460,6 +461,22 @@ class CollapseTests(unittest.TestCase):
     def test_suffix_name_dropped(self):
         kept, _ = self.doms([_e("x.com", "X"), _e("docs.x.com", "X Docs"), _e("blog.x.com", "X-Blog")])
         self.assertEqual(kept, ["x.com"])
+
+    def test_extras_never_dropped(self):
+        ex = dict(_e("docs.x.com", "X Docs"), origin="extras")
+        ex2 = dict(_e("x.github.io", "X"), origin="extras")
+        kept, dropped = self.doms([_e("x.com", "X"), ex, ex2])
+        self.assertEqual(sorted(kept), ["docs.x.com", "x.com", "x.github.io"])
+        self.assertEqual(dropped, [])
+
+    def test_extras_can_drop_upstream(self):
+        kept, dropped = self.doms([dict(_e("x.com", "X"), origin="extras"), _e("docs.x.com", "X")])
+        self.assertEqual(kept, ["x.com"])
+
+    def test_product_words_not_ignorable(self):
+        kept, _ = self.doms([_e("google.com", "Google"), _e("developers.google.com", "Google Developers"),
+                             _e("x.com", "X"), _e("developer.x.com", "X Developer")])
+        self.assertEqual(len(kept), 4)
 
     def test_different_name_kept(self):
         kept, _ = self.doms([_e("google.com", "Google"), _e("home.google.com", "Google Home"),

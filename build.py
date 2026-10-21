@@ -158,14 +158,11 @@ def alnum(text):
 def pick_root(dom, cands):
     """Pick the item that best names the domain's first label. cands keep input order.
 
-    1. shortname or slugified name equals the label, 2. name contains the label, 3. first.
+    shortname or slugified name equals the label, else the first.
     """
     label = alnum(dom.split(".")[0])
     for it in cands:
         if label and label in (alnum(it.get("shortname")), alnum(it.get("name"))):
-            return it
-    for it in cands:
-        if label and label in alnum(it.get("name")):
             return it
     return cands[0]
 
@@ -363,8 +360,8 @@ def build_extras_entries(names, blocked, brand_names=None):
     return entries, skipped
 
 
-NAME_SUFFIXES = ("docs", "blog", "brand", "brands", "press", "developer", "developers", "about",
-                 "assets", "newsroom", "media", "logo", "logos")
+NAME_SUFFIXES = ("docs", "doc", "blog", "press", "brand", "branding", "wiki", "about", "help",
+                 "assets", "styleguide", "handbook", "foundation")
 THIRD_PARTY_HOSTS = frozenset([
     "github.io", "frontify.com", "widencollective.com", "netlify.app", "js.org", "pages.dev",
     "vercel.app", "readthedocs.io", "webflow.io", "zendesk.com", "workspaceair.com",
@@ -397,6 +394,8 @@ def collapse_entries(entries):
     dropped = {}
     for e in entries:
         d = e["domain"]
+        if e.get("origin") == "extras":
+            continue
         parts = d.split(".")
         for i in range(1, len(parts) - 1):
             parent = ".".join(parts[i:])
@@ -406,7 +405,7 @@ def collapse_entries(entries):
                 break
     for e in entries:
         d = e["domain"]
-        if d in dropped or not is_third_party(d):
+        if d in dropped or e.get("origin") == "extras" or not is_third_party(d):
             continue
         for p in entries:
             pd = p["domain"]
