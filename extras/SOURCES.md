@@ -31,7 +31,6 @@ Hand-curated logos that win over gilbarbara/logos and simple-icons for the same 
 | ynet.co.il | Ynet | ynet.co.il.svg | https://commons.wikimedia.org/wiki/File:Ynet_website_logo.svg | 2026-10-21 | Wikimedia Commons, public domain (PD-textlogo); trademark of its owner |
 
 Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskified.com, partner.co.il, cellcom.co.il, strauss-group.com.
-| 1045fm.maariv.co.il | Radio Tzafon | 1045fm.maariv.co.il.svg | https://1045fm.maariv.co.il/images/logo_103fm_footer.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | 13tv.co.il | Reshet 13 | 13tv.co.il.svg | https://13tv.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | 6cn.co.il | 6Cn | 6cn.co.il.svg | https://6cn.co.il/img/icons/logoFooter.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | 83north.com | 83North | 83north.com.svg | https://www.83north.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -40,13 +39,10 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | adama.com | Adama | adama.com.svg | https://commons.wikimedia.org/wiki/File:Adama_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | afcon.co.il | Afcon Holdings Ltd. | afcon.co.il.svg | https://www.afcon.co.il/wp-content/uploads/afcon-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | afi-properties.com | AFI Properties | afi-properties.com.svg | https://www.afi.global/logo-black.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| agmon-law.co.il | Agmon & Co Rosenberg Hacohen & Co | agmon-law.co.il.svg | https://www.agmon-law.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | ai21.com | AI21 Labs | ai21.com.svg | https://www.ai21.com/wp-content/uploads/2026/02/ai21-logo-black.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| airtouchsolar.com | Airtouchsolar | airtouchsolar.com.svg | https://airtouchsolar.com/wp-content/uploads/2023/07/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | akeyless.io | Akeyless | akeyless.io.svg | https://akeyless-908832575.imgix.net/wp-content/uploads/2024/10/akeyless-bright-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | aleph.vc | Aleph | aleph.vc.svg | https://commons.wikimedia.org/wiki/File:Aleph_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | alice.io | Alice | alice.io.svg | https://alice.io/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
-| alison.ai | Alison.ai | alison.ai.svg | https://alison.ai/wp-content/uploads/Meta-Inc.-logo-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | allisraelnews.com | All Israel News | allisraelnews.com.svg | https://allisraelnews.com/img/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | allot.com | Allot | allot.com.svg | https://www.allot.com/wp-content/themes/allot/assets/new-homepage/img/site-header/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | alony-hetz.com | Alony Hetz Properties & Investments Ltd. | alony-hetz.com.svg | https://www.alony-hetz.com/wp-content/uploads/2025/08/alony-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -59,12 +55,9 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | aminach.co.il | Aminach | aminach.co.il.svg | https://www.aminach.co.il/cdn/shop/files/logo-footer.svg?v=1766530790&width=300 | 2026-10-21 | Official site SVG; trademark of its owner |
 | amoon.fund | aMoon | amoon.fund.svg | https://www.amoon.fund/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | ampm.co.il | AM:PM | ampm.co.il.svg | https://www.ampm.co.il/wp-content/uploads/2024/11/logo-ampm.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| anyvision.co | AnyVision | anyvision.co.svg | https://oosto.com/wp-content/uploads/2021/11/Oosto-Logo-Formerly-AnyVision-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | apester.com | Apester | apester.com.svg | https://apester.com/wp-content/uploads/2025/11/logo_az.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| api-docs.imagen-ai.com | Imagen AI | api-docs.imagen-ai.com.svg | https://api-docs.imagen-ai.com/imagen-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | aquasec.com | Aqua Security | aquasec.com.svg | https://www.aquasec.com/wp-content/themes/aqua4/assets/img/logos/forrester.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | arab48.com | Arab 48 | arab48.com.svg | https://data.arab48.com/assets/v2/images/logos/arab48-footer-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| arabic.leumi.co.il | Arab Israel Bank | arabic.leumi.co.il.svg | https://www.leumi.co.il/themes/custom/leumi/leumi_logo_ar.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | arad.co.il | Arad | arad.co.il.svg | https://www.arad.co.il/wp-content/uploads/ard-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | arcaffe.co.il | Arcaffe | arcaffe.co.il.svg | https://arcaffe.co.il/app/themes/arcaffe/images/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | arf.co.il | Ashdod Refinery | arf.co.il.svg | https://arf.co.il/wp-content/uploads/2023/11/arf_he_logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -72,19 +65,16 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | aristo-shmat.co.il | Aristo Shmat | aristo-shmat.co.il.svg | https://www.aristo-shmat.co.il/pub/media/idus/default/aristo-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | arkia.com | Arkia | arkia.com.svg | https://commons.wikimedia.org/wiki/File:Arkia_Israeli_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | aroma.co.il | Aroma Espresso Bar | aroma.co.il.svg | https://www.aroma.co.il/wp-content/uploads/2021/09/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| artlist.io | Artlist.io | artlist.io.svg | https://artlist-dev.imgix.net/artlist/visitor-home-page/microsoft-logo.svg?auto=format&fit=max&w=256&q=75 | 2026-10-21 | Official site SVG; trademark of its owner |
 | ashtrom.co.il | Ashtrom | ashtrom.co.il.svg | https://cdn-cms2.ashtrom.co.il/media/ji2nl3qp/131795_c_ashtrom_blue_group_desktop_heb.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | asocstech.com | ASOCS | asocstech.com.svg | https://asocstech.com/wp-content/uploads/2024/04/logo-v4.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | au10tix.com | Q28446675 | au10tix.com.svg | https://www.au10tix.com/wp-content/uploads/2023/08/AU10TIX-Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | audiocodes.com | AudioCodes | audiocodes.com.svg | https://www.audiocodes.com/media/ns3h0j0t/audiocodes-logo-website.svg?rmode=crop&width=253&height=34&v=1dc412e591742f0 | 2026-10-21 | Official site SVG; trademark of its owner |
 | augury.com | Augury Systems | augury.com.svg | https://www.augury.com/wp-content/uploads/2023/03/augury-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | autods.com | AutoDS | autods.com.svg | https://www.autods.com/wp-content/themes/autods/src/img/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| avid.com | Avid (Israel) | avid.com.svg | https://cdn.avid.com/avidcom/images/shared/avid-logo-mobile.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | avis.co.il | Avis Israel | avis.co.il.svg | https://www.avis.co.il/media/yrbj2wwy/avis-vector-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | azorim.co.il | Azorim | azorim.co.il.svg | https://www.azorim.co.il/wp-content/uploads/2022/03/azorim-hershi-logo-header-desk.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | azrieligroup.com | Azrieli Group Ltd | azrieligroup.com.svg | https://azrieligroup.com/wp-content/uploads/2021/01/Logo-eng-top@2x.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | bagirasys.com | Bagira M. holdings | bagirasys.com.svg | https://www.bagirasys.com/wp-content/themes/bagira/img/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| bakol-mikol-kol.co.il | Bakol Mikol Kol | bakol-mikol-kol.co.il.svg | https://bakol-mikol-kol.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | bancor.network | Bancor | bancor.network.svg | https://commons.wikimedia.org/wiki/File:BANCOR.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | bankjerusalem.co.il | Bank of Jerusalem | bankjerusalem.co.il.svg | https://validate.perfdrive.com/b903d88266fbb09beb0ed4247fd3f6a1/?ssa=60eef602-32f5-43ec-a98a-a4c679fdf626&ssb=24845243274&ssc=https%3A%2F%2Fwww.bankjerusalem.co.il%2F&ssi=f282b142-d66u-4268-8576-e3fa54a10744&ssk=botmanager_support@radware.com&ssm=32363385400127198103445285477409&ssn=dfa03f150a27e0464792e88991d519bc1b2b61b3b686-3a55-4919-873ec7&sso=7cf41e43-7c82bd75b2aa9d2eabb1fe6387f78b3aad9926db9088e043&ssp=13709284841792582438179257184889555&ssq=11527976384374679377363843826762065496915&ssr=MzcuMTQyLjE1My40OQ==&sst=LogoAPI-extras-batch/1.0%20(https://logoapi.sh;%20harpazalon400@gmail.com)%20python-urllib&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImJhbmtqZXJ1c2FsZW0uY28uaWwiLCJ1em14IjoiN2ZjMDAwMGYyMWI1YjgtYTNkNi00YjU4LWExMTktMzYyMWZkZTQ1NzgwMS0xNzkyNTYzODQzMzE2MC0wMGFiZDM3NmY4NmQzN2QwYTZlMTAiLCJfX3V6bWYiOiI3ZjkwMDA2MWIzYjY4Ni0zYTU1LTQ5MTktOGU0My03YzgyYmQ3NWIyYWExLTE3OTI1NjM4NDMzMTYwLTAwNWQyNTQ5YjE4MjY4OTNmYTIxMCJ9 (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | barangroup.com | Baran Group Ltd. | barangroup.com.svg | https://www.barangroup.com/wp-content/uploads/2023/03/baran-group-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -93,44 +83,31 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | bbumgames.com | Beach Bum | bbumgames.com.svg | https://d1sk6oz8y9drxz.cloudfront.net/wp-content/uploads/2023/04/insta-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | believermeats.com | Future Meat Technologies | believermeats.com.svg | https://www.believermeats.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
 | bigcenters.co.il | BIG Shopping Centers | bigcenters.co.il.svg | https://www.bigcenters.co.il/wp-content/uploads/2023/01/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| bikurey.co.il | Bikurey | bikurey.co.il.svg | https://bikurey.co.il/wp-content/uploads/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | bio-beat.com | Biobeat | bio-beat.com.svg | https://www.bio-beat.com/wp-content/uploads/2024/09/Biobeat-logo-2026.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | biomx.com | BiomX | biomx.com.svg | https://thlsq.ai/wp-content/uploads/2026/09/Tessera-Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| biosensewebster.com | Biosense Webster (Israel) | biosensewebster.com.svg | https://www.jnjmedtech.com/en-US/specialties/electrophysiology/?redirect_source_url=https%3A%2F%2Fwww.jnjmedtech.com%2Fen-US%2Fcompanies%2Fbiosensewebster (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | bitsofgold.co.il | Bits of Gold | bitsofgold.co.il.svg | https://static.bitsofgold.co.il/images/logo-blue-text.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| blast.security | Blast Security | blast.security.svg | https://blast.security/wp-content/uploads/2025/11/logo_for_light.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | bluevine.com | BlueVine | bluevine.com.svg | https://www.bluevine.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
 | brainqtech.com | BrainQ | brainqtech.com.svg | https://brainqtech.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| breezometer.com | BreezoMeter | breezometer.com.svg | https://gstatic.com/images/branding/googlelogo/svg/googlelogo_dark54_clr_84x28px.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | brightdata.com | Bright Data | brightdata.com.svg | https://media.brightdata.com/2025/07/logo_cdnlogo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | bringg.com | Bringg | bringg.com.svg | https://www.bringg.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | bsre.co.il | Blue Square Real Estate Ltd | bsre.co.il.svg | https://www.bsre.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | bst.co.il | BST Group E.A.W. | bst.co.il.svg | https://bst.co.il/wp-content/uploads/2026/02/BST-50years-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| buligocapital.com | Buligocapital | buligocapital.com.svg | https://buligocapital.com/wp-content/uploads/2021/09/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| busly.co.il | Busly | busly.co.il.svg | https://busly.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | cafecafe.co.il | Cafe Cafe | cafecafe.co.il.svg | https://www.cafecafe.co.il/he/000Frames/site/images/logo-01.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | calcalist.co.il | Calcalist | calcalist.co.il.svg | https://commons.wikimedia.org/wiki/File:Calcalist_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | carasso-nadlan.co.il | Carasso-Nadlan | carasso-nadlan.co.il.svg | https://www.carasso-nadlan.co.il/icons/logoFooter.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | cardcom.co.il | Cardcom | cardcom.co.il.svg | https://www.cardcom.solutions/assets/brand-logos/woo_logo_color.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| cardumencapital.com | Cardumen Capital | cardumencapital.com.svg | https://cdn.prod.website-files.com/64a524c62c73c874313e539f/64a524c62c73c874313e5390_Group%201.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | cargal.co.il | Plasto-cargal Group Ltd | cargal.co.il.svg | https://cargal.co.il/wp-content/uploads/2026/06/logo-triplex-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | carmelwines.co.il | Carmel Winery | carmelwines.co.il.svg | https://www.carmelwines.co.il/wp-content/uploads/2021/12/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | cellebrite.com | Cellebrite | cellebrite.com.svg | https://commons.wikimedia.org/wiki/File:Logo_of_Cellebrite_(2021).svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
-| cellopark.co.il | Cellopark | cellopark.co.il.svg | https://www.cello-app.com/wp-content/uploads/2022/10/Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | ceragon.com | Ceragon | ceragon.com.svg | https://commons.wikimedia.org/wiki/File:Ceragon_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | ceva-ip.com | Ceva, Inc. | ceva-ip.com.svg | https://commons.wikimedia.org/wiki/File:CEVA_Inc_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
-| chainstory.co | Chainstory | chainstory.co.svg | https://www.chainstory.co/wp-content/uploads/2024/07/logo-black.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| cheq.ai | CHEQ | cheq.ai.svg | https://cheq.ai/wp-content/uploads/2024/07/CHEQ-LOGO.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | cimatron.com | Cimatron | cimatron.com.svg | https://www.cimatron.com/images/default/cimatron-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | clalit.co.il | Clalit | clalit.co.il.svg | https://www.clalit.co.il/he/PublishingImages/SiteLogo/logo-clalit-newsite.svg?v=18.9.1 | 2026-10-21 | Official site SVG; trademark of its owner |
-| clicksoftware.com | ClickSoftware | clicksoftware.com.svg | https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2024/11/logo-salesforce.svg?w=1024 | 2026-10-21 | Official site SVG; trademark of its owner |
 | cognyte.com | Cognyte | cognyte.com.svg | https://commons.wikimedia.org/wiki/File:Logo_of_Cognyte_Software_Limited.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | comeet.com | Comeet | comeet.com.svg | https://www.comeet.com/wp-content/uploads/2023/11/Ellipse-1956.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| comverse.com | Comverse | comverse.com.svg | https://www.mavenir.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | conact-org.de | ConAct | conact-org.de.svg | https://www.conact-org.de/_assets/433a43b69bd55e8540f1ee89745c5bdf/Build/img/Conact-Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | coralogix.com | Coralogix | coralogix.com.svg | https://coralogix.com/wp-content/uploads/2026/09/case_how-mews-put-production-truth-in-the-han-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | crazylabs.com | CrazyLabs | crazylabs.com.svg | https://www.crazylabs.com/wp-content/uploads/2021/12/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| creativemediacommunity.com | Creativemediacommunity | creativemediacommunity.com.svg | https://cdn.prod.website-files.com/62ab5fe02aee314a05c811a2/62ab6ac6ab065e3080e63b2c_CMCT%20Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | cropx.com | CropX | cropx.com.svg | https://spcdn.shortpixel.ai/spio/ret_img+q_cdnize+to_webp+s_webp/cropx.com/wp-content/themes/cropx/assets/logos/cropx-wordmark.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | crossriver.com | Cross River Bank | crossriver.com.svg | https://www.crossriver.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
 | crossriverbank.com | Cross River Bank | crossriverbank.com.svg | https://www.crossriver.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
@@ -151,14 +128,12 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | delek.co.il | Delek Group Ltd. | delek.co.il.svg | https://delek.co.il/wp-content/uploads/2023/01/shinua@1.5x.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | delta-israel.com | Delta Israel Brands Ltd | delta-israel.com.svg | https://delta-israel.com/wp-content/uploads/2021/03/DELTA_LOGO-01-01.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | deltagalil.com | Delta Galil | deltagalil.com.svg | https://commons.wikimedia.org/wiki/File:Delta_Galil_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
-| demandbox.co | DemandBox | demandbox.co.svg | https://demandbox.co/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | denya-group.com | Danya Group | denya-group.com.svg | https://www.denya-group.com/wp-content/uploads/2025/05/denya-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | derechegged.co.il | Derech Egged | derechegged.co.il.svg | https://www.derechegged.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | dexcel.com | Dexcel Pharma | dexcel.com.svg | https://cdn.prod.website-files.com/63fb3720300f0cca5699a61f/63fb39320123f30f09889544_Dexcel%20Blue%20Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | diagnosticrobotics.com | Diagnostic Robotics | diagnosticrobotics.com.svg | https://diagnosticrobotics.com/assets/logo-horizontal-DcyGQJGe.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | dominos.co.il | Domino's Pizza Israel | dominos.co.il.svg | https://cdn.dominos.co.il/hosting/prod/28205ae5-54e1-4be7-83af-d8ab3c9bc1e4/_next/static/media/uxpert-logo.63d3fb35.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | dor-group.com | Dor Chemicals | dor-group.com.svg | https://dor-group.com/wp-content/uploads/2025/01/logo-dor-150x150pix-02.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| dorsel.co.il | Dorsel | dorsel.co.il.svg | https://dorsel.co.il/wp-content/uploads/2025/07/logo-white.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | doubleoctopus.com | Secret Double Octopus | doubleoctopus.com.svg | https://doubleoctopus.com/wp-content/uploads/2022/06/logo-dark.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | dreamgroup.com | Dream Security | dreamgroup.com.svg | https://dreamgroup.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
 | drushim.co.il | Drushim | drushim.co.il.svg | https://assets.drushim.co.il/common/logo-header.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -169,15 +144,10 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | econergytech.com | Econergy | econergytech.com.svg | https://www.econergytech.com/wp-content/themes/econergy/imgs/logo.svg?v=2 | 2026-10-21 | Official site SVG; trademark of its owner |
 | egged.co.il | Egged | egged.co.il.svg | https://www.egged.co.il/media/cecbuchq/derech-eggeed-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | eilatport.co.il | Eilat Port Company | eilatport.co.il.svg | https://eilatport.co.il/wp-content/uploads/2023/05/Port-of-Eilat-logo-HE.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| elbatech.co.il | Elbatech Group | elbatech.co.il.svg | https://elbatech.co.il/wp-content/themes/etlbatech/images/green-arrow.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | eldan.co.il | Eldan | eldan.co.il.svg | https://www.eldan.co.il/images/footer_logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | electra-re.com | Electra Real Estate Ltd | electra-re.com.svg | https://electra-re.com/images/logo/packman-white.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | electreon.com | ElectReon | electreon.com.svg | https://cdn-electreon.awwwsome.cloud/wp-content/uploads/2025/06/logo-light-h.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | eleos.health | Eleos Health | eleos.health.svg | https://eleos.health/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| elfi-tech.com | Elfi-Tech (Israel) | elfi-tech.com.svg | https://elfi-tech.com/wp-content/uploads/2025/09/elfitech-logo-new.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| ella.co.il | Ella | ella.co.il.svg | https://www.ella.co.il/warehouse/temp/ella/LOGO-FOOTER.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| emedgene.com | Emedgene | emedgene.com.svg | https://assets.illumina.com/content/dam/illumina-common/logo/illumina-full_logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| en.onezerobank.com | En | en.onezerobank.com.svg | https://www.onezerobank.com/en/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | enlivex.com | Enlivex | enlivex.com.svg | https://enlivex.com/wp-content/themes/enlivex/assets/img/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | entreecap.com | Entrée Capital | entreecap.com.svg | https://entreecap.com/wp-content/themes/entree-wd/assets/images/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | eon.io | Eon | eon.io.svg | https://www.eon.io/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
@@ -188,15 +158,12 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | exlibrisgroup.com | Ex Libris Group | exlibrisgroup.com.svg | https://exlibrisgroup.com/wp-content/uploads/computer-logo-linkedin-network-linkedin-professional.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | explorium.ai | Explorium | explorium.ai.svg | https://www.explorium.ai/wp-content/themes/moveo-theme/assets/icon/explorium-logo-2026.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | extrapt.co.il | Extra Public Transportation | extrapt.co.il.svg | https://extrapt.co.il/images/extra_logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| ey.com | EY Israel | ey.com.svg | https://www.ey.com/en_gl (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | factory54.co.il | FACTORY 54 | factory54.co.il.svg | https://factory54.co.il/cdn/shop/files/Factory_54_Main_Logo_1.svg?v=1784022982&width=274 | 2026-10-21 | Official site SVG; trademark of its owner |
 | fattal-hotels.com | Fattal Hotels | fattal-hotels.com.svg | https://www.leonardo-hotels.com/assets/images/logo2_red.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | femi.com | Femi | femi.com.svg | https://femi.com/wp-content/uploads/2021/04/femi-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | fermentek.co.il | Fermentek | fermentek.co.il.svg | https://www.fermentek.com/themes/migration_fermentek/img/new-main-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | ffcapital.com | Fortissimo Capital | ffcapital.com.svg | https://www.ffcapital.com/wp-content/uploads/2024/12/header-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | fireblocks.com | Fireblocks | fireblocks.com.svg | https://www.fireblocks.com/wp-content/uploads/2025/10/fireblocks-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| fluencecorp.com | Fluence | fluencecorp.com.svg | https://www.fluencecorp.com/wp-content/themes/Fluence/images/fluencelogo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| flyingspark.com | Flyingspark | flyingspark.com.svg | https://flyingspark.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | foretellix.com | Foretellix | foretellix.com.svg | https://www.foretellix.com/wp-content/uploads/2026/03/Foretelix-Logo-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | formula.co.il | Formula Systems | formula.co.il.svg | https://formulasystems.com/navbar-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | formulasystems.com | Formula Systems (1985) Ltd. | formulasystems.com.svg | https://formulasystems.com/navbar-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -204,23 +171,16 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | fox.co.il | Fox | fox.co.il.svg | https://fox.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | freesbe.com | Carasso Motors Ltd | freesbe.com.svg | https://freesbe.com/_next/static/media/freesbeLogo.d746ebd5.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | fundbox.com | Fundbox | fundbox.com.svg | https://fundbox.com/_evo/logo-8am.C-9VOG-N.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| fyber.com | Fyber | fyber.com.svg | https://cdn.prod.website-files.com/69f832754e7f6f5bd3314f06/69f9f5aac0327d3eebc69c4d_DT%20Chroma%20logo%20(primary).svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | gamaf.co.il | Gamaf | gamaf.co.il.svg | https://www.gamaf.co.il/wp-content/uploads/2026/03/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| gamida-cell.com | Gamida Cell | gamida-cell.com.svg | https://www.gamida-cell.com/wp-content/themes/gamidacell/images/logo_gamida-cell.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| gamla-harel.co.il | Gamla-Harel | gamla-harel.co.il.svg | https://www.gamla-harel.co.il/wp-content/uploads/2025/08/gamla-logo-whith.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | garintzabar.org | Garin Tzabar | garintzabar.org.svg | https://garintzabar.org/wp-content/uploads/2024/03/logo_garin_tzabar.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | gav-yam.co.il | Gav-yam Lands Corp.ltd | gav-yam.co.il.svg | https://gav-yam.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | geektime.co.il | Geektime | geektime.co.il.svg | https://cdn.geektime.co.il/wp-content/uploads/2024/09/geektime-logo-2.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| gemini.co.il | Gemini Israel Funds | gemini.co.il.svg | https://cdn.prod.website-files.com/66fbc07f2fcf447f7a8be696/670d03dd17436101feca768b_Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | generationcapital.co.il | Generation Capital | generationcapital.co.il.svg | https://generationcapital.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | geotours.co.il | Geographic company (Israel) | geotours.co.il.svg | https://www.geotours.co.il/wp-content/uploads/2026/07/geo_logo_small_090726_01.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | gilat.com | Gilat | gilat.com.svg | https://commons.wikimedia.org/wiki/File:Gilat_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | global-e.com | Global-e | global-e.com.svg | https://www.global-e.com/wp-content/uploads/2024/02/Logo-GlobalE.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| globrands.co.il | Globrands | globrands.co.il.svg | https://www.globrands.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | glow.io | Glow | glow.io.svg | https://cdn.prod.website-files.com/69ef932dc67c7db253e00edc/6a5f61a7024f18d8070c370a_Xactly.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| golanplastic.com | Golanplastic | golanplastic.com.svg | https://golanisrael.com/wp-content/uploads/2024/05/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | golanwines.co.il | Golan Heights Winery | golanwines.co.il.svg | https://www.golanwines.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| goptichub.com | GoHub | goptichub.com.svg | https://www.goptichub.com/assets-seo-refresh-20260609/logo-magento-T_ueFupT.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | gotoglobal.com | GoTo | gotoglobal.com.svg | https://commons.wikimedia.org/wiki/File:GoTo_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | gottex.co.il | Gottex | gottex.co.il.svg | https://gottex.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | groveventures.com | Grove Ventures | groveventures.com.svg | https://www.grovevc.com/wp-content/themes/grove/assets/images/h-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -235,22 +195,15 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | hazorfim.co.il | Hazorfim | hazorfim.co.il.svg | https://hazorfim.co.il/on/demandware.static/Sites-hazorfim-il-Site/-/default/dw9e835aa8/images/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | hcsra.co.il | Hachshara Insurance Company Ltd | hcsra.co.il.svg | https://www.hcsra.co.il/hachsharaProtectMobile.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | hellosimply.com | Simply | hellosimply.com.svg | https://www.hellosimply.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| herbertsamuel.com | Herbert Samuel | herbertsamuel.com.svg | https://herbertsamuel.com/wp-content/uploads/2023/06/herbert-logo-en-black.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| hervana-bio.com | Hervana (Israel) | hervana-bio.com.svg | https://hervana-bio.com/wp-content/uploads/2018/01/hrtvsns-bio-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | high-q.co.il | High Q | high-q.co.il.svg | https://www.high-q.co.il/wp-content/themes/generatepress_child/assets/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | hiper-global.com | Hiper Global Ltd | hiper-global.com.svg | https://www.hiper-global.com/wp-content/themes/hiper-theme/svg/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | hisense.co.il | Hisense | hisense.co.il.svg | https://commons.wikimedia.org/wiki/File:Hisense_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | histadrut.org.il | Histadrut | histadrut.org.il.svg | https://www.histadrut.org.il/wp-content/themes/tyco-wp/assets/images/histadrut-logo-he.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | hola.org | Hola | hola.org.svg | https://cdn4.hola.org/www/hola/pub/img/hola_logo_letters.svg?ver=1.260.994 | 2026-10-21 | Official site SVG; trademark of its owner |
 | hollandia.co.il | Hollandia | hollandia.co.il.svg | https://hollandia.co.il/cdn/shop/t/73/assets/Hollandia.svg?v=48415114396471794791783428573 | 2026-10-21 | Official site SVG; trademark of its owner |
-| homeless.co.il | Homeless | homeless.co.il.svg | https://www.homeless.co.il/images/homeless-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | humansecurity.com | HUMAN | humansecurity.com.svg | https://commons.wikimedia.org/wiki/File:HUMAN_logo_2024.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
-| hycos.ai | Hycos.ai | hycos.ai.svg | https://www.hycos.ai/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | i24news.tv | i24NEWS | i24news.tv.svg | https://commons.wikimedia.org/wiki/File:I24NEWS_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
-| icount.co.il | iCount | icount.co.il.svg | https://www.icount.co.il/wp-content/uploads/iCountLogo-w.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| identimedical.com | Identimedical | identimedical.com.svg | https://identimedical.com/wp-content/uploads/2021/07/IDENTI-Logo-WHITE_GREEN.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | idigital.co.il | iDigital | idigital.co.il.svg | https://www.idigital.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| idomoo.com | Idomoo | idomoo.com.svg | https://www.idomoo.com/wp-content/uploads/Idomoo-logo-blue.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | ikea.co.il | IKEA Israel | ikea.co.il.svg | https://www.ikea.com/global/assets/logos/brand/ikea.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | ilmakiage.com | Il Makiage | ilmakiage.com.svg | https://www.ilmakiage.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | imperva.com | Imperva | imperva.com.svg | https://www.imperva.com/wp-content/uploads/2025/08/Thales-Cybersecurity-color.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -260,10 +213,7 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | inrom-group.co.il | Inrom Construction Industries Ltd | inrom-group.co.il.svg | https://inrom-group.co.il/wp-content/uploads/2021/07/logo-header-w.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | inshur.com | Inshur | inshur.com.svg | https://inshur.com/hubfs/Website/Global/Logos/Inshur-logo-dark.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | insightec.com | Insightec | insightec.com.svg | https://insightec.com/wp-content/uploads/2021/07/logo-svg.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| int.icej.org | International Christian Embassy Jerusalem | int.icej.org.svg | https://www.icej.org/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | intel.co.il | Intel Israel | intel.co.il.svg | https://www.intel.co.il/content/dam/logos/intel-header-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| ionix.io | IONIX | ionix.io.svg | https://www.ionix.io/wp-content/uploads/2023/02/ionix-header-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| ipatent.co.il | Ehrlich & Fenster | ipatent.co.il.svg | https://www.ipatent.co.il/wp-content/uploads/2022/11/EHRLICH-FENSTER-LOGO-final2.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | ironsrc.com | ironSource | ironsrc.com.svg | https://commons.wikimedia.org/wiki/File:IronSource-logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | is.com | IronSource | is.com.svg | https://commons.wikimedia.org/wiki/File:IronSource-logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | iscar.com | ISCAR Metalworking | iscar.com.svg | https://www.iscar.com/media/logos-iscar-svg/ISCAR_Logo_flat--13.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -277,56 +227,39 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | kaltura.com | Kaltura | kaltura.com.svg | https://corp.kaltura.com/wp-content/uploads/2024/01/aws-same-h.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | kan.org.il | Kan | kan.org.il.svg | https://www.kan.org.il/media/ghkfvlka/kan_logo_header_update.svg?rmode=pad&v=1dc8ee331f60780 | 2026-10-21 | Official site SVG; trademark of its owner |
 | kardan-nadlan.co.il | Kardan Real Estate Enterprise And Development Ltd | kardan-nadlan.co.il.svg | https://www.kardan-nadlan.co.il/wp-content/uploads/2026/05/kardanlogo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| kavim-t.co.il | Kavim | kavim-t.co.il.svg | https://www.kavim-t.com/content/images/icons/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| kelacyber.com | KELA | kelacyber.com.svg | https://www.kelacyber.com/wp-content/uploads/2025/10/black.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | keystoneisrael.com | Keystone Reit Ltd | keystoneisrael.com.svg | https://www.keystoneisrael.com/wp-content/themes/keystone/images/logo-dark.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | khealth.com | K Health | khealth.com.svg | https://commons.wikimedia.org/wiki/File:K_Health_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | kikar.co.il | Kikar HaShabbat | kikar.co.il.svg | https://commons.wikimedia.org/wiki/File:Kikar_HaShabbat_logo_2022.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | kimberly-clark.co.il | Kimberly-Clark Israel Limited | kimberly-clark.co.il.svg | https://www.kimberly-clark.com/-/media/feature/kcc/corporate/header/kimberlyclark.svg?rev=-1 | 2026-10-21 | Official site SVG; trademark of its owner |
-| kleiobase.com | KleioBase | kleiobase.com.svg | https://kleiobase.com/icons/kleiobase-logo-circle.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | klil.co.il | Klil Aluminum | klil.co.il.svg | https://www.klil.co.il/images/logo-klil.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | knauf.com | knauf.il | knauf.com.svg | https://knauf.com/he-IL (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| konnecto.com | Konnecto | konnecto.com.svg | https://www.konnecto.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
 | kornit.com | Kornit | kornit.com.svg | https://www.kornit.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | kravitz.co.il | Kravitz | kravitz.co.il.svg | https://www.kravitz.co.il/cdn/shop/files/kravitz_logo.svg?v=1743348734&width=110 | 2026-10-21 | Official site SVG; trademark of its owner |
 | l-s.co.il | Leiman Schlussel | l-s.co.il.svg | https://www.l-s.co.il/wp-content/themes/sogo-child/assets/images/sogo_logo_animated_white.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | laline.co.il | Laline | laline.co.il.svg | https://www.laline.co.il/cdn/shop/files/lalineLogo.svg?v=1730037764&width=500 | 2026-10-21 | Official site SVG; trademark of its owner |
-| laniadofund.org | Laniado Development Fund | laniadofund.org.svg | https://laniadofund.org/wp-content/uploads/2020/09/logo-laniado.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| lastprice.co.il | LastPrice | lastprice.co.il.svg | https://www.lastprice.co.il/img/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| lavacaloca.co.il | La Vaca Loca | lavacaloca.co.il.svg | https://lavacaloca.co.il/wp-content/uploads/2025/11/logo_la_vaca.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | lbr.co.il | Libra Insurance Company Ltd | lbr.co.il.svg | https://www.lbr.co.il:443/media/1076/libra.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| leedaniels.co.il | Lee Daniels Holdings | leedaniels.co.il.svg | https://leedaniels.co.il/wp-content/uploads/2025/03/Lemi-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | legitsecurity.com | Legit Security | legitsecurity.com.svg | https://cdn.prod.website-files.com/6a7d9c4ac878f779eabd435c/6a9a77a1d191bcddb5fb13cc_slack-new-logo-logo-svgrepo-com.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | lesico.com | Lesico Ltd | lesico.com.svg | https://lesico.com/wp-content/uploads/2021/06/Lesico-Logo-Rectangle-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | leverate.com | Leverate | leverate.com.svg | https://leverate.com/wp-content/uploads/2025/03/logo-leverate-default.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | lineagecell.com | Lineage Cell Therapeutics | lineagecell.com.svg | https://commons.wikimedia.org/wiki/File:Lineage_Cell_Therapeutics_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | lingopie.com | Lingopie | lingopie.com.svg | https://d1ndg56vpa7k9f.cloudfront.net/assets/homepage/LingopieLogo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | liveperson.com | Liveperson Inc. | liveperson.com.svg | https://static.liveperson.com/static-assets/2024/10/24161133/LivePerson-Logos-2-Color.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| liveu.tv | LiveU | liveu.tv.svg | https://cdn-liveutv.pressidium.com/wp-content/uploads/2026/08/LiveU-20-Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| living-il.co.il | Living-Il | living-il.co.il.svg | https://www.living-il.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | logz.io | Logz.io | logz.io.svg | https://logz.io/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | lool.vc | lool ventures | lool.vc.svg | https://www.lool.vc/wp-content/themes/loolvc/images/lool_logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | loox.app | Loox | loox.app.svg | https://loox.app/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
-| lullidancewear.com | LULLI Dancewear | lullidancewear.com.svg | https://lullidancewear.com/lulli-logo.svg?dpl=bbe17a409248118ea8120ffd830ebdf6e68979ed | 2026-10-21 | Official site SVG; trademark of its owner |
 | lumen.me | Lumen | lumen.me.svg | https://www.lumen.me/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | lumenis.com | Lumenis | lumenis.com.svg | https://0d9c2eae.delivery.rocketcdn.me/wp-content/uploads/2026/03/60logo-site_Black180X49.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| luminati.io | Luminati | luminati.io.svg | https://media.brightdata.com/2025/07/logo_cdnlogo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | lupa.co.il | Lupa | lupa.co.il.svg | https://www.lupa.co.il/wp-content/uploads/2021/01/Logo-Copy-Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | maabarot.co.il | Maabarot Products Ltd | maabarot.co.il.svg | https://maabarot.co.il/wp-content/uploads/2021/12/logo-header-footer.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| maabarot.com | Maabarot Products | maabarot.com.svg | https://maabarot.co.il/wp-content/uploads/2021/12/logo-header-footer.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | maariv.co.il | Maariv | maariv.co.il.svg | https://commons.wikimedia.org/wiki/File:Maariv_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | maccabi4u.co.il | Maccabi Healthcare Services | maccabi4u.co.il.svg | https://www.maccabi4u.co.il/media/3iwdttzs/logo-maccabi-dent-m.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| madebyomnis.com | Omnis | madebyomnis.com.svg | https://www.madebyomnis.com/wp-content/themes/omnis/img/omnis_logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | malamteam.com | Malam-team Ltd. | malamteam.com.svg | https://www.malamteam.com/wp-content/uploads/2024/06/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | maman-group.co.il | Maman- Cargo Terminals & Handling Ltd. | maman-group.co.il.svg | https://maman-group.co.il/wp-content/themes/master-theme/img/global/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| mamillahotel.com | Mamilla Hotel | mamillahotel.com.svg | https://www.mamillahotel.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | masav.co.il | Bank Clearing Center | masav.co.il.svg | https://www.masav.co.il/wp-content/themes/moveo-theme/global/assets/icon/logo-dark.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | max.co.il | Max IT Finance | max.co.il.svg | https://www.max.co.il/assets/images/homepage/logo-max-footer.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | mcdonalds.co.il | McDonald's Israel | mcdonalds.co.il.svg | https://www.mcdonalds.co.il/ver/9/tpl/website/img/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | mdclone.com | MDClone | mdclone.com.svg | https://mdclone.com/wp-content/uploads/2023/11/MDClone_Logo_Color.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| medigus.com | Medigus | medigus.com.svg | https://medigus.com/wp-content/uploads/2023/11/Xylo-Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | medinol.com | Medinol | medinol.com.svg | https://medinol.com/wp-content/uploads/2023/06/Medinol-logo-grey-text.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| medipowergroup.com | Medipowergroup | medipowergroup.com.svg | https://www.medipowergroup.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | mediwound.com | MediWound | mediwound.com.svg | https://mediwound.com/wp-content/uploads/2024/04/favicon.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | megureit.co.il | Megureit | megureit.co.il.svg | https://www.megureit.co.il/assets/images/megureit-vector-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | meitav.co.il | Meitav Investment House Ltd | meitav.co.il.svg | https://www.meitav.co.il/media/1hth1iw1/410917_logo_151x73-01.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -335,7 +268,6 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | mer-group.com | C. Mer Industries Ltd. | mer-group.com.svg | https://mer-group.com/wp-content/uploads/2025/11/mer-group-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | meshulam.co.il | Meshulam | meshulam.co.il.svg | https://grow.business/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | metzer-group.com | Metzerplas | metzer-group.com.svg | https://www.metzer-group.com/wp-content/uploads/2024/12/metzer-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| michlol-fin.co.il | Michlol-Fin | michlol-fin.co.il.svg | https://www.michlol-fin.co.il/wp-content/uploads/2022/08/new-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | migdal.co.il | Migdal | migdal.co.il.svg | https://commons.wikimedia.org/wiki/File:Migdal_Insurance_Company_logo_2024.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | minrav.co.il | Minrav | minrav.co.il.svg | https://www.minrav.co.il/wp-content/uploads/2023/03/Minrav-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | minutemedia.com | Minute Media | minutemedia.com.svg | https://www.minutegroup.com/logo/mm-logo-dark.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -349,34 +281,25 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | nateevexpress.com | Nateev Express | nateevexpress.com.svg | https://commons.wikimedia.org/wiki/File:Nateev_Express_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | navitaspet.com | Navitas Petroleum Limited Partnership | navitaspet.com.svg | https://www.navitaspet.com/wp-content/uploads/2026/01/navitas-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | ness-tech.co.il | Ness A.T. | ness-tech.co.il.svg | https://www.Ness-tech.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| ness.com | Ness Technologies | ness.com.svg | https://www.ness.com/wp-content/uploads/2026/03/Frame-1000005902.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | netafim.com | Netafim | netafim.com.svg | https://www.netafim.com/cdn-cgi/image/format=auto,fit=crop,quality=80,width=230,height=65/contentassets/74ef987da9494e7fb6c7e86f1782ebbe/hero_netafim60-04-01.svg?v=499cdd | 2026-10-21 | Official site SVG; trademark of its owner |
 | neurim.com | Neurim Pharmaceuticals | neurim.com.svg | https://neurim.com/wp-content/uploads/2022/03/omnis-logo-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | neviot.co.il | Neviot | neviot.co.il.svg | https://www.neviot.co.il/on/demandware.static/-/Sites-neviot-Library/default/dw49ce7cf9/Footer/logo-neviot-footer-mobile.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | newmedenergy.com | NewMed Energy | newmedenergy.com.svg | https://newmedenergy.com/wp-content/themes/newmed/images/icon.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | newpan.co.il | Newpan | newpan.co.il.svg | https://www.newpan.co.il/images/logo-black.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | nextinsurance.com | Next Insurance | nextinsurance.com.svg | https://commons.wikimedia.org/wiki/File:Next_Insurance_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
-| nfx.com | NFX | nfx.com.svg | https://www.nfx.com/images/dark/nfx-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | nilit.com | Nilit | nilit.com.svg | https://www.nilit.com/wp-content/themes/nilit/img/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | nimrod.co.il | Nimrod | nimrod.co.il.svg | https://www.nimrod.co.il/cdn/shop/files/logo.svg?crop=center&height=135&v=1746531186&width=380 | 2026-10-21 | Official site SVG; trademark of its owner |
-| nivision.ai | Nivision | nivision.ai.svg | https://nivision.ai/logo-light.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | noga-iso.co.il | Noga – Israel Independent System Operator | noga-iso.co.il.svg | https://www.noga-iso.co.il/media/c34njm2a/logo-copy.svg?v=1dc73daa09cd610 | 2026-10-21 | Official site SVG; trademark of its owner |
-| notalvision.com | Notal Vision (Israel) | notalvision.com.svg | https://notalvision.com//assets/images/brand/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| novartis.co.il | Novartis (Israel) | novartis.co.il.svg | https://www.novartis.com/il-he/themes/custom/cosmos/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | nsogroup.com | NSO Group | nsogroup.com.svg | https://commons.wikimedia.org/wiki/File:Logo_of_NSO_Group.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | nucleix.com | Nucleix | nucleix.com.svg | https://nucleix.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| nutrino.co | Nutrino | nutrino.co.svg | https://www.minimed.com/etc.clientlibs/minimedweb/clientlibs/clientlib-site/resources/images/back_arrow.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | onezerobank.com | Onezerobank | onezerobank.com.svg | https://www.onezerobank.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | oosto.com | Oosto | oosto.com.svg | https://oosto.com/wp-content/uploads/2021/11/Oosto-Logo-Formerly-AnyVision-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | openweb.com | Openweb | openweb.com.svg | https://www.openweb.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | optibus.com | Optibus | optibus.com.svg | https://media.optibus.com/file/2021/12/03135008/optibus-dark-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | optimove.com | Optimove | optimove.com.svg | https://commons.wikimedia.org/wiki/File:Optimove_logo_2026.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | oramed.com | Oramed | oramed.com.svg | https://commons.wikimedia.org/wiki/File:Oramed_logo_2022.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
-| orasis-pharma.com | ORASIS Pharmaceuticals (Israel) | orasis-pharma.com.svg | https://orasis-pharma.com/hubfs/HQ%20Only/Orasis_Pharmaceuticals_Logo_RGB.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | orbit-cs.com | Orbit Communication Systems | orbit-cs.com.svg | https://orbit-cs.com/wp-content/uploads/2026/06/Logo-orbit-C.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| origeneseeds.com | Origene Seeds | origeneseeds.com.svg | https://www.origeneseeds.com/public/assets/images/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | ormat.com | Ormat | ormat.com.svg | https://commons.wikimedia.org/wiki/File:Ormat_Technologies_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
-| orvidapharma.com | Orvida Pharma Ltd. (Israel) | orvidapharma.com.svg | https://www.orvidapharma.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
 | ourcrowd.com | OurCrowd | ourcrowd.com.svg | https://www.ourcrowd.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | overops.com | OverOps | overops.com.svg | https://4108f736-df88-405f-9621-b597c4d2dc10.wf-app-prod.cosmic.webflow.services/cdn-cgi/image/width=3840/products/images/products/logo-msteams.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | overwolf.com | Overwolf | overwolf.com.svg | https://www.overwolf.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -385,19 +308,12 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | pagaya.com | Pagaya | pagaya.com.svg | https://pagaya.com/icons/pagaya-logo.svg?v=2 | 2026-10-21 | Official site SVG; trademark of its owner |
 | palram.co.il | Palram Industries (1990) Ltd. | palram.co.il.svg | https://www.palram.com/il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | palram.com | Palram | palram.com.svg | https://www.palram.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| panaxia.co.il | Panaxia | panaxia.co.il.svg | https://panaxia.co.il/wp-content/uploads/2017/11/logo-01.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | pango.co.il | Pango | pango.co.il.svg | https://www.pango.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| panoply.io | Panoply | panoply.io.svg | https://panoply.io/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | papaya.com | Papaya | papaya.com.svg | https://www.papaya.com/_next/static/media/logo.d6e6dcaa.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| parkomat.co.il | Parkomat | parkomat.co.il.svg | https://parkomat.co.il/wp-content/uploads/2022/12/footer-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | paz.co.il | Paz | paz.co.il.svg | https://www.paz.co.il/Logo/desktop.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| pcb-technologies.com | Pcb-Technologies | pcb-technologies.com.svg | https://www.pcb-technologies.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | pei.co.il | Pei | pei.co.il.svg | https://tassha.pei.co.il/uploads/logo_01_d82fdc26b0.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | pepper.co.il | Pepper | pepper.co.il.svg | https://www.pepper.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| perimeterx.com | PerimeterX | perimeterx.com.svg | https://docs.humansecurity.com:443/_fern-files/humansecurity.docs.buildwithfern.com/ace576c0443302e6bb8060465818907a8528fbfff01a7ec6aee68854b2b4975a/docs/assets/logo-light.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | perion.com | Perion | perion.com.svg | https://perion.com/wp-content/uploads/2026/06/Perion-logo-2025-1-1-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| petrotxlp.com | Petrotxlp | petrotxlp.com.svg | https://www.petrotxlp.com/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| philips.co.il | Philips (Israel) | philips.co.il.svg | https://www.philips.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
 | photomyne.com | Photomyne | photomyne.com.svg | https://photomyne.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | pitango.com | Pitango | pitango.com.svg | https://www.pitango.com/wp-content/themes/pitango-new/assets/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | pizzahut.co.il | Pizza Hut Israel | pizzahut.co.il.svg | https://www.pizzahut.co.il/wp-content/uploads/2025/08/pizza-hut-logo-4.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -409,8 +325,6 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | priority-software.com | Priority Software | priority-software.com.svg | https://cdn-ildofcc.nitrocdn.com/kitdiqlmIRSNEPcfDMXRsJhcusqfcNfZ/assets/images/source/rev-b150e8d/www.priority-software.com/wp-content/uploads/2023/02/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | psagot.co.il | Psagot | psagot.co.il.svg | https://www.psagot.co.il/wp-content/uploads/2025/08/psagot_logo_heb.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | psagotwines.com | Psagot Winery | psagotwines.com.svg | https://psagotwines.com/wp-content/uploads/2023/11/Layer_1-2.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| qedma.com | Qedma Quantum Computing | qedma.com.svg | https://www.qedma.com/wp-content/uploads/2026/08/header-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| qs-labs.com | Quantum Source Labs Ltd (Israel) | qs-labs.com.svg | https://cdn.prod.website-files.com/656dc935e090a122a4b2647f/66e92014296edc8529b8b210_Standard_Investments_Logo_RGB.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | qumracapital.com | Qumra Capital | qumracapital.com.svg | https://qumracapital.com/wp-content/themes/qumra/images/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | rabbi.agency | Rabbi Interactive | rabbi.agency.svg | https://rabbi.agency/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | rad.com | RAD Data Communications | rad.com.svg | https://commons.wikimedia.org/wiki/File:Logo_of_RAD_Data_Communications.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
@@ -418,10 +332,8 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | radware.com | Radware | radware.com.svg | https://commons.wikimedia.org/wiki/File:Radware_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | rafa.co.il | Rafa Laboratories | rafa.co.il.svg | https://www.rafa.co.il/sites/all/modules/comraxcontrib/logo-comrax.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | rail.co.il | Israel Railways | rail.co.il.svg | https://commons.wikimedia.org/wiki/File:Israel_Railways_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
-| railvision.io | Rail Vision | railvision.io.svg | https://railvision.io/wp-content/themes/railvision/images/logo-white.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | rapac.co.il | Rapac Communication & Infrastructure | rapac.co.il.svg | https://rapac.co.il/wp-content/uploads/2026/01/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | rav-bariach.co.il | Rav Bariach(08)lndustries Ltd. | rav-bariach.co.il.svg | https://www.rav-bariach.co.il/wp-content/uploads/system/mobile-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| razor-labs.com | Razor-Labs | razor-labs.com.svg | https://www.razor-labs.com/wp-content/uploads/RazorLabs.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | reblaze.com | Reblaze | reblaze.com.svg | https://www.link11.com/en/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | redhillbio.com | RedHill | redhillbio.com.svg | https://s28.q4cdn.com/226515471/files/design/redhillbio-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | remilk.com | Remilk | remilk.com.svg | https://www.remilk.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -432,17 +344,12 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | rise.ai | Rise.ai | rise.ai.svg | https://rise.ai/wp-content/uploads/2025/09/logo-4.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | riskified.com | Riskified | riskified.com.svg | https://www.riskified.com/app/themes/riskified/public/build/assets/logo-BIgB_wK2.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | riverside.com | Riverside | riverside.com.svg | https://cdn.prod.website-files.com/685be7dcd32275d3830651d3/685be7dcd32275d3830660f7_navbar-logo-updated-black.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| rollmarket.co.il | Roll Market | rollmarket.co.il.svg | https://rollmarket.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | rp-optical-lab.com | Rp-Optical-Lab | rp-optical-lab.com.svg | https://rp-optical-lab.com/wp-content/uploads/2024/03/RP-LOGO.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| safenet.gemalto.com | Gemalto (Israel) | safenet.gemalto.com.svg | https://cpl.thalesgroup.com/sites/default/files/content/thales-logo-building-a-future-we-can-all-trust.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| salsela.co.il | MySalsela | salsela.co.il.svg | https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | sapiens.com | Sapiens | sapiens.com.svg | https://sapiens.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | sarine.com | Sarine | sarine.com.svg | https://sarine.com/wp-content/themes/sarine/ws_assets/images/sarine_profile-logo-svg.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | satec-global.com | SATEC | satec-global.com.svg | https://www.satec-global.com/wp-content/uploads/2025/08/logo2.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | scaleops.com | ScaleOps labs | scaleops.com.svg | https://scaleops.com/content/uploads/2026/02/Logo_ScaleOps_For_Menu_Web_2026_WHITE-2-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| scirobotics.com | SciRobotics | scirobotics.com.svg | https://scirobotics.com/wp-content/plugins/cookie-law-info/legacy/public/images/logo-cookieyes.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | seetree.ai | SeeTree | seetree.ai.svg | https://cdn.prod.website-files.com/5c07a5364b5cfc57d3ebaf49/6602e1de9343f82ae83f7b02_Forbes_logo%201.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| shamaym.com | Shamaym | shamaym.com.svg | https://www.shamaym.com/wp-content/uploads/2020/11/shamaym-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | shapir.co.il | Shapir | shapir.co.il.svg | https://www.shapir.co.il/wp-content/uploads/2022/04/shapir-old-logo-bg-white-3.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | shapirobeer.co.il | Shapiro Beer | shapirobeer.co.il.svg | https://shapirobeer.co.il/wp-content/uploads/2025/05/Logo_Header_2025_2.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | shibolet.com | Shibolet | shibolet.com.svg | https://www.shibolet.com/wp-content/uploads/2024/06/Shibolet_Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -450,30 +357,21 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | simplex.com | Simplex | simplex.com.svg | https://www.simplex.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | singular.net | Singular | singular.net.svg | https://www.singular.net/wp-content/uploads/2026/04/singular-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | sisense.com | Sisense | sisense.com.svg | https://www.sisense.com/wp-content/uploads/2025/07/Sisense-Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| sisram-medical.com | Sisram Medical | sisram-medical.com.svg | https://sisram-medical.com/wp-content/themes/sisram/img/sisram_logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| smartagrofund.com | Smartagrofund | smartagrofund.com.svg | https://smartagrofund.com/wp-content/uploads/2021/07/60d80901a2074683cf5376fd_BetterSeeds-Logo-GREEN-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| smartmedsys.com | SMART Medical Systems (Israel) | smartmedsys.com.svg | https://smartmedsys.com/wp-content/uploads/logo-color.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | sofwave.com | Sofwave Medical | sofwave.com.svg | https://sofwave.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | sol-gel.com | Sol-Gel | sol-gel.com.svg | https://www.sol-gel.com/wp-content/uploads/2023/12/sol-gel-logo-KO-text.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | sourceoutdoor.com | SOURCE | sourceoutdoor.com.svg | https://sourceoutdoor.com/wp-content/themes/getraffic-child/assets/images/matat-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| spectralops.io | Spectral | spectralops.io.svg | https://spectralops.io/wp-content/themes/spectral-theme/assets/images/sections/header/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | sport1.co.il | Sport1 | sport1.co.il.svg | https://commons.wikimedia.org/wiki/File:Sport1_Logo_2024.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | sqream.com | SQream DB | sqream.com.svg | https://commons.wikimedia.org/wiki/File:SQream_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | srugim.co.il | Srugim | srugim.co.il.svg | https://www.srugim.co.il/assets/images/logo/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| standsapp.org | Stands Ltd. | standsapp.org.svg | https://www.standsapp.org/wp-content/uploads/logo-stands.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | starkware.co | StarkWare | starkware.co.svg | https://commons.wikimedia.org/wiki/File:StarkWare_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | sugat.com | Sugat | sugat.com.svg | https://www.sugat.com/wp-content/uploads/2024/02/sugat-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| sumit.co.il | Sumit | sumit.co.il.svg | https://cdn.prod.website-files.com/6246343a7e2d747192ece2c5/6254fa2f77da40b5c215646b_logo_footer.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | sundaysky.com | SundaySky | sundaysky.com.svg | https://sundaysky.com/wp-content/uploads/2026/07/united-healthcare-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| swapp.ai | SWAPP | swapp.ai.svg | https://swapp.ai/images/logos/swapp-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | sweetch.com | Sweetch | sweetch.com.svg | https://cdn.prod.website-files.com/6253e971e57571540a7e6d8f/62543e1afde7b82819a8e84b_sweetch-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | sygnia.co | Sygnia | sygnia.co.svg | https://bunny-wp-pullzone-5pkz60xvv9.b-cdn.net/wp-content/uploads/2024/01/main_logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | synel.co.il | Synel Payway M.l.l Ltd | synel.co.il.svg | https://www.synel.co.il/wp-content/plugins/logo-carousel-free/admin/assets/images/spinner.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| t3.technion.ac.il | T3 Technion | t3.technion.ac.il.svg | https://t3.technion.ac.il/wp-content/uploads/2021/04/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | tabit.cloud | Tabit | tabit.cloud.svg | https://www.tabit.cloud/wp-content/themes/tabit.cloud/assets/img/tabit_logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | tadiran-group.co.il | Tadiran Group Ltd | tadiran-group.co.il.svg | https://www.tadiran-group.co.il/wp-content/themes/tadiran/assets/img/icons/svg/logo_black_with_tadiran_text.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | tadmir.co.il | Tadmir | tadmir.co.il.svg | https://www.tadmir.co.il/sites/default/files/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| talon-sec.com | Talon Cyber Security | talon-sec.com.svg | https://www.paloaltonetworks.com/etc/clientlibs/clean/imgs/sase-logo-dark.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | tambour.co.il | Tambour | tambour.co.il.svg | https://tambour.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | taro.com | Taro Pharmaceutical | taro.com.svg | https://commons.wikimedia.org/wiki/File:Taro_Pharmaceuticals_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | tasc-consulting.com | TASC | tasc-consulting.com.svg | https://www.tasc-consulting.com/wp-content/themes/tailwind/img/tasc-logo-new.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -487,50 +385,32 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | teva.co.il | Teva Pharmaceutical Industries Ltd. | teva.co.il.svg | https://www.teva.co.il/globalassets/scs-branded-images/generic/teva-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | tevapharm.com | Teva | tevapharm.com.svg | https://commons.wikimedia.org/wiki/File:Teva_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | tgum.com | Tgum | tgum.com.svg | https://tgum.com/wp-content/uploads/2025/09/logo-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| thenorman.com | The Norman | thenorman.com.svg | https://www.thenorman.com/wp-content/uploads/2017/05/top-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| theranica.com | Theranica Bio-Electronics Ltd. (Israel) | theranica.com.svg | https://theranica.com/wp-content/uploads/2019/09/header-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | thetaray.com | ThetaRay | thetaray.com.svg | https://thetaray.com/wp-content/themes/thetaray/images/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | tidhar.co.il | Tidhar | tidhar.co.il.svg | https://tidhar.co.il/wp-content/uploads/2023/03/tidhar-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| tigisolar.com | Tigisolar | tigisolar.com.svg | https://www.tigisolar.com/wp-content/uploads/2024/06/Logo-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| tipa-corp.com | TIPA Corp | tipa-corp.com.svg | https://tipa-corp.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | tipalti.com | Tipalti | tipalti.com.svg | https://commons.wikimedia.org/wiki/File:Tipalti_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | tipranks.com | TipRanks | tipranks.com.svg | https://tr-cdn.tipranks.com/static/v2/static/images/logo/youtube/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | tlv.partners | TLV Partners | tlv.partners.svg | https://www.tlv.partners/wp-content/uploads/2021/04/TLV-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | tonara.com | Tonara | tonara.com.svg | https://www.cryptovantage.com/wp-content/themes/cryptovantagev2/assets/public/images/v2/cryptovantage-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | towersemi.com | Tower Semiconductor | towersemi.com.svg | https://commons.wikimedia.org/wiki/File:Tower_Semiconductor.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | transmitsecurity.com | Transmit Security | transmitsecurity.com.svg | https://transmitsecurity.com/wp-content/uploads/transmit-main-logo-1-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| trinityaudio.ai | Trinity Audio | trinityaudio.ai.svg | https://www.trinityaudio.ai/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
-| trucknet.io | Trucknet | trucknet.io.svg | https://trucknet.io/wp-content/uploads/2023/02/trucknet_logo-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| turbogenchp.com | Turbogenchp | turbogenchp.com.svg | https://turbogenchp.com/wp-content/uploads/2022/01/6016ead582f72cce1e8c250f_turbogen-color-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| turnowsky.com | Turnowsky Ltd. | turnowsky.com.svg | https://www.turnowsky.com/assets/turnowsky-footer-logo-BICpOwM6.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | tv2000.co.il | Tv2000 | tv2000.co.il.svg | https://www.tv2000.co.il/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| twistlock.com | Twistlock | twistlock.com.svg | https://www.paloaltonetworks.com/etc/clientlibs/clean/imgs/prisma-logo-dark.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | tytocare.com | TytoCare | tytocare.com.svg | https://static.tytocare.com/wp-content/uploads/2022/08/Vector-3.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | tzav9.co.il | Tsav 9 | tzav9.co.il.svg | https://www.tzav9.co.il/wp-content/uploads/2024/02/tzav9-logo-01-1.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| tzoravineyards.com | Tzora Vineyards | tzoravineyards.com.svg | https://www.tzoravineyards.com/wp-content/uploads/2019/03/logo_tzora_vineyards.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | ubqmaterials.com | UBQ Materials | ubqmaterials.com.svg | https://www.ubqmaterials.com/wp-content/uploads/2021/03/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | unioncareer.co.il | Unioncareer | unioncareer.co.il.svg | https://unioncareer.co.il/wp-content/uploads/2023/06/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | unitronics.com | Unitronics | unitronics.com.svg | https://www.unitronicsplc.com/wp-content/uploads/2023/03/Logo-Unitronics-2.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | upstream.auto | Upstream Security | upstream.auto.svg | https://upstream.io/wp-content/uploads/2021/12/logo-blue.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | upwind.io | Upwind Security | upwind.io.svg | https://www.upwind.io/wp-content/uploads/2026/08/Sixt_Logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | urogen.com | UroGen | urogen.com.svg | https://www.urogen.com/images/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| userway.org | Userway | userway.org.svg | https://userway.org/static/capterra-w-ba66478290cfc4f0d816a7b498881482.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | uvisionuav.com | UVision | uvisionuav.com.svg | https://uvisionuav.com/wp-content/uploads/2026/06/Uvision-inc-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | valens.com | Valens | valens.com.svg | https://www.valens.com/wp-content/themes/valens/assets/icons/valens-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| variantyx.com | Variantyx | variantyx.com.svg | https://www.variantyx.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | vastdata.com | Vast Data | vastdata.com.svg | https://commons.wikimedia.org/wiki/File:VAST_Data_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | vayyar.com | Vayyar | vayyar.com.svg | https://vayyar.com/wp-content/uploads/2020/12/vayayrlogo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| vblrx.com | Vascular Biogenics (Israel) | vblrx.com.svg | https://www.vblrx.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | verbit.ai | Verbit Software | verbit.ai.svg | https://verbit.ai/wp-content/themes/verbit/images/logo-final2.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| verint.com | Verint | verint.com.svg | https://www.verint.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | vintage-ip.com | Vintage Investment Partners | vintage-ip.com.svg | https://vintage-ip.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | vwavemedical.com | V-Wave | vwavemedical.com.svg | https://vwavemedical.com/themes/heartrecovery_theme/heartrecovery/logo-jjmt-main.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| vynetherapeutics.com | Vyne Therapeutics (Israel) | vynetherapeutics.com.svg | https://www.yarrowbioscience.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
 | walla.co.il | Walla | walla.co.il.svg | https://commons.wikimedia.org/wiki/File:Walla_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | watergen.com | Watergen | watergen.com.svg | https://watergen.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner; currentColor replaced with #000000 |
-| webydo.com | Webydo | webydo.com.svg | https://www.webydo.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner |
-| webz.io | Webz.io | webz.io.svg | https://webz.io/wp-content/themes/webz.io/assets/images/logo-blue.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| weccelerate.co.il | WeCcelerate | weccelerate.co.il.svg | https://weccelerate.co.il/images/portfolio/symbiosis.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | wiliot.com | Wiliot | wiliot.com.svg | https://cdn.prod.website-files.com/69705b4bd697a364360a4fd0/6979534119ffcad99ab071d6_Wiliot%20logo%20(1).svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | wtea.com | Wissotzky Tea | wtea.com.svg | https://www.wtea.com/wp-content/uploads/2024/03/logo-W-svg.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | yad2.co.il | Yad2 | yad2.co.il.svg | https://visuals.yad2.co.il/mango/yad2-main-logo-v2.svg | 2026-10-21 | Official site SVG; trademark of its owner |
@@ -539,7 +419,4 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | ylventures.com | YL Ventures | ylventures.com.svg | https://www.ylventures.com/wp-content/uploads/2026/05/logo_color_white_bg.svg | 2026-10-21 | Official site SVG; trademark of its owner |
 | yotpo.com | Yotpo | yotpo.com.svg | https://commons.wikimedia.org/wiki/File:Yotpo-logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner |
 | zap.co.il | Zap | zap.co.il.svg | https://img.zap.co.il/imgs/newui/wisebuy_logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| zarfati-zvi.com | Zvi Sarfati & Sons | zarfati-zvi.com.svg | https://zarfati-zvi.com/wp-content/uploads/2023/01/zz-logo-mobile.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| zhuti.co.il | Zhuti | zhuti.co.il.svg | https://zhuti.co.il/wp-content/themes/Zhuti/assets/img/svgs/logo-icon-footer.svg | 2026-10-21 | Official site SVG; trademark of its owner |
-| zielinskiandrozen.com | Zielinski & Rozen | zielinskiandrozen.com.svg | https://zielinskiandrozen.com/cdn/shop/files/LOGO_ZR_OFFWHITE_3000x664px.svg?crop=center&height=100&v=1755799687&width=200 | 2026-10-21 | Official site SVG; trademark of its owner |
 | zur-shamir.com | Zur Shamir Holdings Ltd. | zur-shamir.com.svg | https://www.zur-shamir.com/wp-content/uploads/logo.svg | 2026-10-21 | Official site SVG; trademark of its owner |
