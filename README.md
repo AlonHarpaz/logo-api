@@ -72,7 +72,7 @@ curl -s https://logoapi.sh/index.json | jq 'length'
 
 ## Coverage
 
-3,637 domains: 1,283 from gilbarbara/logos, 2,013 from simple-icons and 341 hand-curated extras. Cloud, SaaS and open source tools are well covered. Banks and retail are thin.
+3,737 domains: 1,283 from gilbarbara/logos, 2,013 from simple-icons and 441 hand-curated extras. Cloud, SaaS and open source tools are well covered. Banks and retail are thin.
 
 The logos come from two sources, each pinned to one commit in `build.py`:
 
@@ -88,7 +88,7 @@ Every `index.json` entry has `origin`: `gilbarbara`, `simple-icons` or `extras`.
 - `extras/<domain>.svg` is the wordmark. `extras/<domain>-icon.svg` is the optional icon. If one is missing, the other serves both paths.
 - File names must be lowercase `<domain>.svg` with no `www.`, no path and no spaces. Anything else is skipped with a message.
 - Extras go through the same `normalize_svg` (no `width` or `height`, `viewBox` kept) and the same `blocklist.txt` as every other source.
-- Every file needs a row in `extras/SOURCES.md`: domain, name, file, source URL, date and license or note. The Name column is required: it is the official brand name used as `name` in `index.json`. A domain with no row falls back to its first label.
+- Every file needs a row in `extras/SOURCES.md`: domain, name, file, source URL, date, license or note and an optional category (`finance` or `organizations`). The Name column is required: it is the official brand name used as `name` in `index.json`. A domain with no row falls back to its first label.
 
 To contribute one, open a pull request that adds the SVG and its `SOURCES.md` row. Use a real SVG from the brand's own press or brand page, the inline SVG of its official site, or Wikimedia Commons (record the license). No PNG, no tracing, no third-party logo sites. Remove scripts and external references, and keep the `viewBox`.
 
