@@ -416,5 +416,78 @@ class ExtrasTests(unittest.TestCase):
             shutil.rmtree(tmp, ignore_errors=True)
 
 
+class RootNameTests(unittest.TestCase):
+    def _pick(self, dom, names):
+        items = [{"name": n, "shortname": sn, "url": "https://" + dom, "files": [sn + ".svg"]} for n, sn in names]
+        return build.build_entries(items, set())[0][0]["name"]
+
+    def test_shortname_equals_label(self):
+        self.assertEqual(self._pick("google.com", [("Chrome", "chrome"), ("Google", "google")]), "Google")
+
+    def test_name_equals_label_slugified(self):
+        self.assertEqual(self._pick("mastercard.com", [("Maestro", "maestro"), ("MasterCard", "x")]), "MasterCard")
+
+    def test_name_contains_label(self):
+        self.assertEqual(self._pick("apache.org", [("Kafka", "kafka"), ("Apache Foundation", "af")]), "Apache Foundation")
+
+    def test_fallback_first(self):
+        self.assertEqual(self._pick("x.com", [("One", "one"), ("Two", "two")]), "One")
+
+    def test_microsoft(self):
+        self.assertEqual(self._pick("microsoft.com", [("Azure", "azure"), ("Microsoft", "microsoft")]), "Microsoft")
+
+    def test_dups_reported(self):
+        items = [{"name": "Chrome", "shortname": "chrome", "url": "https://google.com", "files": ["a.svg"]},
+                 {"name": "Google", "shortname": "google", "url": "https://google.com", "files": ["b.svg"]}]
+        _, _, dups, _ = build.build_entries(items, set())
+        self.assertEqual(dups, [("google.com", "Chrome")])
+
+
+def _e(dom, name):
+    return {"domain": dom, "name": name}
+
+
+class CollapseTests(unittest.TestCase):
+    def doms(self, entries):
+        kept, dropped = build.collapse_entries(entries)
+        return [e["domain"] for e in kept], dropped
+
+    def test_same_name_subdomain_dropped(self):
+        kept, dropped = self.doms([_e("contentful.com", "Contentful"), _e("press.contentful.com", "Contentful")])
+        self.assertEqual(kept, ["contentful.com"])
+        self.assertEqual(dropped, [("press.contentful.com", "contentful.com", "subdomain")])
+
+    def test_suffix_name_dropped(self):
+        kept, _ = self.doms([_e("x.com", "X"), _e("docs.x.com", "X Docs"), _e("blog.x.com", "X-Blog")])
+        self.assertEqual(kept, ["x.com"])
+
+    def test_different_name_kept(self):
+        kept, _ = self.doms([_e("google.com", "Google"), _e("home.google.com", "Google Home"),
+                             _e("camel.apache.org", "Apache Camel"), _e("apache.org", "Apache")])
+        self.assertEqual(sorted(kept), ["apache.org", "camel.apache.org", "google.com", "home.google.com"])
+
+    def test_third_party_dropped_when_brand_domain_exists(self):
+        kept, dropped = self.doms([_e("algolia.com", "Algolia"), _e("algolia.frontify.com", "Algolia"),
+                                   _e("acme.github.io", "Acme"), _e("acme.org", "Acme")])
+        self.assertEqual(sorted(kept), ["acme.org", "algolia.com"])
+        self.assertEqual({d[2] for d in dropped}, {"third-party host"})
+
+    def test_sole_third_party_kept(self):
+        kept, _ = self.doms([_e("solo.github.io", "Solo"), _e("other.com", "Other")])
+        self.assertEqual(sorted(kept), ["other.com", "solo.github.io"])
+
+    def test_two_third_party_same_name_both_kept(self):
+        kept, _ = self.doms([_e("a.github.io", "A"), _e("a.netlify.app", "A")])
+        self.assertEqual(len(kept), 2)
+
+    def test_alias_pair_kept(self):
+        kept, _ = self.doms([_e("13tv.co.il", "13TV"), _e("reshet.tv", "13TV")])
+        self.assertEqual(len(kept), 2)
+
+    def test_deterministic(self):
+        es = [_e("a.com", "A"), _e("x.a.com", "A"), _e("b.github.io", "B"), _e("b.com", "B")]
+        self.assertEqual(build.collapse_entries(es), build.collapse_entries(list(reversed(es))))
+
+
 if __name__ == "__main__":
     unittest.main()
