@@ -83,7 +83,7 @@ Every `index.json` entry has `origin`: `gilbarbara` or `simple-icons`. To get a 
 
 ## How it works
 
-- `build.py` reads both upstream catalogs. It writes one SVG per domain into `dist/`, plus `dist/index.json`. It uses only the Python standard library.
+- `build.py` reads both upstream catalogs. It writes `dist/<domain>.svg` and `dist/icon/<domain>.svg` for each domain, plus `dist/index.json`. It uses only the Python standard library.
 - It strips `width` and `height` from each SVG root and keeps the `viewBox`.
 - There is no database and no server state.
 

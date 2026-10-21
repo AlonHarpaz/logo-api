@@ -194,7 +194,7 @@ class OverrideTests(unittest.TestCase):
 
 
 class SimpleIconsTests(unittest.TestCase):
-    SLUGS = {"Foo": "foo", "Bar": "bar", "Baz": "baz"}
+    SLUGS = {"Foo": ["foo"], "Bar": ["bar"], "Baz": ["baz"], "Dup": ["dup", "dup_two"], "Amb": ["a1", "a2"]}
 
     def item(self, title, source, hex="112233", **kw):
         d = {"title": title, "hex": hex, "source": source}
@@ -251,7 +251,17 @@ class SimpleIconsTests(unittest.TestCase):
 
     def test_parse_slugs(self):
         text = "| Brand name | Brand slug |\n| :--- | :--- |\n| `.NET` | `dotnet` |\n| `1&1` | `1and1` |\n"
-        self.assertEqual(build.parse_slugs(text), {".NET": "dotnet", "1&1": "1and1"})
+        self.assertEqual(build.parse_slugs(text), {".NET": ["dotnet"], "1&1": ["1and1"]})
+
+    def test_duplicate_title_resolved_by_explicit_slug(self):
+        items = [self.item("Dup", "https://one.com", slug="dup_two"), self.item("Dup", "https://two.com")]
+        es, st = self.run_si(items)
+        self.assertEqual({e["domain"]: e["slug"] for e in es}, {"one.com": "dup_two", "two.com": "dup"})
+
+    def test_duplicate_title_unresolved_is_invalid(self):
+        es, st = self.run_si([self.item("Amb", "https://amb.com")])
+        self.assertEqual(es, [])
+        self.assertEqual(st["invalid"], 1)
 
     def test_index_fields(self):
         es, _ = self.run_si([self.item("Foo", "https://foo.com", hex="abcdef", license={"type": "MIT"}),

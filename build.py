@@ -196,17 +196,21 @@ def is_code_host(host):
 
 
 def parse_slugs(text):
-    """Map brand title -> slug from the simple-icons slugs.md table."""
+    """Map brand title -> ordered list of slugs from the simple-icons slugs.md table."""
     out = {}
     for line in text.splitlines():
         m = SLUG_ROW.match(line)
         if m:
-            out[m.group(1).replace("\\|", "|")] = m.group(2)
+            out.setdefault(m.group(1).replace("\\|", "|"), []).append(m.group(2))
     return out
 
 
-def si_slug(item, slugs):
-    return item.get("slug") or slugs.get(item.get("title"))
+def si_slug(item, slugs, explicit=frozenset()):
+    """Explicit slug, else the one table slug for the title that no item claims explicitly."""
+    if item.get("slug"):
+        return item["slug"]
+    left = [s for s in slugs.get(item.get("title"), []) if s not in explicit]
+    return left[0] if len(left) == 1 else None
 
 
 def build_si_entries(items, slugs, blocked, taken):
@@ -217,6 +221,7 @@ def build_si_entries(items, slugs, blocked, taken):
     """
     stats = {"no_domain": 0, "code_host": 0, "ambiguous": 0, "custom_license": 0,
              "blocked": 0, "conflict": 0, "invalid": 0}
+    explicit = {it["slug"] for it in items if it.get("slug")}
     cands = []
     for it in items:
         dom = domain_from_url(it.get("source", ""))
@@ -232,7 +237,7 @@ def build_si_entries(items, slugs, blocked, taken):
     entries = []
     for dom, it in cands:
         lic = (it.get("license") or {}).get("type")
-        slug = si_slug(it, slugs)
+        slug = si_slug(it, slugs, explicit)
         if counts[dom] > 1:
             stats["ambiguous"] += 1
         elif lic == "custom":
