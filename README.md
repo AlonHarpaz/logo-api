@@ -72,7 +72,9 @@ curl -s https://logoapi.sh/index.json | jq 'length'
 
 ## Coverage
 
-3,737 domains: 1,283 from gilbarbara/logos, 2,013 from simple-icons and 441 hand-curated extras. Cloud, SaaS and open source tools are well covered. Banks and retail are thin.
+3,697 domains: 1,281 from gilbarbara/logos, 1,974 from simple-icons and 442 hand-curated extras. Cloud, SaaS and open source tools are well covered. Banks and retail are thin.
+
+When several gilbarbara logos share a domain, the one named after the domain wins (google.com is Google). After all sources merge, a subdomain entry is dropped when its parent domain has an entry with the same brand name (press.contentful.com), and so is an entry on a third-party host (github.io, netlify.app and similar) when the brand's own domain is also present. Subdomains with a different name stay (home.google.com).
 
 The logos come from two sources, each pinned to one commit in `build.py`:
 

@@ -150,9 +150,32 @@ def pick_files(files):
     return word, icon
 
 
+def alnum(text):
+    """Lowercase, alphanumerics only."""
+    return re.sub(r"[^a-z0-9]", "", (text or "").lower())
+
+
+def pick_root(dom, cands):
+    """Pick the item that best names the domain, exact matches only. cands keep input order.
+
+    The shortname or slugified name equals the first label (google.com -> google) or the
+    labels reversed without the TLD (cloud.google.com -> googlecloud); else the first.
+    """
+    labels = dom.split(".")[:-1] or dom.split(".")
+    wanted = {alnum(labels[0]), alnum("".join(reversed(labels)))} - {""}
+    for it in cands:
+        if wanted & {alnum(it.get("shortname")), alnum(it.get("name"))}:
+            return it
+    return cands[0]
+
+
 def build_entries(items, blocked):
-    """Return (entries, skipped_blocked, duplicates, no_domain). Deterministic: input order, first wins."""
-    entries, seen = [], set()
+    """Return (entries, skipped_blocked, duplicates, no_domain). Deterministic.
+
+    When several items share a domain, the one named after the domain's first label wins
+    (see pick_root); otherwise the first in input order.
+    """
+    groups, order = {}, []
     skipped, dups, nodom = [], [], []
     for it in items:
         dom = domain_from_url(it.get("url", ""))
@@ -172,14 +195,21 @@ def build_entries(items, blocked):
         if dom in blocked:
             skipped.append(dom)
             continue
-        if dom in seen:
-            dups.append((dom, it.get("name")))
-            continue
-        word, icon = pick_files(it["files"])
-        if word is None:
+        if pick_files(files)[0] is None:
             nodom.append(it.get("name"))
             continue
-        seen.add(dom)
+        if dom not in groups:
+            groups[dom] = []
+            order.append(dom)
+        groups[dom].append(it)
+    entries = []
+    for dom in order:
+        cands = groups[dom]
+        it = pick_root(dom, cands)
+        for other in cands:
+            if other is not it:
+                dups.append((dom, other.get("name")))
+        word, icon = pick_files(it["files"])
         entries.append({
             "domain": dom,
             "name": it.get("name"),
@@ -332,6 +362,63 @@ def build_extras_entries(names, blocked, brand_names=None):
     return entries, skipped
 
 
+NAME_SUFFIXES = ("docs", "doc", "blog", "press", "brand", "branding", "wiki", "about", "help",
+                 "assets", "styleguide", "handbook", "foundation")
+THIRD_PARTY_HOSTS = frozenset([
+    "github.io", "frontify.com", "widencollective.com", "netlify.app", "js.org", "pages.dev",
+    "vercel.app", "readthedocs.io", "webflow.io", "zendesk.com", "workspaceair.com",
+])
+
+
+def same_brand_name(a, b):
+    """Normalized names match, or one is the other plus a suffix word like docs or blog."""
+    a, b = alnum(a), alnum(b)
+    if not a or not b:
+        return False
+    if a == b:
+        return True
+    return any(a == b + x or b == a + x for x in NAME_SUFFIXES)
+
+
+def is_third_party(host):
+    return any(host == h or host.endswith("." + h) for h in THIRD_PARTY_HOSTS)
+
+
+def collapse_entries(entries):
+    """Return (kept, dropped). dropped = [(domain, kept_domain, reason)], sorted by domain.
+
+    Drops a subdomain entry when a parent-domain entry has the same brand name, and a
+    third-party-hosted entry when a brand-domain entry has the same name. Different-name
+    subdomains (home.google.com) and sole third-party entries stay.
+    """
+    entries = sorted(entries, key=lambda e: e["domain"])
+    doms = {e["domain"]: e for e in entries}
+    dropped = {}
+    for e in entries:
+        d = e["domain"]
+        if e.get("origin") == "extras":
+            continue
+        parts = d.split(".")
+        for i in range(1, len(parts) - 1):
+            parent = ".".join(parts[i:])
+            p = doms.get(parent)
+            if p is not None and same_brand_name(e.get("name"), p.get("name")):
+                dropped[d] = (parent, "subdomain")
+                break
+    for e in entries:
+        d = e["domain"]
+        if d in dropped or e.get("origin") == "extras" or not is_third_party(d):
+            continue
+        for p in entries:
+            pd = p["domain"]
+            if pd != d and not is_third_party(pd) and pd not in dropped \
+                    and alnum(p.get("name")) == alnum(e.get("name")):
+                dropped[d] = (pd, "third-party host")
+                break
+    kept = [e for e in entries if e["domain"] not in dropped]
+    return kept, sorted((d, v[0], v[1]) for d, v in dropped.items())
+
+
 def fetch(url):
     last = None
     for attempt in range(RETRIES):
@@ -384,6 +471,14 @@ def main():
     won = {e["domain"] for e in ex_entries}
     entries = [e for e in entries if e["domain"] not in won]
     si_entries = [e for e in si_entries if e["domain"] not in won]
+    _, dropped = collapse_entries(entries + si_entries + ex_entries)
+    for d, keep, why in dropped:
+        print("collapsed %s into %s (%s)" % (d, keep, why))
+    print("collapsed: %d" % len(dropped))
+    gone = {d for d, _, _ in dropped}
+    entries = [e for e in entries if e["domain"] not in gone]
+    si_entries = [e for e in si_entries if e["domain"] not in gone]
+    ex_entries = [e for e in ex_entries if e["domain"] not in gone]
     shutil.rmtree(DIST_TMP, ignore_errors=True)
     os.makedirs(os.path.join(DIST_TMP, "icon"))
     written, failures, index = 0, 0, []
