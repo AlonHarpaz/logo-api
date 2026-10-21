@@ -431,6 +431,9 @@ class RootNameTests(unittest.TestCase):
         self.assertEqual(self._pick("elastic.co", [("Elasticsearch", "elasticsearch"), ("Elastic", "elastic-x")]), "Elastic")
         self.assertEqual(self._pick("elastic.co", [("Elasticsearch", "es"), ("Kibana", "kb")]), "Elasticsearch")
 
+    def test_subdomain_reversed_labels(self):
+        self.assertEqual(self._pick("cloud.google.com", [("Dialogflow", "dialogflow"), ("Google Cloud", "google-cloud")]), "Google Cloud")
+
     def test_fallback_first(self):
         self.assertEqual(self._pick("x.com", [("One", "one"), ("Two", "two")]), "One")
 
@@ -477,6 +480,14 @@ class CollapseTests(unittest.TestCase):
         kept, _ = self.doms([_e("google.com", "Google"), _e("developers.google.com", "Google Developers"),
                              _e("x.com", "X"), _e("developer.x.com", "X Developer")])
         self.assertEqual(len(kept), 4)
+
+    def test_product_child_of_brand_parent_kept(self):
+        kept, _ = self.doms([_e("cloud.google.com", "Google Cloud"), _e("dialogflow.cloud.google.com", "Dialogflow")])
+        self.assertEqual(len(kept), 2)
+
+    def test_docs_child_dropped(self):
+        kept, _ = self.doms([_e("example.com", "Example"), _e("docs.example.com", "Example Docs")])
+        self.assertEqual(kept, ["example.com"])
 
     def test_different_name_kept(self):
         kept, _ = self.doms([_e("google.com", "Google"), _e("home.google.com", "Google Home"),

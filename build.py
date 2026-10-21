@@ -156,13 +156,15 @@ def alnum(text):
 
 
 def pick_root(dom, cands):
-    """Pick the item that best names the domain's first label. cands keep input order.
+    """Pick the item that best names the domain, exact matches only. cands keep input order.
 
-    shortname or slugified name equals the label, else the first.
+    The shortname or slugified name equals the first label (google.com -> google) or the
+    labels reversed without the TLD (cloud.google.com -> googlecloud); else the first.
     """
-    label = alnum(dom.split(".")[0])
+    labels = dom.split(".")[:-1] or dom.split(".")
+    wanted = {alnum(labels[0]), alnum("".join(reversed(labels)))} - {""}
     for it in cands:
-        if label and label in (alnum(it.get("shortname")), alnum(it.get("name"))):
+        if wanted & {alnum(it.get("shortname")), alnum(it.get("name"))}:
             return it
     return cands[0]
 
