@@ -324,6 +324,17 @@ class ExtrasTests(unittest.TestCase):
         self.assertEqual(es, [])
         self.assertEqual(sorted(sk), sorted(bad))
 
+    def test_name_from_sources(self):
+        with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False) as f:
+            f.write("| Domain | Name | File |\n| --- | --- | --- |\n| elal.com | El Al | elal.com.svg |\n")
+        try:
+            names = build.load_extras_names(f.name)
+        finally:
+            os.unlink(f.name)
+        self.assertEqual(names, {"elal.com": "El Al"})
+        es, _ = build.build_extras_entries(["elal.com.svg", "foo.com.svg"], set(), names)
+        self.assertEqual([e["name"] for e in es], ["Foo", "El Al"][::-1] if False else ["El Al", "Foo"])
+
     def test_non_svg_ignored(self):
         es, sk = build.build_extras_entries(["SOURCES.md", "a.com.png"], set())
         self.assertEqual((es, sk), ([], []))

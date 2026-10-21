@@ -280,12 +280,28 @@ def extras_domain(fname):
     return dom, kind
 
 
-def build_extras_entries(names, blocked):
+def load_extras_names(path):
+    """Map domain -> brand name from the Name column (2nd) of the extras/SOURCES.md table."""
+    out = {}
+    if not os.path.exists(path):
+        return out
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            if not line.startswith("|"):
+                continue
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            if len(cells) >= 2 and cells[1] and cells[0] not in ("Domain", "---") and valid_domain(cells[0]):
+                out[cells[0]] = cells[1]
+    return out
+
+
+def build_extras_entries(names, blocked, brand_names=None):
     """Return (entries, skipped). `names` = file names found in extras/.
 
     Curated: these win over both upstreams. Same safe-name, domain and blocklist
     checks as upstream. A missing wordmark or icon falls back to the other one.
     """
+    brand_names = brand_names or {}
     found, skipped = {}, []
     for fname in sorted(names):
         if not fname.endswith(".svg"):
@@ -306,7 +322,7 @@ def build_extras_entries(names, blocked):
             [f for f in (found[dom].get("wordmark"), found[dom].get("icon")) if f])
         entries.append({
             "domain": dom,
-            "name": dom.split(".")[0].title(),
+            "name": brand_names.get(dom) or dom.split(".")[0].title(),
             "slug": dom,
             "files": {"wordmark": word, "icon": icon},
             "source": "https://github.com/AlonHarpaz/logo-api/blob/main/extras/SOURCES.md",
@@ -363,7 +379,7 @@ def main():
     slugs = parse_slugs(fetch(SI_SLUGS).decode("utf-8"))
     si_entries, si_stats = build_si_entries(si_items, slugs, blocked, {e["domain"] for e in entries})
     extras_names = sorted(os.listdir(EXTRAS)) if os.path.isdir(EXTRAS) else []
-    ex_entries, ex_skipped = build_extras_entries(extras_names, blocked)
+    ex_entries, ex_skipped = build_extras_entries(extras_names, blocked, load_extras_names(os.path.join(EXTRAS, "SOURCES.md")))
     won = {e["domain"] for e in ex_entries}
     entries = [e for e in entries if e["domain"] not in won]
     si_entries = [e for e in si_entries if e["domain"] not in won]
