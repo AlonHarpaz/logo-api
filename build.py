@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build a static domain -> logo index from gilbarbara/logos and simple-icons. Stdlib only."""
+import copy
 import json
 import os
 import re
@@ -40,7 +41,11 @@ DIST_TMP = os.path.join(ROOT, "dist.tmp")
 BLOCKLIST = os.path.join(ROOT, "blocklist.txt")
 DELAY = 0.05
 EXTRAS = os.path.join(ROOT, "extras")
-NAME_OVERRIDES = {"vercel.com": "Vercel", "openai.com": "OpenAI"}
+NAME_OVERRIDES = {"vercel.com": "Vercel", "openai.com": "OpenAI", "sencha.com": "Sencha", "apache.org": "Apache"}
+# Domains where the gilbarbara logo is wrong; the simple-icons candidate wins instead.
+PREFER_SIMPLE_ICONS = {"elastic.co"}
+# alias domain -> target domain whose entry and SVGs it copies.
+DOMAIN_ALIASES = {"ionic.io": "ionicframework.com"}
 ROOT_SVG = re.compile(r"<svg\b[^>]*>", re.I | re.S)
 COMMENT = re.compile(r"<!--.*?(?:-->|\Z)", re.S)
 ATTR = r"""(?:\s|^)%s\s*=\s*(?:"([^"]*)"|'([^']*)')"""
@@ -125,6 +130,41 @@ def apply_overrides(entries, overrides=None):
         if e.get("origin") != "extras" and e["domain"] in overrides:
             e["name"] = overrides[e["domain"]]
     return entries
+
+
+def drop_preferred_si(entries, prefer=None):
+    """Drop gilbarbara entries for domains that should use simple-icons."""
+    prefer = PREFER_SIMPLE_ICONS if prefer is None else prefer
+    return [e for e in entries if e["domain"] not in prefer]
+
+
+def missing_preferred(si_entries, prefer=None):
+    """Sorted PREFER_SIMPLE_ICONS domains that simple-icons did not produce."""
+    prefer = PREFER_SIMPLE_ICONS if prefer is None else prefer
+    return sorted(prefer - {e["domain"] for e in si_entries})
+
+
+def apply_aliases(index, dist_dir, aliases=None):
+    """Make each alias domain a copy of its target's entry and SVGs."""
+    aliases = DOMAIN_ALIASES if aliases is None else aliases
+    by = {e["domain"]: e for e in index}
+    for alias, target in aliases.items():
+        t = by.get(target)
+        if t is None:
+            print("warning: alias %s skipped, target %s missing" % (alias, target))
+            continue
+        index[:] = [e for e in index if e["domain"] != alias]
+        new = copy.deepcopy(t)
+        new["domain"] = alias
+        index.append(new)
+        for sub in ("", "icon"):
+            src = os.path.join(dist_dir, sub, target + ".svg")
+            dst = os.path.join(dist_dir, sub, alias + ".svg")
+            if os.path.exists(dst):
+                os.remove(dst)
+            shutil.copyfile(src, dst)
+    index.sort(key=lambda e: e["domain"])
+    return index
 
 
 def load_blocklist(path):
@@ -245,12 +285,14 @@ def si_slug(item, slugs, explicit=frozenset()):
     return left[0] if len(left) == 1 else None
 
 
-def build_si_entries(items, slugs, blocked, taken):
+def build_si_entries(items, slugs, blocked, taken, prefer=None):
     """Return (entries, stats) for simple-icons. `taken` = domains already served (gilbarbara wins).
 
     Drops code/wiki hosts, hosts shared by several icons, custom licenses, blocklisted
     and conflicting domains, and icons without a usable slug or hex. Sorted by domain.
+    For domains in `prefer` (PREFER_SIMPLE_ICONS) a shared host is resolved with pick_root.
     """
+    prefer = PREFER_SIMPLE_ICONS if prefer is None else prefer
     stats = {"no_domain": 0, "code_host": 0, "ambiguous": 0, "custom_license": 0,
              "blocked": 0, "conflict": 0, "invalid": 0}
     explicit = {it["slug"] for it in items if it.get("slug")}
@@ -263,6 +305,11 @@ def build_si_entries(items, slugs, blocked, taken):
             stats["code_host"] += 1
         else:
             cands.append((dom, it))
+    for dom in prefer:
+        group = [it for d, it in cands if d == dom]
+        if len(group) > 1:
+            root = pick_root(dom, [{"name": it.get("title"), "shortname": it.get("slug"), "_it": it} for it in group])["_it"]
+            cands = [(d, it) for d, it in cands if d != dom or it is root]
     counts = {}
     for dom, _ in cands:
         counts[dom] = counts.get(dom, 0) + 1
@@ -460,12 +507,18 @@ def cached(fname, base=None, cache_dir=None):
 def main():
     items = json.loads(fetch(LOGOS_JSON).decode("utf-8"))
     entries, skipped, dups, nodom = build_entries(items, load_blocklist(BLOCKLIST))
+    entries = drop_preferred_si(entries)
     for dom, name in dups:
         print("duplicate domain %s ignored: %s" % (dom, name))
     blocked = load_blocklist(BLOCKLIST)
     si_items = json.loads(fetch(SI_JSON).decode("utf-8"))
     slugs = parse_slugs(fetch(SI_SLUGS).decode("utf-8"))
     si_entries, si_stats = build_si_entries(si_items, slugs, blocked, {e["domain"] for e in entries})
+    lost = missing_preferred(si_entries)
+    if lost:
+        print("error: no simple-icons entry for preferred domain(s): " + ", ".join(lost), file=sys.stderr)
+        print("build failed, dist/ left untouched", file=sys.stderr)
+        sys.exit(1)
     extras_names = sorted(os.listdir(EXTRAS)) if os.path.isdir(EXTRAS) else []
     ex_entries, ex_skipped = build_extras_entries(extras_names, blocked, load_extras_names(os.path.join(EXTRAS, "SOURCES.md")))
     won = {e["domain"] for e in ex_entries}
@@ -523,6 +576,8 @@ def main():
         index.append(e)
         ex_written += 1
     index.sort(key=lambda e: e["domain"])
+    apply_overrides(index)
+    apply_aliases(index, DIST_TMP)
     print("extras domains written: %d (skipped %d)" % (ex_written, len(ex_skipped)))
     print("domains written: %d" % written)
     print("simple-icons domains written: %d" % si_written)
@@ -535,7 +590,6 @@ def main():
         shutil.rmtree(DIST_TMP, ignore_errors=True)
         print("build failed, dist/ left untouched", file=sys.stderr)
         sys.exit(1)
-    apply_overrides(index)
     with open(os.path.join(DIST_TMP, "index.json"), "w", encoding="utf-8") as f:
         json.dump(index, f, indent=1, sort_keys=True, ensure_ascii=False)
         f.write("\n")
