@@ -39,6 +39,7 @@ DIST = os.path.join(ROOT, "dist")
 DIST_TMP = os.path.join(ROOT, "dist.tmp")
 BLOCKLIST = os.path.join(ROOT, "blocklist.txt")
 DELAY = 0.05
+EXTRAS = os.path.join(ROOT, "extras")
 NAME_OVERRIDES = {"vercel.com": "Vercel", "openai.com": "OpenAI"}
 ROOT_SVG = re.compile(r"<svg\b[^>]*>", re.I | re.S)
 COMMENT = re.compile(r"<!--.*?(?:-->|\Z)", re.S)
@@ -265,6 +266,55 @@ def build_si_entries(items, slugs, blocked, taken):
     return entries, stats
 
 
+def extras_domain(fname):
+    """('example.com', 'wordmark'|'icon') for extras file names, else None."""
+    if not safe_filename(fname):
+        return None
+    stem = fname[:-4]
+    kind = "wordmark"
+    if stem.endswith("-icon"):
+        stem, kind = stem[:-5], "icon"
+    dom = normalize_domain(stem)
+    if dom != stem or not valid_domain(dom):
+        return None
+    return dom, kind
+
+
+def build_extras_entries(names, blocked):
+    """Return (entries, skipped). `names` = file names found in extras/.
+
+    Curated: these win over both upstreams. Same safe-name, domain and blocklist
+    checks as upstream. A missing wordmark or icon falls back to the other one.
+    """
+    found, skipped = {}, []
+    for fname in sorted(names):
+        if not fname.endswith(".svg"):
+            continue
+        parsed = extras_domain(fname)
+        if parsed is None:
+            print("unsafe extras filename skipped: %r" % fname)
+            skipped.append(fname)
+            continue
+        dom, kind = parsed
+        if dom in blocked:
+            skipped.append(fname)
+            continue
+        found.setdefault(dom, {})[kind] = fname
+    entries = []
+    for dom in sorted(found):
+        word, icon = pick_files(
+            [f for f in (found[dom].get("wordmark"), found[dom].get("icon")) if f])
+        entries.append({
+            "domain": dom,
+            "name": dom.split(".")[0].title(),
+            "slug": dom,
+            "files": {"wordmark": word, "icon": icon},
+            "source": "https://github.com/AlonHarpaz/logo-api/blob/main/extras/SOURCES.md",
+            "origin": "extras",
+        })
+    return entries, skipped
+
+
 def fetch(url):
     last = None
     for attempt in range(RETRIES):
@@ -312,6 +362,11 @@ def main():
     si_items = json.loads(fetch(SI_JSON).decode("utf-8"))
     slugs = parse_slugs(fetch(SI_SLUGS).decode("utf-8"))
     si_entries, si_stats = build_si_entries(si_items, slugs, blocked, {e["domain"] for e in entries})
+    extras_names = sorted(os.listdir(EXTRAS)) if os.path.isdir(EXTRAS) else []
+    ex_entries, ex_skipped = build_extras_entries(extras_names, blocked)
+    won = {e["domain"] for e in ex_entries}
+    entries = [e for e in entries if e["domain"] not in won]
+    si_entries = [e for e in si_entries if e["domain"] not in won]
     shutil.rmtree(DIST_TMP, ignore_errors=True)
     os.makedirs(os.path.join(DIST_TMP, "icon"))
     written, failures, index = 0, 0, []
@@ -343,7 +398,20 @@ def main():
                 f.write(data)
         index.append(e)
         si_written += 1
+    ex_written = 0
+    for e in ex_entries:
+        w = os.path.join(EXTRAS, e["files"]["wordmark"])
+        i = os.path.join(EXTRAS, e["files"]["icon"])
+        for src, dst in ((w, os.path.join(DIST_TMP, e["domain"] + ".svg")),
+                         (i, os.path.join(DIST_TMP, "icon", e["domain"] + ".svg"))):
+            with open(src, "rb") as f:
+                raw = f.read()
+            with open(dst, "wb") as f:
+                f.write(normalize_svg(raw))
+        index.append(e)
+        ex_written += 1
     index.sort(key=lambda e: e["domain"])
+    print("extras domains written: %d (skipped %d)" % (ex_written, len(ex_skipped)))
     print("domains written: %d" % written)
     print("simple-icons domains written: %d" % si_written)
     print("simple-icons skipped: " + ", ".join("%s %d" % (k, v) for k, v in sorted(si_stats.items())))

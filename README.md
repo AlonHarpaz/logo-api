@@ -79,11 +79,22 @@ The logos come from two sources, each pinned to one commit in `build.py`:
 - [gilbarbara/logos](https://github.com/gilbarbara/logos) (`UPSTREAM_SHA`). Wordmarks and icons. It wins when both sources have a domain.
 - [simple-icons](https://github.com/simple-icons/simple-icons) (`SI_SHA`). Icons only. The domain is the host of each icon's `source` URL. An icon is dropped when that host is a code or wiki host (`CODE_WIKI_HOSTS`, for example github.com or wikipedia.org), when more than one icon maps to the same host, or when its license is `custom`.
 
-Every `index.json` entry has `origin`: `gilbarbara` or `simple-icons`. To get a logo added, open a pull request upstream. It shows up here after the next bump.
+Every `index.json` entry has `origin`: `gilbarbara`, `simple-icons` or `extras`. To get a logo added, open a pull request upstream and it shows up here after the next bump, or add it to `extras/` (below).
+
+## Extras
+
+`extras/` holds hand-curated SVGs. An extras entry wins over gilbarbara and simple-icons for the same domain, and has `origin: "extras"`.
+
+- `extras/<domain>.svg` is the wordmark. `extras/<domain>-icon.svg` is the optional icon. If one is missing, the other serves both paths.
+- File names must be lowercase `<domain>.svg` with no `www.`, no path and no spaces. Anything else is skipped with a message.
+- Extras go through the same `normalize_svg` (no `width` or `height`, `viewBox` kept) and the same `blocklist.txt` as every other source.
+- Every file needs a row in `extras/SOURCES.md`: domain, file, source URL, date and license or note.
+
+To contribute one, open a pull request that adds the SVG and its `SOURCES.md` row. Use a real SVG from the brand's own press or brand page, the inline SVG of its official site, or Wikimedia Commons (record the license). No PNG, no tracing, no third-party logo sites. Remove scripts and external references, and keep the `viewBox`.
 
 ## How it works
 
-- `build.py` reads both upstream catalogs. It writes `dist/<domain>.svg` and `dist/icon/<domain>.svg` for each domain, plus `dist/index.json`. It uses only the Python standard library.
+- `build.py` reads both upstream catalogs, then `extras/`. It writes `dist/<domain>.svg` and `dist/icon/<domain>.svg` for each domain, plus `dist/index.json`. It uses only the Python standard library.
 - It strips `width` and `height` from each SVG root and keeps the `viewBox`.
 - There is no database and no server state.
 
