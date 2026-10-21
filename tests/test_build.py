@@ -193,5 +193,100 @@ class OverrideTests(unittest.TestCase):
         self.assertEqual([e["name"] for e in es], ["Vercel", "OpenAI", "A"])
 
 
+class SimpleIconsTests(unittest.TestCase):
+    SLUGS = {"Foo": "foo", "Bar": "bar", "Baz": "baz"}
+
+    def item(self, title, source, hex="112233", **kw):
+        d = {"title": title, "hex": hex, "source": source}
+        d.update(kw)
+        return d
+
+    def run_si(self, items, blocked=None, taken=None):
+        return build.build_si_entries(items, self.SLUGS, blocked or set(), taken or set())
+
+    def test_code_and_wiki_hosts_dropped(self):
+        hosts = ["github.com", "gitlab.com", "codeberg.org", "sourceforge.net", "bitbucket.org",
+                 "commons.wikimedia.org", "en.wikipedia.org", "raw.githubusercontent.com",
+                 "npmjs.com", "pypi.org", "foo.github.io"]
+        for h in hosts:
+            es, st = self.run_si([self.item("Foo", "https://%s/x/y.svg" % h)])
+            self.assertEqual(es, [], h)
+            self.assertEqual(st["code_host"], 1, h)
+
+    def test_similar_name_not_dropped(self):
+        es, _ = self.run_si([self.item("Foo", "https://notgithub.com/")])
+        self.assertEqual([e["domain"] for e in es], ["notgithub.com"])
+
+    def test_shared_host_dropped_for_all(self):
+        items = [self.item("Foo", "https://www.acme.com/a"), self.item("Bar", "https://acme.com/b"),
+                 self.item("Baz", "https://baz.com")]
+        es, st = self.run_si(items)
+        self.assertEqual([e["domain"] for e in es], ["baz.com"])
+        self.assertEqual(st["ambiguous"], 2)
+
+    def test_custom_license_skipped(self):
+        es, st = self.run_si([self.item("Foo", "https://foo.com", license={"type": "custom", "url": "x"})])
+        self.assertEqual(es, [])
+        self.assertEqual(st["custom_license"], 1)
+
+    def test_blocklist_applies(self):
+        es, st = self.run_si([self.item("Foo", "https://foo.com")], blocked={"foo.com"})
+        self.assertEqual(es, [])
+        self.assertEqual(st["blocked"], 1)
+
+    def test_gilbarbara_wins_conflict(self):
+        es, st = self.run_si([self.item("Foo", "https://foo.com")], taken={"foo.com"})
+        self.assertEqual(es, [])
+        self.assertEqual(st["conflict"], 1)
+
+    def test_slug_explicit_beats_table(self):
+        es, _ = self.run_si([self.item("Foo", "https://foo.com", slug="custom-slug")])
+        self.assertEqual(es[0]["slug"], "custom-slug")
+        self.assertEqual(es[0]["files"], {"wordmark": "custom-slug.svg", "icon": "custom-slug.svg"})
+
+    def test_slug_from_table_and_missing(self):
+        es, st = self.run_si([self.item("Foo", "https://foo.com"), self.item("Nope", "https://nope.com")])
+        self.assertEqual([e["slug"] for e in es], ["foo"])
+        self.assertEqual(st["invalid"], 1)
+
+    def test_parse_slugs(self):
+        text = "| Brand name | Brand slug |\n| :--- | :--- |\n| `.NET` | `dotnet` |\n| `1&1` | `1and1` |\n"
+        self.assertEqual(build.parse_slugs(text), {".NET": "dotnet", "1&1": "1and1"})
+
+    def test_index_fields(self):
+        es, _ = self.run_si([self.item("Foo", "https://foo.com", hex="abcdef", license={"type": "MIT"}),
+                             self.item("Bar", "https://bar.com")])
+        by = {e["domain"]: e for e in es}
+        self.assertEqual(by["foo.com"]["origin"], "simple-icons")
+        self.assertEqual(by["foo.com"]["hex"], "ABCDEF")
+        self.assertEqual(by["foo.com"]["license"], "MIT")
+        self.assertEqual(by["foo.com"]["source"], "https://foo.com")
+        self.assertNotIn("license", by["bar.com"])
+        self.assertIn("hex", by["bar.com"])
+
+    def test_gilbarbara_origin(self):
+        es, _, _, _ = build.build_entries(
+            [{"name": "A", "shortname": "a", "url": "https://a.com", "files": ["a.svg"]}], set())
+        self.assertEqual(es[0]["origin"], "gilbarbara")
+        self.assertNotIn("hex", es[0])
+
+    def test_fill_injected_on_root(self):
+        out = build.inject_fill(b'<svg role="img" viewBox="0 0 24 24"><path d="M0"/></svg>', "ff0000")
+        self.assertEqual(out, b'<svg role="img" viewBox="0 0 24 24" fill="#FF0000"><path d="M0"/></svg>')
+
+    def test_fill_replaces_existing_and_after_normalize(self):
+        raw = b'<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="red" d="M0"/></svg>'
+        out = build.inject_fill(build.normalize_svg(raw), "00AA00").decode()
+        self.assertEqual(out.count('fill="#00AA00"'), 1)
+        self.assertNotIn('fill="none"', out)
+        self.assertIn('<path fill="red"', out)
+        self.assertIn('viewBox="0 0 24 24"', out)
+
+    def test_fill_skips_comment_and_bad_hex(self):
+        out = build.inject_fill(b'<!-- <svg a="1"> --><svg b="2"/>', "010203").decode()
+        self.assertIn('<svg b="2" fill="#010203"/>', out)
+        self.assertEqual(build.inject_fill(b"<svg/>", "zz"), b"<svg/>")
+
+
 if __name__ == "__main__":
     unittest.main()

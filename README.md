@@ -27,7 +27,9 @@ Base URL: `https://logoapi.sh`
 | --- | --- |
 | `/<domain>.svg` | The wordmark. Falls back to the icon when a brand has no wordmark. |
 | `/icon/<domain>.svg` | The square icon. Falls back to the wordmark when there is no icon. |
-| `/index.json` | Every domain with its name, slug, files and source URL. |
+| `/index.json` | Every domain with its name, slug, files, source URL and `origin`. |
+
+Simple Icons entries are single-color icons. They have the brand color set as `fill` on the root `<svg>`, and `/<domain>.svg` returns the same icon as `/icon/<domain>.svg`. Their index entries also carry `hex` and, when the icon has one, `license`.
 
 - Unknown domains return `404` with the body `not found`. There is no placeholder image, so your own fallback can run.
 - Domains are lowercase. A path with capitals gets a `301` to the lowercase path.
@@ -70,13 +72,18 @@ curl -s https://logoapi.sh/index.json | jq 'length'
 
 ## Coverage
 
-1,283 domains. Cloud, SaaS and open source tools are well covered. Banks and retail are thin.
+3,296 domains: 1,283 from gilbarbara/logos and 2,013 from simple-icons. Cloud, SaaS and open source tools are well covered. Banks and retail are thin.
 
-The logos come from [gilbarbara/logos](https://github.com/gilbarbara/logos), pinned to one commit (`UPSTREAM_SHA` in `build.py`). To get a logo added, open a pull request upstream. It shows up here after the next bump.
+The logos come from two sources, each pinned to one commit in `build.py`:
+
+- [gilbarbara/logos](https://github.com/gilbarbara/logos) (`UPSTREAM_SHA`). Wordmarks and icons. It wins when both sources have a domain.
+- [simple-icons](https://github.com/simple-icons/simple-icons) (`SI_SHA`). Icons only. The domain is the host of each icon's `source` URL. An icon is dropped when that host is a code or wiki host (`CODE_WIKI_HOSTS`, for example github.com or wikipedia.org), when more than one icon maps to the same host, or when its license is `custom`.
+
+Every `index.json` entry has `origin`: `gilbarbara` or `simple-icons`. To get a logo added, open a pull request upstream. It shows up here after the next bump.
 
 ## How it works
 
-- `build.py` reads the upstream catalog. It writes one SVG per domain into `dist/`, plus `dist/index.json`. It uses only the Python standard library.
+- `build.py` reads both upstream catalogs. It writes one SVG per domain into `dist/`, plus `dist/index.json`. It uses only the Python standard library.
 - It strips `width` and `height` from each SVG root and keeps the `viewBox`.
 - There is no database and no server state.
 
@@ -86,7 +93,7 @@ Run `python3 build.py`, then serve `dist/` from any static host. Unknown paths m
 
 ## Bumping the upstream
 
-Run `gh api repos/gilbarbara/logos/commits/main --jq .sha`. Paste the result into `UPSTREAM_SHA` in `build.py`. Run the tests and `python3 build.py`, then commit. Downloads are cached per commit in `cache/<sha12>/`. A build with any download failure exits non-zero and leaves `dist/` unchanged.
+For gilbarbara, run `gh api repos/gilbarbara/logos/commits/main --jq .sha` and paste the result into `UPSTREAM_SHA` in `build.py`. For simple-icons, run `gh api repos/simple-icons/simple-icons/commits/develop --jq .sha` and paste it into `SI_SHA`. Run the tests and `python3 build.py`, then commit. Downloads are cached per commit in `cache/<sha12>/` and `cache/si-<sha12>/`. A build with any download failure exits non-zero and leaves `dist/` unchanged.
 
 ## Takedown
 
@@ -96,4 +103,4 @@ If you own a mark and want it removed, [open a takedown issue](https://github.co
 
 The code is MIT. See `LICENSE`.
 
-The logo files come from gilbarbara/logos and are CC0. Logos are trademarks of their owners. They are served for identification only.
+The gilbarbara/logos files are CC0. The simple-icons files are CC0 as a collection, but a few icons carry their own license, shown as `license` in `index.json` (icons with a `custom` license are not included). Logos are trademarks of their owners. They are served for identification only.
