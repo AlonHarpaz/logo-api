@@ -448,3 +448,57 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | ijvcanada.org | Independent Jewish Voices | ijvcanada.org.svg | https://commons.wikimedia.org/wiki/File:Independent_Jewish_Voices.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | organizations |
 | hazon.org | Hazon | hazon.org.svg | https://commons.wikimedia.org/wiki/File:Hazon_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | organizations |
 | encountercapital.com | Encounter Capital | encountercapital.com.svg | https://static.wixstatic.com/media/c945cb_5085b7b6c9ad496db926156ef0dc810e~mv2.png (traced from the brand's own site PNG, mark rebuilt from measurements) | 2026-10-21 | trademark of its owner | finance |
+| pfizer.com | Pfizer | pfizer.com.svg | https://www.pfizer.com/profiles/pfecpfizercomus_profile/themes/pfecpfizercomus/public/assets/images/logo-blue.svg | 2026-10-21 | Official site SVG; trademark of its owner | health |
+| novartis.com | Novartis | novartis.com.svg | https://commons.wikimedia.org/wiki/File:Novartis-Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| jnj.com | Johnson & Johnson | jnj.com.svg | https://jnj-content-lab2.brightspotcdn.com/ac/25/bd2078f54d5992dd486ed26140ce/johnson-johnson-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner | health |
+| astrazeneca.com | AstraZeneca | astrazeneca.com.svg | https://commons.wikimedia.org/wiki/File:Astrazeneca_text_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| sanofi.com | Sanofi | sanofi.com.svg | https://commons.wikimedia.org/wiki/File:Sanofi_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| bayer.com | Bayer | bayer.com.svg | https://commons.wikimedia.org/wiki/File:Logo_Bayer.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| bms.com | Bristol Myers Squibb | bms.com.svg | https://commons.wikimedia.org/wiki/File:Bristol-Myers_Squibb_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| moderna.com | Moderna | moderna.com.svg | https://commons.wikimedia.org/wiki/File:Moderna_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| biontech.com | BioNTech | biontech.com.svg | https://commons.wikimedia.org/wiki/File:BioNTech_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| medtronic.com | Medtronic | medtronic.com.svg | https://commons.wikimedia.org/wiki/File:Medtronic_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| philips.com | Philips | philips.com.svg | https://commons.wikimedia.org/wiki/File:Philips_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| siemens-healthineers.com | Siemens Healthineers | siemens-healthineers.com.svg | https://commons.wikimedia.org/wiki/File:Siemens_Healthineers_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| walgreens.com | Walgreens | walgreens.com.svg | https://commons.wikimedia.org/wiki/File:Walgreens_1990_logo_text.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| unitedhealthgroup.com | UnitedHealth Group | unitedhealthgroup.com.svg | https://commons.wikimedia.org/wiki/File:UnitedHealth_Group_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| cigna.com | Cigna | cigna.com.svg | https://www.cigna.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner | health |
+| humana.com | Humana | humana.com.svg | https://commons.wikimedia.org/wiki/File:Humana_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| mayoclinic.org | Mayo Clinic | mayoclinic.org.svg | https://commons.wikimedia.org/wiki/File:Mayo_Clinic_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| clevelandclinic.org | Cleveland Clinic | clevelandclinic.org.svg | https://commons.wikimedia.org/wiki/File:Cleveland_Clinic_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| illumina.com | Illumina | illumina.com.svg | https://commons.wikimedia.org/wiki/File:Illumina_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| stryker.com | Stryker | stryker.com.svg | https://commons.wikimedia.org/wiki/File:Stryker_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| bostonscientific.com | Boston Scientific | bostonscientific.com.svg | https://www.bostonscientific.com/content/dam/logo-bsc.svg | 2026-10-21 | Official site SVG; trademark of its owner | health |
+| dexcom.com | Dexcom | dexcom.com.svg | https://www.dexcom.com/en-il (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner | health |
+| teladoc.com | Teladoc | teladoc.com.svg | https://commons.wikimedia.org/wiki/File:Teladoc_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| goodrx.com | GoodRx | goodrx.com.svg | https://commons.wikimedia.org/wiki/File:GoodRx_logo_icon.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| 23andme.com | 23andMe | 23andme.com.svg | https://commons.wikimedia.org/wiki/File:23andMe_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| strava.com | Strava | strava.com.svg | https://commons.wikimedia.org/wiki/File:Strava_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| regeneron.com | Regeneron | regeneron.com.svg | https://commons.wikimedia.org/wiki/File:Regeneron_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| biogen.com | Biogen | biogen.com.svg | https://commons.wikimedia.org/wiki/File:Biogen_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| baxter.com | Baxter | baxter.com.svg | https://commons.wikimedia.org/wiki/File:Baxter.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | health |
+| chevron.com | Chevron | chevron.com.svg | https://commons.wikimedia.org/wiki/File:Chevron_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| honeywell.com | Honeywell | honeywell.com.svg | https://commons.wikimedia.org/wiki/File:Honeywell_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| hitachi.com | Hitachi | hitachi.com.svg | https://commons.wikimedia.org/wiki/File:Hitachi_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| toshiba.com | Toshiba | toshiba.com.svg | https://commons.wikimedia.org/wiki/File:Toshiba_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| kone.com | KONE | kone.com.svg | https://commons.wikimedia.org/wiki/File:Kone_Logo_2023.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| otis.com | Otis | otis.com.svg | https://commons.wikimedia.org/wiki/File:Otis_logo.SVG | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| vestas.com | Vestas | vestas.com.svg | https://commons.wikimedia.org/wiki/File:Vestas.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| engie.com | Engie | engie.com.svg | https://commons.wikimedia.org/wiki/File:Logo-engie.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| iberdrola.com | Iberdrola | iberdrola.com.svg | https://commons.wikimedia.org/wiki/File:Logo_Iberdrola_(2023).svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| enphase.com | Enphase | enphase.com.svg | https://commons.wikimedia.org/wiki/File:Enphase_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| sunrun.com | Sunrun | sunrun.com.svg | https://commons.wikimedia.org/wiki/File:Sunrun_logo_(2026).svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| lockheedmartin.com | Lockheed Martin | lockheedmartin.com.svg | https://lockheedmartin.com/content/dam/lockheed-martin/general/lm-logo.svg | 2026-10-21 | Official site SVG; trademark of its owner | industry |
+| rtx.com | RTX | rtx.com.svg | https://prd-sc102-cdn.rtx.com/-/media/themes/raytheon-technologies/rtx-shared/rtx-theme/images/rtx_logo.svg?rev=57e660dbd2ee4ef6895a84799210c5bf&rid=a5829bdc17c74537842441a8a1b055f2 | 2026-10-21 | Official site SVG; trademark of its owner | industry |
+| rolls-royce.com | Rolls-Royce | rolls-royce.com.svg | https://commons.wikimedia.org/wiki/File:Rolls-Royce_Group_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| thalesgroup.com | Thales | thalesgroup.com.svg | https://commons.wikimedia.org/wiki/File:Thales_Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| dupont.com | DuPont | dupont.com.svg | https://commons.wikimedia.org/wiki/File:DuPont_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| basf.com | BASF | basf.com.svg | https://commons.wikimedia.org/wiki/File:BASF-Logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| airliquide.com | Air Liquide | airliquide.com.svg | https://www.airliquide.com/sites/airliquide.com/files/air-liquide_2.svg | 2026-10-21 | Official site SVG; trademark of its owner | industry |
+| glencore.com | Glencore | glencore.com.svg | https://www.glencore.com/.resources/gc/webresources/img/Glencore_logo.svg | 2026-10-21 | Official site SVG; trademark of its owner | industry |
+| cbre.com | CBRE | cbre.com.svg | https://www.cbre.com/ (inline svg) | 2026-10-21 | Official site SVG; trademark of its owner | industry |
+| komatsu.com | Komatsu | komatsu.com.svg | https://commons.wikimedia.org/wiki/File:Komatsu_company_logos.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| volvo.com | Volvo | volvo.com.svg | https://commons.wikimedia.org/wiki/File:Volvo_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| cummins.com | Cummins | cummins.com.svg | https://commons.wikimedia.org/wiki/File:Cummins_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| hilti.com | Hilti | hilti.com.svg | https://commons.wikimedia.org/wiki/File:Hilti_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| kuka.com | KUKA | kuka.com.svg | https://commons.wikimedia.org/wiki/File:Kuka-logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
