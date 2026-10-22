@@ -1,0 +1,199 @@
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="220"
+   height="35"
+   viewBox="0 0 220 35"
+   version="1.1"
+   sodipodi:docname="logo-ccf.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata>
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>logo-ccf</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="836"
+     id="namedview16"
+     showgrid="false"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-page="true"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="29.725179"
+     inkscape:cy="94.33425"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <rect
+     rx="2.5"
+     ry="2.5"
+     y="-0.0062504653"
+     x="-0.0043729679"
+     height="16.1"
+     width="16.1"
+     id="upperLeft"
+     style="opacity:1;fill:#0960a9;fill-opacity:1;stroke:none;stroke-width:5.6692915;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <rect
+     rx="2.5"
+     style="opacity:1;fill:#0960a9;fill-opacity:1;stroke:none;stroke-width:5.6692915;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="upperRight"
+     width="16.1"
+     height="16.1"
+     x="18.199999"
+     y="-0.00042923706"
+     ry="2.5" />
+  <rect
+     style="opacity:1;fill:#247c3e;fill-opacity:1;stroke:none;stroke-width:5.6692915;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="lowerLeft"
+     width="16.1"
+     height="16.1"
+     x="-0.0043729679"
+     y="18.19418"
+     ry="2.5" />
+  <rect
+     ry="2.5"
+     y="18.200001"
+     x="18.199999"
+     height="16.1"
+     width="16.1"
+     id="lowerRight"
+     style="opacity:1;fill:#247c3e;fill-opacity:0.99824159;stroke:none;stroke-width:5.6692915;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  <rect
+     ry="2.5"
+     y="7.6925597"
+     x="7.6920748"
+     height="18.907442"
+     width="18.907442"
+     id="middle"
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.66929197;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     rx="2.5" />
+  <g
+     id="Cleveland">
+    <path
+       id="C1"
+       d="m 56.9,20.7 c -0.6,3.9 -3.2,6.2 -7.1,6.2 -5.4,0 -7.8,-5 -7.8,-9.7 0,-4.8 2.4,-9.7 7.8,-9.7 3.9,0 6.5,2.2 7.1,6.2 l -3.6,0.5 c -0.4,-2 -1.2,-3.7 -3.5,-3.7 -3.2,0 -3.9,4.3 -3.9,6.7 0,2.4 0.7,6.7 3.9,6.7 2.3,0 3.2,-1.8 3.5,-3.7 z"
+       style="fill:#343536;fill-rule:evenodd"
+       inkscape:connector-curvature="0" />
+    <path
+       id="l1"
+       d="m 59.1,7.7 h 3.6 v 18.9 h -3.6 z"
+       style="fill:#343536;fill-rule:evenodd"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 68.5,20.7 c -0.1,1.6 0.8,3.6 2.7,3.6 1.1,0 1.9,-0.7 2.3,-2 l 3.4,0.4 c -0.8,2.7 -3.4,4.2 -5.9,4.2 -4,0 -6,-3.5 -6,-7.1 0,-3.6 2,-7.1 6,-7.1 3.4,0 6,1.6 5.9,7.9 h -8.4 z m 4.8,-2.3 c 0,-1.5 -0.6,-3 -2.3,-3 -1.6,0 -2.3,1.6 -2.3,3 z"
+       style="fill:#343536;fill-rule:evenodd"
+       id="e1"
+       inkscape:connector-curvature="0" />
+    <path
+       id="v"
+       d="M 85.7,26.6 H 81.9 L 77.7,13 h 3.7 l 2.4,10 h 0.1 l 2.3,-10 h 3.6 z"
+       style="fill:#343536;fill-rule:evenodd"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 94,20.7 c -0.1,1.6 0.8,3.6 2.7,3.6 1.1,0 1.9,-0.7 2.3,-2 l 3.4,0.4 c -0.8,2.7 -3.4,4.2 -5.9,4.2 -4,0 -6,-3.5 -6,-7.1 0,-3.6 2,-7.1 6,-7.1 3.4,0 6,1.6 5.9,7.9 H 94 Z m 4.8,-2.3 c 0,-1.5 -0.6,-3 -2.3,-3 -1.6,0 -2.3,1.6 -2.3,3 z"
+       style="fill:#343536;fill-rule:evenodd"
+       id="e2"
+       inkscape:connector-curvature="0" />
+    <path
+       id="l2"
+       d="m 104.7,7.7 h 3.6 v 18.9 h -3.6 z"
+       style="fill:#343536;fill-rule:evenodd"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 118.6,25.3 c -1.3,0.9 -2.2,1.5 -3.9,1.5 -2.4,0 -4.3,-1.6 -4.3,-4 0,-3.8 5,-4.6 7.9,-4.9 0.2,-1.9 -0.4,-2.6 -1.7,-2.6 -1.1,0 -2,0.5 -2.2,1.7 L 111,16.5 c 0.8,-2.9 2.7,-3.8 5.6,-3.8 3.7,0 5.3,1.7 5.3,4.3 v 6.7 c 0,1 0,1.9 0.5,2.8 H 119 c -0.3,-0.5 -0.4,-1.2 -0.4,-1.2 z m -0.2,-4.9 c -1.5,0.3 -4.4,0.4 -4.4,2.4 0,0.8 0.4,1.5 1.2,1.5 1.5,0 2.5,-0.9 3.2,-1.8 z"
+       style="fill:#343536;fill-rule:evenodd"
+       id="a"
+       inkscape:connector-curvature="0" />
+    <path
+       id="n1"
+       d="m 128.5,14.4 c 1.1,-0.9 2.5,-1.7 4.1,-1.7 1.5,0 3.6,0.9 3.6,4.2 v 9.6 h -3.6 v -8.2 c 0,-1.1 0.1,-2.8 -1.5,-2.8 -1,0 -1.9,0.8 -2.5,1.5 v 9.5 H 125 V 13 h 3.6 v 1.4 z"
+       style="fill:#343536;fill-rule:evenodd"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 150.5,24.2 V 7.7 h -3.6 v 6.6 c -1,-0.9 -1.9,-1.6 -3.3,-1.6 -2,0 -5,1.7 -5,6.7 0,5.7 2.5,7.4 5.3,7.4 1.5,0 2.3,-0.5 3.4,-1.5 0,0 0.1,0.7 0.4,1.2 h 3.3 c -0.4,-0.7 -0.5,-1.5 -0.5,-2.3 z m -3.6,-1.9 c -0.6,0.8 -1.3,1.6 -2.3,1.6 -2.2,0 -2.5,-2.6 -2.5,-4.2 0,-1.5 0.4,-4 2.4,-4 1,0 1.8,0.7 2.4,1.5 z"
+       style="fill:#343536;fill-rule:evenodd"
+       id="d"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     id="Clinic">
+    <path
+       id="C2"
+       d="m 173.1,20.7 c -0.6,3.9 -3.2,6.2 -7.1,6.2 -5.4,0 -7.8,-5 -7.8,-9.7 0,-4.8 2.4,-9.7 7.8,-9.7 3.9,0 6.5,2.2 7.1,6.2 l -3.6,0.5 c -0.4,-2 -1.2,-3.7 -3.5,-3.7 -3.2,0 -3.9,4.3 -3.9,6.7 0,2.4 0.7,6.7 3.9,6.7 2.3,0 3.2,-1.8 3.5,-3.7 z"
+       style="fill:#343536;fill-rule:evenodd"
+       inkscape:connector-curvature="0" />
+    <path
+       id="l3"
+       d="m 175.3,7.7 h 3.6 v 18.9 h -3.6 z"
+       style="fill:#343536;fill-rule:evenodd"
+       inkscape:connector-curvature="0" />
+    <g
+       id="i1">
+      <path
+         style="fill:#343536;fill-rule:evenodd"
+         d="m 185.5,26.6 h -3.6 V 13 h 3.6 z"
+         id="i1stem"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#343536;fill-rule:evenodd"
+         d="m 185.5,11 h -3.6 V 7.7 h 3.6 z"
+         id="i1tittle"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       id="n2"
+       d="m 192,14.4 c 1.1,-0.9 2.5,-1.7 4,-1.7 1.5,0 3.6,0.9 3.6,4.2 v 9.6 H 196 v -8.2 c 0,-1.1 0.1,-2.8 -1.5,-2.8 -1,0 -1.9,0.8 -2.5,1.5 v 9.5 h -3.6 V 13 h 3.6 z"
+       style="fill:#343536;fill-rule:evenodd"
+       inkscape:connector-curvature="0" />
+    <g
+       id="i2">
+      <path
+         style="fill:#343536;fill-rule:evenodd"
+         d="m 206.1,26.6 h -3.6 V 13 h 3.6 z"
+         id="i2stem"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#343536;fill-rule:evenodd"
+         d="m 206.1,11 h -3.6 V 7.7 h 3.6 z"
+         id="i2tittle"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       id="c"
+       d="m 220,22.2 c -0.6,2.8 -2.6,4.7 -5.7,4.7 -4,0 -6,-3.5 -6,-7.1 0,-3.6 2,-7.1 6,-7.1 3,0 5.1,1.8 5.7,4.7 l -3.3,0.4 c -0.2,-1.1 -0.6,-2.5 -2.4,-2.5 -1.9,0 -2.3,2.7 -2.3,4.4 0,1.7 0.3,4.4 2.3,4.4 1.8,0 2.1,-1.2 2.4,-2.5 z"
+       style="fill:#343536;fill-rule:evenodd"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
