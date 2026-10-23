@@ -649,5 +649,23 @@ class CollapseTests(unittest.TestCase):
         self.assertEqual(build.collapse_entries(es), build.collapse_entries(list(reversed(es))))
 
 
+class PrefetchTests(unittest.TestCase):
+    def test_cache_env_override(self):
+        import importlib, subprocess
+        out = subprocess.check_output(
+            [sys.executable, "-c", "import build; print(build.CACHE)"],
+            env=dict(os.environ, LOGOAPI_CACHE="/tmp/xcache"), cwd=os.path.dirname(build.__file__), text=True).strip()
+        self.assertTrue(out.startswith("/tmp/xcache/"))
+        self.assertEqual(os.path.dirname(out), "/tmp/xcache")
+
+    def test_prefetch_dedupes(self):
+        from unittest import mock
+        calls = []
+        with mock.patch.object(build, "cached", side_effect=lambda *a: calls.append(a)):
+            n = build.prefetch([("a.svg", "b", "c"), ("a.svg", "b", "c"), ("b.svg", "b", "c")], workers=4)
+        self.assertEqual(n, 2)
+        self.assertEqual(sorted(calls), [("a.svg", "b", "c"), ("b.svg", "b", "c")])
+
+
 if __name__ == "__main__":
     unittest.main()
