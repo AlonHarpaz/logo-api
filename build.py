@@ -6,6 +6,7 @@ import os
 import re
 import shutil
 import sys
+import tempfile
 import time
 from concurrent.futures import ThreadPoolExecutor
 import urllib.request
@@ -499,10 +500,17 @@ def cached(fname, base=None, cache_dir=None):
         print("download failed: %s (%s)" % (fname, e), file=sys.stderr)
         return None
     os.makedirs(cache_dir, exist_ok=True)
-    part = path + ".part"
-    with open(part, "wb") as f:
-        f.write(data)
-    os.replace(part, path)
+    fd, part = tempfile.mkstemp(dir=cache_dir, prefix=fname + ".", suffix=".part")
+    try:
+        with os.fdopen(fd, "wb") as f:
+            f.write(data)
+        os.replace(part, path)
+    except BaseException:
+        try:
+            os.remove(part)
+        except OSError:
+            pass
+        raise
     time.sleep(DELAY)
     return path
 
