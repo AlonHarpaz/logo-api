@@ -6,7 +6,9 @@ import os
 import re
 import shutil
 import sys
+import tempfile
 import time
+from concurrent.futures import ThreadPoolExecutor
 import urllib.request
 from urllib.parse import urlparse
 
@@ -34,8 +36,10 @@ SAFE_FILE = re.compile(r"^[A-Za-z0-9._-]+\.svg$")
 SAFE_DOMAIN = re.compile(r"^[a-z0-9.-]+$")
 RETRIES = 3
 ROOT = os.path.dirname(os.path.abspath(__file__))
-CACHE = os.path.join(ROOT, "cache", UPSTREAM_SHA[:12])
-SI_CACHE = os.path.join(ROOT, "cache", "si-" + SI_SHA[:12])
+CACHE_ROOT = os.environ.get("LOGOAPI_CACHE") or os.path.join(ROOT, "cache")
+CACHE = os.path.join(CACHE_ROOT, UPSTREAM_SHA[:12])
+SI_CACHE = os.path.join(CACHE_ROOT, "si-" + SI_SHA[:12])
+WORKERS = 8
 DIST = os.path.join(ROOT, "dist")
 DIST_TMP = os.path.join(ROOT, "dist.tmp")
 BLOCKLIST = os.path.join(ROOT, "blocklist.txt")
@@ -496,12 +500,29 @@ def cached(fname, base=None, cache_dir=None):
         print("download failed: %s (%s)" % (fname, e), file=sys.stderr)
         return None
     os.makedirs(cache_dir, exist_ok=True)
-    part = path + ".part"
-    with open(part, "wb") as f:
-        f.write(data)
-    os.replace(part, path)
+    fd, part = tempfile.mkstemp(dir=cache_dir, prefix=fname + ".", suffix=".part")
+    try:
+        with os.fdopen(fd, "wb") as f:
+            f.write(data)
+        os.replace(part, path)
+    except BaseException:
+        try:
+            os.remove(part)
+        except OSError:
+            pass
+        raise
     time.sleep(DELAY)
     return path
+
+
+def prefetch(jobs, workers=WORKERS):
+    """Download missing files in parallel. jobs: (fname, base, cache_dir) tuples; duplicates are dropped."""
+    unique = list(dict.fromkeys(jobs))
+    if not unique:
+        return 0
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        list(pool.map(lambda j: cached(j[0], j[1], j[2]), unique))
+    return len(unique)
 
 
 def main():
@@ -534,6 +555,13 @@ def main():
     ex_entries = [e for e in ex_entries if e["domain"] not in gone]
     shutil.rmtree(DIST_TMP, ignore_errors=True)
     os.makedirs(os.path.join(DIST_TMP, "icon"))
+    jobs = []
+    for e in entries:
+        jobs.append((e["files"]["wordmark"], SVG_BASE, CACHE))
+        jobs.append((e["files"]["icon"], SVG_BASE, CACHE))
+    for e in si_entries:
+        jobs.append((e["files"]["icon"], SI_ICONS, SI_CACHE))
+    print("prefetch: %d files" % prefetch(jobs))
     written, failures, index = 0, 0, []
     for e in entries:
         w = cached(e["files"]["wordmark"])
