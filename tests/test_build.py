@@ -599,6 +599,46 @@ def _e(dom, name):
     return {"domain": dom, "name": name}
 
 
+class DomainOverrideTests(unittest.TestCase):
+    ITEMS = [
+        {"name": "Google", "shortname": "google", "url": "https://www.google.com", "files": ["g.svg"]},
+        {"name": "Google Drive", "shortname": "google-drive", "url": "https://www.google.com/drive/", "files": ["d.svg"]},
+        {"name": "Gem", "shortname": "gem", "url": "https://deepmind.google/gemini/", "files": ["m.svg"]},
+    ]
+
+    def test_shortname_override_rehomes(self):
+        es, _, dups, _ = build.build_entries(self.ITEMS, set(), {"google-drive": "drive.google.com"})
+        self.assertEqual([e["domain"] for e in es], ["deepmind.google", "drive.google.com", "google.com"])
+        self.assertEqual(dups, [])
+
+    def test_url_override(self):
+        es, _, _, _ = build.build_entries(self.ITEMS, set(), {"https://deepmind.google/gemini/": "gemini.google.com"})
+        self.assertIn("gemini.google.com", [e["domain"] for e in es])
+
+    def test_no_override_keeps_old_behaviour(self):
+        es, _, dups, _ = build.build_entries(self.ITEMS, set(), {})
+        self.assertEqual(len(es), 2)
+        self.assertEqual(len(dups), 1)
+
+    def test_default_table(self):
+        self.assertEqual(build.DOMAIN_OVERRIDES["google-home"], "home.google.com")
+
+
+class DuplicateReportTests(unittest.TestCase):
+    def test_pairs(self):
+        es = [_e("a.com", "Home"), _e("b.com", "home"), _e("c.com", "Other"), _e("d.com", "Other")]
+        es[3]["domain"] = "d.com"
+        pairs = build.duplicate_name_pairs(es)
+        self.assertEqual([k for k, _ in pairs], ["home", "other"])
+        self.assertEqual(pairs[0][1], [("a.com", "Home"), ("b.com", "home")])
+
+    def test_no_pairs_and_format(self):
+        self.assertEqual(build.duplicate_name_pairs([_e("a.com", "A"), _e("b.com", "B")]), [])
+        self.assertEqual(build.format_duplicate_report([]), "")
+        self.assertEqual(build.format_duplicate_report([("home", [("a.com", "Home"), ("b.com", "Home")])]),
+                         "home: a.com (Home), b.com (Home)\n")
+
+
 class CollapseTests(unittest.TestCase):
     def doms(self, entries):
         kept, dropped = build.collapse_entries(entries)
