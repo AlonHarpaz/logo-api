@@ -313,7 +313,8 @@ class CuratedTableTests(unittest.TestCase):
 
     def test_shipped_aliases_present(self):
         for a, t in {"amazon.co.uk": "amazon.com", "aboutamazon.com": "amazon.com",
-                     "woocommerce.com": "woothemes.com", "woo.com": "woothemes.com"}.items():
+                     "woocommerce.com": "woothemes.com", "woo.com": "woothemes.com",
+                     "ebay.co.uk": "ebay.com", "ebay.de": "ebay.com"}.items():
             self.assertEqual(build.DOMAIN_ALIASES.get(a), t)
 
     def test_alias_missing_target(self):
