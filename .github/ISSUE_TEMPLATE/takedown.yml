@@ -15,7 +15,7 @@ body:
     id: proof
     attributes:
       label: Proof you own the mark
-      description: A trademark registration, or a way we can check you work for the company.
+      description: Send the same request from an email address at the brand's domain to takedown@logoapi.sh, or paste it here from a company address. No ID documents or trademark registration needed.
     validations:
       required: true
   - type: textarea
