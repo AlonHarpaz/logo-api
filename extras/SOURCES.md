@@ -5,6 +5,7 @@ Hand-curated logos that win over gilbarbara/logos and simple-icons for the same 
 | Domain | Name | File | Source URL | Date | License or note | Category |
 | --- | --- | --- | --- | --- | --- | --- |
 | amazon.com | Amazon | amazon.com.svg | https://commons.wikimedia.org/wiki/File:Amazon_2024.svg | 2026-10-24 | Wikimedia Commons, public domain (PD-textlogo); trademark of its owner |  |
+| ebay.com | eBay | ebay.com.svg | https://commons.wikimedia.org/wiki/File:EBay_logo.svg | 2026-10-24 | Wikimedia Commons, public domain (PD-textlogo); trademark of its owner |  |
 | appsflyer.com | AppsFlyer | appsflyer.com.svg | https://commons.wikimedia.org/wiki/File:Logo_of_AppsFlyer.svg | 2026-10-21 | Wikimedia Commons, public domain (PD-textlogo); trademark of its owner |  |
 | bankhapoalim.co.il | Bank Hapoalim | bankhapoalim.co.il.svg | https://commons.wikimedia.org/wiki/File:Bank_Hapoalim_logo.svg | 2026-10-21 | Wikimedia Commons, public domain (PD-textlogo); trademark of its owner | finance |
 | bezeq.co.il | Bezeq | bezeq.co.il.svg | https://media.bezeq.co.il/common/master/images/logo_bezeq.svg | 2026-10-21 | Official site SVG (icon mark only); trademark of its owner |  |

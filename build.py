@@ -53,6 +53,8 @@ DOMAIN_ALIASES = {
     "ionic.io": "ionicframework.com",
     "amazon.co.uk": "amazon.com",
     "aboutamazon.com": "amazon.com",
+    "ebay.co.uk": "ebay.com",
+    "ebay.de": "ebay.com",
     "woocommerce.com": "woothemes.com",
     "woo.com": "woothemes.com",
 }
