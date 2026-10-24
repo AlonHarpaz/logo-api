@@ -48,6 +48,7 @@ DIST_TMP = os.path.join(ROOT, "dist.tmp")
 BLOCKLIST = os.path.join(ROOT, "blocklist.txt")
 DELAY = 0.05
 EXTRAS = os.path.join(ROOT, "extras")
+PRIVATE_EXTRAS = os.environ.get("LOGOAPI_PRIVATE_EXTRAS", "")
 NAME_OVERRIDES = {"vercel.com": "Vercel", "openai.com": "OpenAI", "sencha.com": "Sencha", "apache.org": "Apache"}
 # Domains where the gilbarbara logo is wrong; the simple-icons candidate wins instead.
 PREFER_SIMPLE_ICONS = {"elastic.co"}
@@ -424,6 +425,25 @@ def build_extras_entries(names, blocked, brand_names=None):
     return entries, skipped
 
 
+def collect_extras(public_dir, private_dir, blocked):
+    """Return (entries, skipped, dirs). Private extras (optional) win over public ones on a domain clash.
+
+    `dirs` maps domain -> the directory holding its files.
+    """
+    out, skipped, dirs = {}, [], {}
+    for d, private in ((public_dir, False), (private_dir, True)):
+        if not d or not os.path.isdir(d):
+            continue
+        ents, sk = build_extras_entries(sorted(os.listdir(d)), blocked, load_extras_names(os.path.join(d, "SOURCES.md")))
+        skipped += sk
+        for e in ents:
+            if private:
+                e["source"] = "https://logoapi.sh/brands"
+            out[e["domain"]] = e
+            dirs[e["domain"]] = d
+    return [out[k] for k in sorted(out)], skipped, dirs
+
+
 NAME_SUFFIXES = ("docs", "doc", "blog", "press", "brand", "branding", "wiki", "about", "help",
                  "assets", "styleguide", "handbook", "foundation")
 THIRD_PARTY_HOSTS = frozenset([
@@ -551,8 +571,7 @@ def main():
         print("error: no simple-icons entry for preferred domain(s): " + ", ".join(lost), file=sys.stderr)
         print("build failed, dist/ left untouched", file=sys.stderr)
         sys.exit(1)
-    extras_names = sorted(os.listdir(EXTRAS)) if os.path.isdir(EXTRAS) else []
-    ex_entries, ex_skipped = build_extras_entries(extras_names, blocked, load_extras_names(os.path.join(EXTRAS, "SOURCES.md")))
+    ex_entries, ex_skipped, ex_dirs = collect_extras(EXTRAS, PRIVATE_EXTRAS, blocked)
     won = {e["domain"] for e in ex_entries}
     entries = [e for e in entries if e["domain"] not in won]
     si_entries = [e for e in si_entries if e["domain"] not in won]
@@ -604,8 +623,8 @@ def main():
         si_written += 1
     ex_written = 0
     for e in ex_entries:
-        w = os.path.join(EXTRAS, e["files"]["wordmark"])
-        i = os.path.join(EXTRAS, e["files"]["icon"])
+        w = os.path.join(ex_dirs[e["domain"]], e["files"]["wordmark"])
+        i = os.path.join(ex_dirs[e["domain"]], e["files"]["icon"])
         for src, dst in ((w, os.path.join(DIST_TMP, e["domain"] + ".svg")),
                          (i, os.path.join(DIST_TMP, "icon", e["domain"] + ".svg"))):
             with open(src, "rb") as f:

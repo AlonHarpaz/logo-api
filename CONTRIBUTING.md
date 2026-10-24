@@ -5,3 +5,4 @@
 - Keep `build.py` standard-library only.
 - Logos are not added here. Add or fix them upstream in [gilbarbara/logos](https://github.com/gilbarbara/logos). They arrive here when the pinned commit is bumped.
 - To remove a logo, use the takedown issue template.
+- This repo takes main brand logos only. Product-family logos are hosted on logoapi.sh.
