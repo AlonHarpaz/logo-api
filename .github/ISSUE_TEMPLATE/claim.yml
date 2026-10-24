@@ -1,0 +1,36 @@
+name: Claim a logo
+description: Brand owners can replace the logo we serve and set its link.
+title: "Claim: <domain>"
+labels: ["claim"]
+body:
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      description: The domain whose logo you want to claim.
+      placeholder: example.com
+    validations:
+      required: true
+  - type: input
+    id: svg
+    attributes:
+      label: Link to the official SVG
+      description: A link to the SVG on your brand page.
+      placeholder: https://example.com/brand/logo.svg
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link we should show
+      description: The page the logo should link to.
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: Proof you own the mark
+      description: Send the same request from an email address at the brand's domain to claim@logoapi.sh, or paste it here from a company address. No ID documents or trademark registration needed.
+    validations:
+      required: true
