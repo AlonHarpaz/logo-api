@@ -29,7 +29,7 @@ Hand-curated logos that win over gilbarbara/logos and simple-icons for the same 
 | solaredge.com | SolarEdge | solaredge.com.svg | https://commons.wikimedia.org/wiki/File:SolarEdge_logo.svg | 2026-10-21 | Wikimedia Commons, public domain (PD-textlogo); trademark of its owner |  |
 | taboola.com | Taboola | taboola.com.svg | https://commons.wikimedia.org/wiki/File:Taboola_logo.svg | 2026-10-21 | Wikimedia Commons, public domain (PD-textlogo); trademark of its owner |  |
 | teva.com | Teva | teva.com.svg | https://commons.wikimedia.org/wiki/File:Teva_logo.svg | 2026-10-21 | Wikimedia Commons, public domain (PD-textlogo); trademark of its owner |  |
-| wiz.io | Wiz | wiz.io.svg | https://www.wiz.io/images/logo_sprite.svg (symbol wiz-logo, from the official site header) | 2026-10-21 | Official site inline SVG; trademark of its owner. Wrapped as a standalone svg, currentColor set to black |  |
+| wiz.io | Wiz | wiz.io.svg | https://commons.wikimedia.org/wiki/File:Wiz_logo.svg | 2026-10-24 | Wikimedia Commons, public domain (PD-textlogo); trademark of its owner |  |
 | ynet.co.il | Ynet | ynet.co.il.svg | https://commons.wikimedia.org/wiki/File:Ynet_website_logo.svg | 2026-10-21 | Wikimedia Commons, public domain (PD-textlogo); trademark of its owner |  |
 
 Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskified.com, partner.co.il, cellcom.co.il, strauss-group.com.
