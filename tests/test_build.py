@@ -243,6 +243,16 @@ class CuratedTableTests(unittest.TestCase):
             (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.cached, build.BLOCKLIST, build.DOMAIN_ALIASES) = old
             shutil.rmtree(tmp, ignore_errors=True)
 
+    def test_shared_hosting_sources_skipped(self):
+        hosts = ["drive.google.com", "sites.google.com", "support.google.com",
+                 "mazedesign.notion.site", "docs.google.com", "notion.so"]
+        items = [{"title": "T%d" % i, "hex": "11111%d" % i, "source": "https://%s/x" % h}
+                 for i, h in enumerate(hosts)]
+        items.append({"title": "Firebase", "hex": "FFCA28", "source": "https://firebase.google.com"})
+        slugs = {i["title"]: [i["title"].lower()] for i in items}
+        es, _ = build.build_si_entries(items, slugs, set(), set())
+        self.assertEqual([e["domain"] for e in es], ["firebase.google.com"])
+
     def test_missing_preferred(self):
         self.assertEqual(build.missing_preferred([{"domain": "elastic.co"}]), [])
         self.assertEqual(build.missing_preferred([{"domain": "a.com"}]), ["elastic.co"])
