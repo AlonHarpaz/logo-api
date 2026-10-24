@@ -50,6 +50,16 @@ DELAY = 0.05
 EXTRAS = os.path.join(ROOT, "extras")
 PRIVATE_EXTRAS = os.environ.get("LOGOAPI_PRIVATE_EXTRAS", "")
 NAME_OVERRIDES = {"vercel.com": "Vercel", "openai.com": "OpenAI", "sencha.com": "Sencha", "apache.org": "Apache"}
+# Re-home a gilbarbara item onto the domain where the brand really lives, before domain
+# grouping. Key = gilbarbara shortname or the item's exact url; value = target domain.
+# Use it when build_entries maps a product page onto its parent (google.com/drive/ lost
+# to "Google") or a same-brand pair sits on two unrelated domains (#21). A simple-icons
+# entry on the same domain then yields to it (gilbarbara wins `taken`).
+DOMAIN_OVERRIDES = {
+    "google-drive": "drive.google.com",
+    "google-home": "home.google.com",
+    "google-gemini": "gemini.google.com",
+}
 # Domains where the gilbarbara logo is wrong; the simple-icons candidate wins instead.
 PREFER_SIMPLE_ICONS = {"elastic.co"}
 # alias domain -> target domain whose entry and SVGs it copies.
@@ -225,7 +235,13 @@ def pick_root(dom, cands):
     return cands[0]
 
 
-def build_entries(items, blocked):
+def override_domain(it, dom, overrides=None):
+    """Return the DOMAIN_OVERRIDES target for an item (by shortname or url), else dom."""
+    overrides = DOMAIN_OVERRIDES if overrides is None else overrides
+    return overrides.get(it.get("shortname")) or overrides.get(it.get("url")) or dom
+
+
+def build_entries(items, blocked, domain_overrides=None):
     """Return (entries, skipped_blocked, duplicates, no_domain). Deterministic.
 
     When several items share a domain, the one named after the domain's first label wins
@@ -235,6 +251,8 @@ def build_entries(items, blocked):
     skipped, dups, nodom = [], [], []
     for it in items:
         dom = domain_from_url(it.get("url", ""))
+        if dom:
+            dom = override_domain(it, dom, domain_overrides)
         files = it.get("files")
         if not dom or not files or not isinstance(files, list):
             nodom.append(it.get("name"))
@@ -501,6 +519,25 @@ def collapse_entries(entries):
     return kept, sorted((d, v[0], v[1]) for d, v in dropped.items())
 
 
+def duplicate_name_pairs(entries):
+    """Report brand names that sit on two or more different domains.
+
+    Returns [(normalized_name, [(domain, name), ...])], sorted. Run on the entries kept
+    after collapse_entries; extras are included. Report only, nothing is dropped.
+    """
+    groups = {}
+    for e in entries:
+        key = alnum(e.get("name"))
+        if key:
+            groups.setdefault(key, {})[e["domain"]] = e.get("name")
+    return sorted((k, sorted(v.items())) for k, v in groups.items() if len(v) > 1)
+
+
+def format_duplicate_report(pairs):
+    lines = ["%s: %s" % (k, ", ".join("%s (%s)" % (d, n) for d, n in doms)) for k, doms in pairs]
+    return "\n".join(lines) + ("\n" if lines else "")
+
+
 def fetch(url):
     last = None
     for attempt in range(RETRIES):
@@ -635,6 +672,12 @@ def main():
         ex_written += 1
     index.sort(key=lambda e: e["domain"])
     apply_overrides(index)
+    pairs = duplicate_name_pairs(index)
+    print("same-name brands on different domains: %d (see duplicate-names.txt)" % len(pairs))
+    for k, doms in pairs:
+        print("  %s: %s" % (k, ", ".join(d for d, _ in doms)))
+    with open(os.path.join(DIST_TMP, "duplicate-names.txt"), "w", encoding="utf-8") as f:
+        f.write(format_duplicate_report(pairs))
     apply_aliases(index, DIST_TMP)
     print("extras domains written: %d (skipped %d)" % (ex_written, len(ex_skipped)))
     print("domains written: %d" % written)
