@@ -29,6 +29,9 @@ CODE_WIKI_HOSTS = frozenset([
     "sourceforge.net", "sourceforge.io", "bitbucket.org", "wikimedia.org", "wikipedia.org",
     "wikidata.org", "npmjs.com", "pypi.org", "crates.io", "rubygems.org", "packagist.org",
     "archive.org", "gitea.com", "sr.ht",
+    # shared hosting: the host belongs to the platform, not the brand
+    "drive.google.com", "sites.google.com", "support.google.com", "docs.google.com",
+    "notion.site", "notion.so",
 ])
 HEX_RE = re.compile(r"^[0-9A-Fa-f]{6}$")
 SLUG_ROW = re.compile(r"^\|\s*`(.+?)`\s*\|\s*`([^`]+)`\s*\|\s*$")

@@ -243,6 +243,25 @@ class CuratedTableTests(unittest.TestCase):
             (build.EXTRAS, build.DIST, build.DIST_TMP, build.fetch, build.cached, build.BLOCKLIST, build.DOMAIN_ALIASES) = old
             shutil.rmtree(tmp, ignore_errors=True)
 
+    def test_shared_hosting_sources_skipped(self):
+        hosts = ["drive.google.com", "sites.google.com", "support.google.com",
+                 "mazedesign.notion.site", "docs.google.com", "notion.so"]
+        items = [{"title": "T%d" % i, "hex": "11111%d" % i, "source": "https://%s/x" % h}
+                 for i, h in enumerate(hosts)]
+        items.append({"title": "Firebase", "hex": "FFCA28", "source": "https://firebase.google.com"})
+        slugs = {i["title"]: [i["title"].lower()] for i in items}
+        es, _ = build.build_si_entries(items, slugs, set(), set())
+        self.assertEqual([e["domain"] for e in es], ["firebase.google.com"])
+
+    def test_built_index_has_no_shared_hosts(self):
+        import json
+        path = os.path.join(build.DIST, "index.json")
+        if not os.path.exists(path):
+            self.skipTest("dist not built")
+        domains = {e["domain"] for e in json.load(open(path))}
+        for d in ("drive.google.com", "sites.google.com", "mazedesign.notion.site", "support.google.com"):
+            self.assertNotIn(d, domains)
+
     def test_missing_preferred(self):
         self.assertEqual(build.missing_preferred([{"domain": "elastic.co"}]), [])
         self.assertEqual(build.missing_preferred([{"domain": "a.com"}]), ["elastic.co"])
