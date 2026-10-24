@@ -504,3 +504,7 @@ Skipped (no real SVG found on an official page or Commons): leumi.co.il, riskifi
 | cummins.com | Cummins | cummins.com.svg | https://commons.wikimedia.org/wiki/File:Cummins_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
 | hilti.com | Hilti | hilti.com.svg | https://commons.wikimedia.org/wiki/File:Hilti_logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
 | kuka.com | KUKA | kuka.com.svg | https://commons.wikimedia.org/wiki/File:Kuka-logo.svg | 2026-10-21 | Wikimedia Commons, Public domain; trademark of its owner | industry |
+| wm.monday.com | monday work management | wm.monday.com.svg | https://dapulse-res.cloudinary.com/image/upload/WM_Symbol.svg | 2026-10-24 | Official site SVG (product symbol); trademark of monday.com |  |
+| crm.monday.com | monday CRM | crm.monday.com.svg | https://dapulse-res.cloudinary.com/image/upload/CRM_Symbol.svg | 2026-10-24 | Official site SVG (product symbol); trademark of monday.com |  |
+| dev.monday.com | monday dev | dev.monday.com.svg | https://dapulse-res.cloudinary.com/image/upload/DEV_Symbol.svg | 2026-10-24 | Official site SVG (product symbol); trademark of monday.com |  |
+| service.monday.com | monday service | service.monday.com.svg | https://dapulse-res.cloudinary.com/image/upload/SVC_Symbol.svg | 2026-10-24 | Official site SVG (product symbol); trademark of monday.com |  |
