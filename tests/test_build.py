@@ -683,5 +683,36 @@ class PrefetchTests(unittest.TestCase):
         self.assertEqual(sorted(calls), [("a.svg", "b", "c"), ("b.svg", "b", "c")])
 
 
+class TestPrivateExtras(unittest.TestCase):
+    def _dir(self, root, name, files, rows):
+        d = os.path.join(root, name)
+        os.makedirs(d)
+        for f in files:
+            open(os.path.join(d, f), "w").write("<svg/>")
+        with open(os.path.join(d, "SOURCES.md"), "w") as fh:
+            fh.write("| Domain | Name |\n| --- | --- |\n" + "".join("| %s | %s |\n" % r for r in rows))
+        return d
+
+    def test_private_dir_added_and_wins_clash(self):
+        with tempfile.TemporaryDirectory() as t:
+            pub = self._dir(t, "pub", ["a.com.svg", "x.com.svg"], [("a.com", "A"), ("x.com", "Pub X")])
+            priv = self._dir(t, "priv", ["x.com.svg", "p.example.com.svg"], [("x.com", "Priv X"), ("p.example.com", "P")])
+            ents, _, dirs = build.collect_extras(pub, priv, set())
+            by = {e["domain"]: e for e in ents}
+            self.assertEqual(sorted(by), ["a.com", "p.example.com", "x.com"])
+            self.assertEqual(by["x.com"]["name"], "Priv X")
+            self.assertEqual(dirs["x.com"], priv)
+            self.assertEqual(dirs["a.com"], pub)
+            self.assertEqual(by["p.example.com"]["source"], "https://logoapi.sh/brands")
+            self.assertEqual(by["p.example.com"]["origin"], "extras")
+            self.assertIn("github.com", by["a.com"]["source"])
+
+    def test_no_private_dir(self):
+        with tempfile.TemporaryDirectory() as t:
+            pub = self._dir(t, "pub", ["a.com.svg"], [("a.com", "A")])
+            self.assertEqual(len(build.collect_extras(pub, "", set())[0]), 1)
+            self.assertEqual(len(build.collect_extras(pub, "/nonexistent", set())[0]), 1)
+
+
 if __name__ == "__main__":
     unittest.main()
