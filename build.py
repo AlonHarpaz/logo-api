@@ -49,7 +49,13 @@ NAME_OVERRIDES = {"vercel.com": "Vercel", "openai.com": "OpenAI", "sencha.com": 
 # Domains where the gilbarbara logo is wrong; the simple-icons candidate wins instead.
 PREFER_SIMPLE_ICONS = {"elastic.co"}
 # alias domain -> target domain whose entry and SVGs it copies.
-DOMAIN_ALIASES = {"ionic.io": "ionicframework.com"}
+DOMAIN_ALIASES = {
+    "ionic.io": "ionicframework.com",
+    "amazon.co.uk": "amazon.com",
+    "aboutamazon.com": "amazon.com",
+    "woocommerce.com": "woothemes.com",
+    "woo.com": "woothemes.com",
+}
 ROOT_SVG = re.compile(r"<svg\b[^>]*>", re.I | re.S)
 COMMENT = re.compile(r"<!--.*?(?:-->|\Z)", re.S)
 ATTR = r"""(?:\s|^)%s\s*=\s*(?:"([^"]*)"|'([^']*)')"""
