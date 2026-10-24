@@ -311,6 +311,11 @@ class CuratedTableTests(unittest.TestCase):
             self.assertEqual(open(os.path.join(tmp, "al.com.svg")).read(), "T")
             self.assertEqual(open(os.path.join(tmp, "icon", "al.com.svg")).read(), "Ticon")
 
+    def test_shipped_aliases_present(self):
+        for a, t in {"amazon.co.uk": "amazon.com", "aboutamazon.com": "amazon.com",
+                     "woocommerce.com": "woothemes.com", "woo.com": "woothemes.com"}.items():
+            self.assertEqual(build.DOMAIN_ALIASES.get(a), t)
+
     def test_alias_missing_target(self):
         with tempfile.TemporaryDirectory() as tmp:
             self.make_dist(tmp, {"al.com": "OLD"})
