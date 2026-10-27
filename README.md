@@ -132,7 +132,7 @@ Step-by-step guide: [Clearbit Logo API migration](https://logoapi.sh/guides/clea
 ## Pricing
 
 **Free:** 1M requests a month per site. No key, no attribution required.
-**Pro:** $29 a month for 10M requests a month and email support.
+**Pro (waitlist):** $29 a month for 10M requests a month and email support. Join at [logoapi.sh/pricing](https://logoapi.sh/pricing).
 Details: [logoapi.sh/pricing](https://logoapi.sh/pricing)
 
 ## What's in this repo
