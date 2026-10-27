@@ -1,0 +1,27 @@
+name: Takedown request
+description: Ask for a logo to be removed.
+title: "Takedown: <domain>"
+labels: ["takedown"]
+body:
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      description: The domain whose logo you want removed.
+      placeholder: example.com
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: Proof you own the mark
+      description: Send the same request from an email address at the brand's domain to takedown@logoapi.sh, or paste it here from a company address. No ID documents or trademark registration needed.
+    validations:
+      required: true
+  - type: textarea
+    id: remove
+    attributes:
+      label: What to remove
+      description: The wordmark, the icon, or both.
+    validations:
+      required: true
