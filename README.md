@@ -9,13 +9,14 @@
 
 <p align="center">
   <b>Company logos by domain. One URL returns the SVG.</b><br>
-  A free alternative to the Clearbit Logo API. No API key, no signup, no cookies.
+  A free alternative to the Clearbit Logo API. No API key, no signup, no attribution. Commercial use included.
 </p>
 
 <p align="center">
   <a href="https://logoapi.sh?utm_source=github&utm_medium=readme&utm_campaign=logo-api"><img src="https://img.shields.io/badge/logos%20via%20API-4%2C138-15161a?style=flat-square" alt="4,138 logos via API"></a>
   <a href="logos/"><img src="https://img.shields.io/badge/CC0%20files%20in%20this%20repo-2%2C016-15161a?style=flat-square" alt="2,016 CC0 files in this repo"></a>
   <a href="https://logoapi.sh/docs?utm_source=github&utm_medium=readme&utm_campaign=logo-api"><img src="https://img.shields.io/badge/API%20key-not%20needed-15161a?style=flat-square" alt="No API key"></a>
+  <a href="https://logoapi.sh/docs?utm_source=github&utm_medium=readme&utm_campaign=logo-api"><img src="https://img.shields.io/badge/attribution-not%20required-15161a?style=flat-square" alt="Attribution not required"></a>
   <a href="https://logoapi.sh/pricing?utm_source=github&utm_medium=readme&utm_campaign=logo-api"><img src="https://img.shields.io/badge/free-1M%20requests%20a%20month-15161a?style=flat-square" alt="1M requests a month per site, free"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/logo%20files-CC0-15161a?style=flat-square" alt="CC0"></a>
 </p>
@@ -135,6 +136,8 @@ Step-by-step guide: [Clearbit Logo API migration](https://logoapi.sh/guides/clea
 **Free:** 1M requests a month per site. No key, no attribution required.
 **Pro (waitlist):** $29 a month for 10M requests a month and email support. Join at [logoapi.sh/pricing](https://logoapi.sh/pricing?utm_source=github&utm_medium=readme&utm_campaign=logo-api).
 Details: [logoapi.sh/pricing](https://logoapi.sh/pricing?utm_source=github&utm_medium=readme&utm_campaign=logo-api)
+
+**Do I have to credit LogoAPI.sh?** No. No attribution is required, for personal or commercial projects.
 
 ## What's in this repo
 
