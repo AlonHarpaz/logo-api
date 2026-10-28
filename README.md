@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://logoapi.sh">
+  <a href="https://logoapi.sh?utm_source=github&utm_medium=readme&utm_campaign=logo-api">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset=".github/assets/logoapi-wordmark-dark.svg">
       <img src=".github/assets/logoapi-wordmark.svg" alt="LogoAPI.sh" height="64">
@@ -13,17 +13,17 @@
 </p>
 
 <p align="center">
-  <a href="https://logoapi.sh"><img src="https://img.shields.io/badge/logos-4%2C138-15161a?style=flat-square" alt="4,138 logos"></a>
-  <a href="https://logoapi.sh/docs"><img src="https://img.shields.io/badge/API%20key-not%20needed-15161a?style=flat-square" alt="No API key"></a>
-  <a href="https://logoapi.sh/pricing"><img src="https://img.shields.io/badge/free-1M%20requests%20a%20month-15161a?style=flat-square" alt="1M requests a month per site, free"></a>
+  <a href="https://logoapi.sh?utm_source=github&utm_medium=readme&utm_campaign=logo-api"><img src="https://img.shields.io/badge/logos-4%2C138-15161a?style=flat-square" alt="4,138 logos"></a>
+  <a href="https://logoapi.sh/docs?utm_source=github&utm_medium=readme&utm_campaign=logo-api"><img src="https://img.shields.io/badge/API%20key-not%20needed-15161a?style=flat-square" alt="No API key"></a>
+  <a href="https://logoapi.sh/pricing?utm_source=github&utm_medium=readme&utm_campaign=logo-api"><img src="https://img.shields.io/badge/free-1M%20requests%20a%20month-15161a?style=flat-square" alt="1M requests a month per site, free"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/logo%20files-CC0-15161a?style=flat-square" alt="CC0"></a>
 </p>
 
 <p align="center">
-  <a href="https://logoapi.sh/docs">Docs</a> ·
-  <a href="https://logoapi.sh/finder">Logo Finder</a> ·
-  <a href="https://logoapi.sh/pricing">Pricing</a> ·
-  <a href="https://logoapi.sh/guides/clearbit-migration">Migrating from Clearbit</a>
+  <a href="https://logoapi.sh/docs?utm_source=github&utm_medium=readme&utm_campaign=logo-api">Docs</a> ·
+  <a href="https://logoapi.sh/finder?utm_source=github&utm_medium=readme&utm_campaign=logo-api">Logo Finder</a> ·
+  <a href="https://logoapi.sh/pricing?utm_source=github&utm_medium=readme&utm_campaign=logo-api">Pricing</a> ·
+  <a href="https://logoapi.sh/guides/clearbit-migration?utm_source=github&utm_medium=readme&utm_campaign=logo-api">Migrating from Clearbit</a>
 </p>
 
 <br>
