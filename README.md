@@ -69,7 +69,7 @@ An unknown domain returns a plain `404`, with no placeholder image, so your own 
 | Name to domain | `https://logoapi.sh/search?q=stripe` |
 | Clearbit-style bare domain | `https://logoapi.sh/{domain}` |
 
-Full reference with real responses: [logoapi.sh/docs](https://logoapi.sh/docs)
+Full reference with real responses: [logoapi.sh/docs](https://logoapi.sh/docs?utm_source=github&utm_medium=readme&utm_campaign=logo-api)
 
 ## Examples
 
@@ -127,13 +127,13 @@ The Clearbit Logo API (`logo.clearbit.com`) has shut down. Change the host and k
 + https://logoapi.sh/stripe.com
 ```
 
-Step-by-step guide: [Clearbit Logo API migration](https://logoapi.sh/guides/clearbit-migration)
+Step-by-step guide: [Clearbit Logo API migration](https://logoapi.sh/guides/clearbit-migration?utm_source=github&utm_medium=readme&utm_campaign=logo-api)
 
 ## Pricing
 
 **Free:** 1M requests a month per site. No key, no attribution required.
-**Pro (waitlist):** $29 a month for 10M requests a month and email support. Join at [logoapi.sh/pricing](https://logoapi.sh/pricing).
-Details: [logoapi.sh/pricing](https://logoapi.sh/pricing)
+**Pro (waitlist):** $29 a month for 10M requests a month and email support. Join at [logoapi.sh/pricing](https://logoapi.sh/pricing?utm_source=github&utm_medium=readme&utm_campaign=logo-api).
+Details: [logoapi.sh/pricing](https://logoapi.sh/pricing?utm_source=github&utm_medium=readme&utm_campaign=logo-api)
 
 ## What's in this repo
 
@@ -147,7 +147,7 @@ search. The API service itself is not in this repo.
 ## Contributing
 
 - **Missing, wrong or outdated logo?** [Open an issue](../../issues/new/choose). The forms ask for the domain and a link to the official file.
-- **You own a brand and want its logo changed or removed?** Use [logoapi.sh/claim](https://logoapi.sh/claim). We reply within 2 business days.
+- **You own a brand and want its logo changed or removed?** Use [logoapi.sh/claim](https://logoapi.sh/claim?utm_source=github&utm_medium=readme&utm_campaign=logo-api). We reply within 2 business days.
 
 ## License
 
