@@ -58,7 +58,7 @@ curl -I https://logoapi.sh/stripe.com.svg
 # access-control-allow-origin: *
 ```
 
-An unknown domain returns a plain `404`, with no placeholder image, so your own fallback runs.
+An unknown domain gets the site's live favicon, then a letter tile. Add `?fallback=404` to get a plain `404` and run your own fallback.
 
 ## Routes
 
@@ -81,7 +81,7 @@ Full reference with real responses: [logoapi.sh/docs](https://logoapi.sh/docs?ut
 function CompanyLogo({ domain, name }) {
   return (
     <img
-      src={`https://logoapi.sh/${domain}.svg`}
+      src={`https://logoapi.sh/${domain}.svg?fallback=404`}
       alt={name}
       height={24}
       onError={(e) => { e.currentTarget.style.display = "none"; }}
