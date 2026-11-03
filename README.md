@@ -13,7 +13,11 @@
 </p>
 
 <p align="center">
-  <a href="https://logoapi.sh?utm_source=github&utm_medium=readme&utm_campaign=logo-api"><img src="https://img.shields.io/badge/logos%20via%20API-4%2C138-15161a?style=flat-square" alt="4,138 logos via API"></a>
+  This repo holds part of the catalog. The <a href="https://logoapi.sh?utm_source=github&utm_medium=readme&utm_campaign=logo-api">logoapi.sh</a> CDN serves all 5,000+ logos. We add more here when the licence allows.
+</p>
+
+<p align="center">
+  <a href="https://logoapi.sh?utm_source=github&utm_medium=readme&utm_campaign=logo-api"><img src="https://img.shields.io/badge/logos%20via%20API-5%2C000%2B-15161a?style=flat-square" alt="5,000+ logos via API"></a>
   <a href="logos/"><img src="https://img.shields.io/badge/CC0%20files%20in%20this%20repo-2%2C016-15161a?style=flat-square" alt="2,016 CC0 files in this repo"></a>
   <a href="https://logoapi.sh/docs?utm_source=github&utm_medium=readme&utm_campaign=logo-api"><img src="https://img.shields.io/badge/API%20key-not%20needed-15161a?style=flat-square" alt="No API key"></a>
   <a href="https://logoapi.sh/docs?utm_source=github&utm_medium=readme&utm_campaign=logo-api"><img src="https://img.shields.io/badge/attribution-not%20required-15161a?style=flat-square" alt="Attribution not required"></a>
