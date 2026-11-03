@@ -7,10 +7,14 @@
   </a>
 </p>
 
+<h1 align="center">Free logo API: company logos by domain</h1>
+
 <p align="center">
-  <b>Company logos by domain. One URL returns the SVG.</b><br>
-  A free alternative to the Clearbit Logo API. No API key, no signup, no attribution. Commercial use included.
+  <b>One URL returns the SVG. No API key, no signup, no attribution.</b><br>
+  A free alternative to the Clearbit Logo API. 2M requests a month per site. Commercial use included.
 </p>
+
+<p align="center"><code>&lt;img src="https://logoapi.sh/stripe.com.svg" alt="Stripe"&gt;</code></p>
 
 <p align="center">
   This repo holds part of the catalog. The <a href="https://logoapi.sh?utm_source=github&utm_medium=readme&utm_campaign=logo-api">logoapi.sh</a> CDN serves all 5,000+ logos. We add more here when the licence allows.
@@ -29,7 +33,7 @@
   <a href="https://logoapi.sh/docs?utm_source=github&utm_medium=readme&utm_campaign=logo-api">Docs</a> ·
   <a href="https://logoapi.sh/finder?utm_source=github&utm_medium=readme&utm_campaign=logo-api">Logo Finder</a> ·
   <a href="https://logoapi.sh/pricing?utm_source=github&utm_medium=readme&utm_campaign=logo-api">Pricing</a> ·
-  <a href="https://logoapi.sh/guides/clearbit-migration?utm_source=github&utm_medium=readme&utm_campaign=logo-api">Migrating from Clearbit</a>
+  <a href="https://logoapi.sh/blog/clearbit-logo-api-migration?utm_source=github&utm_medium=readme&utm_campaign=logo-api">Migrating from Clearbit</a>
 </p>
 
 <br>
@@ -133,7 +137,7 @@ The Clearbit Logo API (`logo.clearbit.com`) has shut down. Change the host and k
 + https://logoapi.sh/stripe.com
 ```
 
-Step-by-step guide: [Clearbit Logo API migration](https://logoapi.sh/guides/clearbit-migration?utm_source=github&utm_medium=readme&utm_campaign=logo-api)
+Step-by-step guide: [Clearbit Logo API migration](https://logoapi.sh/blog/clearbit-logo-api-migration?utm_source=github&utm_medium=readme&utm_campaign=logo-api)
 
 ## Pricing
 
