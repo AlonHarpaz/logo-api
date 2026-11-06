@@ -163,6 +163,8 @@ An [Agent Skill](skills/company-logos/SKILL.md) teaches coding agents to add the
 npx skills add AlonHarpaz/logo-api
 ```
 
+This installs both skills: `company-logos` and [`stock-ticker-logos`](skills/stock-ticker-logos/SKILL.md) (stock, ETF and crypto logos by ticker symbol).
+
 Or copy `skills/company-logos/` into your tool's skills folder:
 
 | Tool | Project path |
@@ -171,6 +173,8 @@ Or copy `skills/company-logos/` into your tool's skills folder:
 | Codex | `.agents/skills/company-logos/` |
 | GitHub Copilot | `.github/skills/company-logos/` |
 | Cursor | `.cursor/skills/company-logos/` |
+
+Use the same paths with `stock-ticker-logos` for the ticker skill.
 
 ## Pricing
 
