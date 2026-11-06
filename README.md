@@ -51,6 +51,20 @@
 
 ---
 
+## Using this from an AI agent or sandbox
+
+- Start here: `https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/index.json`. Look up the domain or the stock ticker there, then fetch the path it gives you.
+- Files are NOT named by domain. `logos/apple.com.svg` and `logos/<domain>/logo.svg` do not exist. Names are slugs, such as `logos/apple.svg`, so always go through `index.json`.
+- Shape: `{"domains": {"apple.com": "logos/apple.svg"}, "tickers": {"AAPL": "logos/apple.svg"}}`
+- Raw URL pattern: `https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/<path>`, for example `.../main/logos/apple.svg`.
+- Logos are trademarks of their owners. You may show them, free and with no attribution, to identify a company in your site or app, including saving a few files into your project. Don't change them, don't suggest the company endorses you, and don't redistribute the catalog in bulk. Files in `logos/` in this repo are CC0. Full terms: https://logoapi.sh/terms.
+- The full catalog (5,000+ logos, tickers, crypto, PNG) is on the API: `https://logoapi.sh/<domain>`, `https://logoapi.sh/ticker/<SYM>` and `https://logoapi.sh/icon/ticker/<SYM>`.
+- Tickers: `index.json` has a `tickers` map, and the API serves `https://logoapi.sh/ticker/<SYM>`. ETFs map to the issuer (SPY goes to ssga.com).
+- Right now `index.json` lists 1,174 domains and 50 tickers, and every path in it exists.
+- If outside hosts are blocked, connect the MCP server `https://logoapi.sh/mcp`, or ask the user to allow `logoapi.sh`.
+
+---
+
 ## Quick start
 
 Swap the domain. That's it.
