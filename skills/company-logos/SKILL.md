@@ -1,6 +1,6 @@
 ---
 name: company-logos
-description: Add company logos, brand logos and stock ticker logos to a website, app, email or no-code builder using LogoAPI.sh. Use when the user needs a company logo, brand logo, logo by domain, logo by stock ticker, a logo for a customer or partner list, an avatar or icon for a company, or a Clearbit Logo API replacement (logo.clearbit.com shut down in December 2025). Free, no API key, no signup, no attribution. Covers SVG and PNG URLs, ticker lookups, square icons, dark-background versions, missing-logo fallbacks, and Softr, Glide and Airtable-style builders.
+description: Add company logos, brand logos, stock ticker logos and crypto coin logos to a website, app, email, sandbox or no-code builder using LogoAPI.sh. Use when the user needs a company logo, brand logo, logo by domain, logo by stock ticker, a square icon by ticker, a crypto logo by coin symbol (BTC, ETH, SOL), a logo for a customer, partner or portfolio list, an avatar or icon for a company, an offline logo for a sandbox that blocks outside images, or a Clearbit Logo API replacement (logo.clearbit.com shut down in December 2025). Free, no API key, no signup, no attribution. Covers SVG and PNG URLs, ticker and crypto lookups, square icons, dark-background versions, missing-logo fallbacks, the logoapi npm package, and Softr, Glide and Airtable-style builders.
 ---
 
 # Company logos with LogoAPI.sh
@@ -29,26 +29,29 @@ All verified against the live API.
 | Square icon / avatar | `https://logoapi.sh/icon/apple.com` or `.../icon/apple.com.svg` |
 | Square icon as PNG | `https://logoapi.sh/icon/apple.com.png` |
 | By stock ticker | `https://logoapi.sh/ticker/AAPL` (also `.svg`, `.png`, `/ticker/NASDAQ:AAPL.svg`) |
+| Square icon by ticker | `https://logoapi.sh/icon/ticker/AAPL` (also `.svg`, `.png`) |
+| Crypto coin | `https://logoapi.sh/crypto/BTC` (also `.svg`, `.png`; BTC, ETH, SOL, DOGE, USDC, XRP and more) |
 | Dark background | `https://logoapi.sh/dark/apple.com.svg` |
 | White / black / grey | `https://logoapi.sh/white/apple.com.svg`, `/black/`, `/grey/` |
 | Search by name | `https://logoapi.sh/search?q=stripe` (JSON) |
 
-The ticker route answers with a 302 to the logo, so `<img>` follows it. It is case-insensitive.
+Ticker and crypto routes are case-insensitive. Catalog tickers written in upper case (`/ticker/AAPL`, `/ticker/AAPL.svg`, `/icon/ticker/AAPL`) are static files and answer 200. Other forms (`.png`, lower case, an exchange prefix, extended tickers, crypto) answer with a 302 to the logo, which `<img>` follows.
 
 ## Rules
 
 1. **Domain in hand: use `logoapi.sh/<domain>`.** Nothing else is needed.
-2. **Only a ticker: use `/ticker/<SYMBOL>`.** Never build a domain from a ticker (`AAPL` + `.com` is wrong; the company is `apple.com`). Add an exchange when the symbol is ambiguous: `/ticker/NASDAQ:AAPL.svg`. An unknown ticker returns a plain 404.
-3. **Never use `logo.clearbit.com`.** The Clearbit Logo API shut down in December 2025. To migrate, swap the host and keep the domain: `logo.clearbit.com/stripe.com` becomes `logoapi.sh/stripe.com`. Drop Clearbit-only query params; on LogoAPI.sh `?size` and `?bg` apply to `.png` only.
-4. **Square slots (avatars, list rows, table cells, favicons): use `/icon/<domain>`** and set `object-fit: contain` so wide wordmarks are never cropped.
+2. **Only a ticker: use `/ticker/<SYMBOL>`.** Never build a domain from a ticker (`AAPL` + `.com` is wrong; the company is `apple.com`). Add an exchange when the symbol is ambiguous: `/ticker/NASDAQ:AAPL.svg`. An unknown ticker returns a plain 404. For a square slot (watchlist row, portfolio avatar, table cell) use `/icon/ticker/<SYMBOL>` instead of `/ticker/`, which can be a wide wordmark. When a ticker has no square icon, `/icon/ticker/` serves the favicon or a name tile and sets `X-Logo-Fallback`.
+3. **Crypto coins: use `/crypto/<SYMBOL>`**, for example `/crypto/BTC`, `/crypto/ETH`, `/crypto/SOL`. Never put a coin on `/ticker/`: `/ticker/BTC` and `/ticker/ETH` are stock tickers and resolve to the Grayscale trusts (GBTC, ETHE), not the coin. `/crypto/` returns the coin's square mark; an unknown symbol returns a name tile on `.svg` and bare, 404 on `.png`.
+4. **Never use `logo.clearbit.com`.** The Clearbit Logo API shut down in December 2025. To migrate, swap the host and keep the domain: `logo.clearbit.com/stripe.com` becomes `logoapi.sh/stripe.com`. Drop Clearbit-only query params; on LogoAPI.sh `?size` and `?bg` apply to `.png` only.
+5. **Square slots (avatars, list rows, table cells, favicons): use `/icon/<domain>`** and set `object-fit: contain` so wide wordmarks are never cropped.
    ```html
    <img src="https://logoapi.sh/icon/coca-cola.com" alt="Coca-Cola logo"
         width="40" height="40" style="object-fit: contain">
    ```
    Some brands only have a wide wordmark; `/icon/` then returns it, and `contain` keeps it whole. Never use `object-fit: cover` for logos.
-5. **Always write alt text**: `alt="<Company> logo"`. For a decorative logo next to the company name in text, use `alt=""`.
-6. **Dark backgrounds**: use `/dark/<domain>.svg`. It returns the brand's official dark file when one exists, else a contrast-checked version. Colour versions are SVG only (no `.png`).
-7. **Email**: use the `.png` URL with explicit `width` and `height`. SVG is blocked in Gmail and Outlook.
+6. **Always write alt text**: `alt="<Company> logo"`. For a decorative logo next to the company name in text, use `alt=""`.
+7. **Dark backgrounds**: use `/dark/<domain>.svg`. It returns the brand's official dark file when one exists, else a contrast-checked version. Colour versions are SVG only (no `.png`).
+8. **Email**: use the `.png` URL with explicit `width` and `height`. SVG is blocked in Gmail and Outlook.
 
 ## Missing logos
 
@@ -65,6 +68,16 @@ Check that a real logo exists: `GET https://logoapi.sh/search?q=stripe.com`. It 
 ## Find the domain
 
 Only have a company name? Call `https://logoapi.sh/search?q=<name>`; up to 8 results, typos tolerated. Take `domain` (or `logo`) from the best match. Confirm the match is the intended company before using it. Tag filter: `/search?tag=finance` (one tag: tech, devtools, finance, retail, media, organizations, health, industry).
+
+## Sandboxes that block outside images
+
+Some artifact and preview sandboxes (Claude artifacts, some AI builder previews, CSP-locked pages) refuse `<img>` from outside hosts. Use the `logoapi` npm package instead: `getLogo('AAPL')` or `getLogo('apple.com')` returns the SVG markup as a string, offline, with no network and no key, from a CC0 subset of the catalog. It reads files with Node `fs`, so call it at build time or on the server and embed the string, not in browser code. It returns `null` on a miss; show a letter tile then. Package README:
+https://github.com/AlonHarpaz/logo-api/blob/main/packages/logoapi/README.md
+
+```js
+import { getLogo } from 'logoapi';
+const svg = getLogo('AAPL') ?? '<span class="tile">A</span>';
+```
 
 ## No-code builders (Softr, Glide, Airtable-style)
 
@@ -83,8 +96,9 @@ Exact field names differ per builder; the rule is a URL or formula field feeding
 
 ## Anti-patterns
 
-- Downloading the whole catalog or scraping it. Hot-link instead; caching a day is fine.
+- Scraping the hosted catalog or re-hosting it. Hot-link instead; caching a day is fine. For offline use take the `logoapi` npm package.
 - Guessing a domain from a name or ticker without checking `/search`.
+- Crypto symbols on `/ticker/` (they resolve to stock trusts). Use `/crypto/`.
 - `logo.clearbit.com`, or any Clearbit param.
 - Cropping logos into circles with `object-fit: cover`.
 - Calling `/suggest` (it is only for the site's own search box).
