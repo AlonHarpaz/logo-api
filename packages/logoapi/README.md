@@ -48,5 +48,5 @@ Docs: https://logoapi.sh/docs
 ## License
 
 - Code (`index.js`, `index.mjs`, `index.d.ts`): MIT, see `LICENSE-MIT`.
-- Logo files in `logos/`: CC0 1.0, see `LICENSE`. This is an asset notice, separate from the code license.
+- Files in this package are CC0 (public domain). Logos remain trademarks of their owners: use them to identify the company, and don't suggest the company endorses you. Full catalog and terms: https://logoapi.sh.
 - Logos remain the trademarks of their owners. You may show them, free and with no attribution, to identify a company in your site or app, including saving a few files into your project. Don't change them, don't suggest the company endorses you, and don't redistribute the catalog in bulk. Full terms: https://logoapi.sh/terms.
