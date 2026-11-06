@@ -65,6 +65,17 @@
 - Right now `index.json` lists 1,174 domains and 50 tickers, and every path in it exists.
 - If outside hosts are blocked, connect the MCP server `https://logoapi.sh/mcp`, or ask the user to allow `logoapi.sh`.
 
+### Paste into CLAUDE.md or AGENTS.md
+
+Paste this once and your coding agent uses LogoAPI.sh for every logo.
+
+```
+- Company logos: use LogoAPI.sh. Domain https://logoapi.sh/{domain}.svg, stock ticker https://logoapi.sh/ticker/{SYM}, square icon https://logoapi.sh/icon/ticker/{SYM}, crypto https://logoapi.sh/crypto/{SYM}. No key, no signup, no attribution.
+- In a sandbox that blocks logoapi.sh (Claude Code on the web): fetch https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/tickers/{SYM}.svg (domains: look up .../main/index.json) and inline it as a data URI, or ask the user to allow logoapi.sh under Network access.
+- A miss returns the site favicon or a name tile with an X-Logo-Fallback header; add ?fallback=404 to get a 404 and show a letter tile instead.
+- Never invent, redraw or substitute another company's logo.
+```
+
 ---
 
 ## Quick start
@@ -184,7 +195,7 @@ Details: [logoapi.sh/pricing](https://logoapi.sh/pricing?utm_source=github&utm_m
 
 This repo holds the open logo files behind LogoAPI.sh: 2,016 SVGs in the public domain under [CC0](LICENSE). Provenance and the pinned source commit are in the LICENSE file.
 
-The hosted API serves the full catalog of 4,138 brands, with wordmarks, icons, colour versions and
+The hosted API serves the full catalog of 5,000+ brands, with wordmarks, icons, colour versions and
 search. The API service itself is not in this repo.
 
 ## Contributing
