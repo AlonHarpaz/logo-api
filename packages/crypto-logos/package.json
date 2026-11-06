@@ -1,0 +1,58 @@
+{
+  "name": "crypto-logos",
+  "version": "0.1.0",
+  "description": "Crypto coin logos by symbol (BTC, ETH, SOL) as SVG. Alias of logoapi; the hosted API adds /crypto/<SYM>.",
+  "keywords": [
+    "crypto",
+    "crypto-logo",
+    "crypto-logos",
+    "bitcoin",
+    "ethereum",
+    "coin",
+    "token",
+    "logo",
+    "logos",
+    "company-logo",
+    "svg",
+    "no-api-key",
+    "clearbit-alternative",
+    "logo-api",
+    "offline",
+    "ai-agent"
+  ],
+  "homepage": "https://logoapi.sh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlonHarpaz/logo-api.git",
+    "directory": "packages/crypto-logos"
+  },
+  "bugs": {
+    "url": "https://github.com/AlonHarpaz/logo-api/issues"
+  },
+  "license": "(MIT AND CC0-1.0)",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "llms.txt",
+    "README.md"
+  ],
+  "dependencies": {
+    "logoapi": "^0.1.1"
+  },
+  "engines": {
+    "node": ">=16.7"
+  },
+  "sideEffects": false
+}
