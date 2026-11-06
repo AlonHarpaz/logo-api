@@ -1,6 +1,8 @@
 `npm install logoapi` then `const { getLogo } = require('logoapi'); getLogo('AAPL')` returns the Apple logo as an SVG string.
 
-Company and stock ticker logos as SVG files in your project. Free, no key, no network call, zero dependencies. CommonJS and ESM, with types.
+Offline company and stock ticker logos as SVG. This package bundles 1,174 domains and 50 stock tickers (2,016 SVG files, CC0). No network call, no key, zero dependencies. CommonJS and ESM, with types. The hosted API at logoapi.sh covers 5,000+ more; see "The full catalog" below.
+
+`getLogo()` always returns the SVG markup as a string, never a URL. If the package has no logo for the input it returns `null`, so check for `null` before you use the result.
 
 ```js
 import { getLogo, getLogoPath, hasLogo, list } from 'logoapi';
@@ -45,6 +47,6 @@ Docs: https://logoapi.sh/docs
 
 ## License
 
-Logos are trademarks of their owners. You may show them, free and with no attribution, to identify a company in your site or app, including saving a few files into your project. Don't change them, don't suggest the company endorses you, and don't redistribute the catalog in bulk. Files in `logos/` in this repo are CC0. Full terms: https://logoapi.sh/terms.
-
-Logo files: CC0 1.0 (`LICENSE`). Code (`index.js`, `index.mjs`, `index.d.ts`): MIT (`LICENSE-MIT`).
+- Code (`index.js`, `index.mjs`, `index.d.ts`): MIT, see `LICENSE-MIT`.
+- Logo files in `logos/`: CC0 1.0, see `LICENSE`. This is an asset notice, separate from the code license.
+- Logos remain the trademarks of their owners. You may show them, free and with no attribution, to identify a company in your site or app, including saving a few files into your project. Don't change them, don't suggest the company endorses you, and don't redistribute the catalog in bulk. Full terms: https://logoapi.sh/terms.
