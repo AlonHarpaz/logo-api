@@ -71,7 +71,7 @@ Only have a company name? Call `https://logoapi.sh/search?q=<name>`; up to 8 res
 
 ## Sandboxes that block outside images
 
-Some artifact and preview sandboxes (Claude artifacts, some AI builder previews, CSP-locked pages) refuse `<img>` from outside hosts. Use the `logoapi` npm package instead: `getLogo('AAPL')` or `getLogo('apple.com')` returns the SVG markup as a string, offline, with no network and no key, from a CC0 subset of the catalog. It reads files with Node `fs`, so call it at build time or on the server and embed the string, not in browser code. It returns `null` on a miss; show a letter tile then. Package README:
+Some artifact and preview sandboxes (Claude artifacts, some AI builder previews, CSP-locked pages) refuse `<img>` from outside hosts. Use the `logoapi` npm package instead: `getLogo('AAPL')` or `getLogo('apple.com')` returns the SVG markup as a string, offline, with no network and no key, from a CC0 subset of the catalog. It reads files with Node `fs`, so call it at build time or on the server and embed the string, not in browser code. It returns `null` on a miss; show a letter tile then. In Claude Code on the web the sandbox blocks outside hosts; ask the user to add `logoapi.sh` under Network access > allowed hosts, or use the npm package `logoapi` offline. Package README:
 https://github.com/AlonHarpaz/logo-api/blob/main/packages/logoapi/README.md
 
 ```js
