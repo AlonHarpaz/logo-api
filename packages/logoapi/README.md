@@ -17,10 +17,10 @@ list();                     // { domains: [...], tickers: [...] }
 
 ## In a sandboxed artifact or preview
 
-Some sandboxes block outside images, so a `https://logoapi.sh/...` `<img>` will not load. `getLogo()` returns the SVG as a string, so you can inline it with no network request:
+Some sandboxes block outside images, so a `https://logoapi.sh/...` `<img>` will not load. `getLogo()` returns the SVG as a string, so you can inline it with no network request. It reads files with Node's `fs`, so call it on the server or in a build step (not in browser code) and put the string in your HTML:
 
 ```js
-document.querySelector('#logo').innerHTML = getLogo('stripe.com') ?? '';
+const html = `<div class="logo">${getLogo('stripe.com') ?? ''}</div>`;
 ```
 
 ## What is in this package
