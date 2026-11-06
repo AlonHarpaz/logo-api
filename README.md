@@ -51,6 +51,16 @@
 
 ---
 
+## Using this from an AI agent or sandbox
+
+- Files are `logos/<slug>.svg`, all CC0.
+- `index.json` maps a domain or a stock ticker to a file: `{"domains": {"apple.com": "logos/apple.svg"}, "tickers": {"AAPL": "logos/apple.svg"}}`.
+- Raw URL pattern: `https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/logos/<slug>.svg`
+- The full catalog (5,000+ logos, tickers, crypto, PNG) is on the API: `https://logoapi.sh/<domain>`, `https://logoapi.sh/ticker/<SYM>` and `https://logoapi.sh/icon/ticker/<SYM>`.
+- If outside hosts are blocked, connect the MCP server `https://logoapi.sh/mcp`, or ask the user to allow `logoapi.sh`.
+
+---
+
 ## Quick start
 
 Swap the domain. That's it.
