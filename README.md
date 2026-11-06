@@ -180,9 +180,7 @@ Details: [logoapi.sh/pricing](https://logoapi.sh/pricing?utm_source=github&utm_m
 
 ## What's in this repo
 
-This repo holds the open logo files behind LogoAPI.sh: 2,016 SVGs from
-[gilbarbara/logos](https://github.com/gilbarbara/logos), dedicated to the public domain under
-[CC0](LICENSE). They are pinned to commit `dafdf2df1334` and keep gilbarbara's file names.
+This repo holds the open logo files behind LogoAPI.sh: 2,016 SVGs in the public domain under [CC0](LICENSE). Provenance and the pinned source commit are in the LICENSE file.
 
 The hosted API serves the full catalog of 4,138 brands, with wordmarks, icons, colour versions and
 search. The API service itself is not in this repo.
@@ -194,7 +192,7 @@ search. The API service itself is not in this repo.
 
 ## License
 
-Logo files in this repo: [CC0 1.0](LICENSE), from gilbarbara/logos.
+Logo files in this repo: [CC0 1.0](LICENSE).
 Logos remain trademarks of their owners. Use them to refer to the company, not to imply endorsement.
 
 <p align="center"><sub>LogoAPI.sh is operated by H. Tech Innovation LLC, Dallas, TX.</sub></p>
