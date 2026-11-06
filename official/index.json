@@ -1,0 +1,37 @@
+{
+ "tickers": {
+  "ABBV": "official/tickers/ABBV.svg",
+  "ACN": "official/tickers/ACN.svg",
+  "AXP": "official/tickers/AXP.svg",
+  "BAC": "official/tickers/BAC.svg",
+  "BKNG": "official/tickers/BKNG.svg",
+  "CSCO": "official/tickers/CSCO.svg",
+  "CVX": "official/tickers/CVX.svg",
+  "GE": "official/tickers/GE.svg",
+  "HON": "official/tickers/HON.svg",
+  "MCD": "official/tickers/MCD.svg",
+  "PANW": "official/tickers/PANW.svg",
+  "PG": "official/tickers/PG.svg",
+  "SCHW": "official/tickers/SCHW.svg",
+  "T": "official/tickers/T.svg",
+  "TSLA": "official/tickers/TSLA.svg",
+  "WFC": "official/tickers/WFC.svg",
+  "WMT": "official/tickers/WMT.svg"
+ },
+ "crypto": {
+  "ADA": "official/crypto/ADA.svg",
+  "BCH": "official/crypto/BCH.svg",
+  "BNB": "official/crypto/BNB.svg",
+  "BTC": "official/crypto/BTC.svg",
+  "ETH": "official/crypto/ETH.svg",
+  "LINK": "official/crypto/LINK.svg",
+  "NEAR": "official/crypto/NEAR.svg",
+  "SOL": "official/crypto/SOL.svg",
+  "TRX": "official/crypto/TRX.svg",
+  "USDC": "official/crypto/USDC.svg",
+  "USDT": "official/crypto/USDT.svg",
+  "XLM": "official/crypto/XLM.svg",
+  "XRP": "official/crypto/XRP.svg",
+  "ZEC": "official/crypto/ZEC.svg"
+ }
+}
