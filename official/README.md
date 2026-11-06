@@ -1,6 +1,6 @@
 # Official marks
 
-Square brand marks for the largest US stocks and the main coins, reproduced unchanged from each company's own brand or press material, under predictable file names. These files are NOT CC0; see [LICENSE.md](LICENSE.md). The CC0 set lives in `../logos/` and `../tickers/`.
+Square brand marks for about 100 large US-listed companies and the main coins, reproduced unchanged from each company's own brand or press material, under predictable file names. These files are NOT CC0; see [LICENSE.md](LICENSE.md). The CC0 set lives in `../logos/` and `../tickers/`.
 
 Raw URL pattern:
 
@@ -11,7 +11,7 @@ Examples: `.../main/official/tickers/WMT.svg`, `.../main/official/crypto/BTC.svg
 
 ## What is here
 
-- `tickers/`: 24 square marks for top-100 US companies by market cap whose square icon is a real vector: ABBV, ACN, AXP, BAC, BKNG, CSCO, CVX, GE, HON, MCD, PANW, PG, SCHW, T, TSLA, WFC, WMT, plus seven Vanguard ETFs: BND, VIG, VOO, VTI, VTV, VUG, VXUS. ETFs map to the issuer's mark (VTI -> Vanguard).
+- `tickers/`: 24 square marks from a list of about 100 large US-listed companies, as of 2026-11-06, whose square icon is a real vector: ABBV, ACN, AXP, BAC, BKNG, CSCO, CVX, GE, HON, MCD, PANW, PG, SCHW, T, TSLA, WFC, WMT, plus seven Vanguard ETFs: BND, VIG, VOO, VTI, VTV, VUG, VXUS. ETFs map to the issuer's mark (VTI -> Vanguard).
 - `crypto/`: 14 coin marks: ADA, BCH, BNB, BTC, ETH, LINK, NEAR, SOL, TRX, USDC, USDT, XLM, XRP, ZEC.
 
 Every file is byte-for-byte what the API serves at `https://logoapi.sh/icon/<domain>.svg`. USDC and XRP are the marks the `https://logoapi.sh/crypto/<SYMBOL>.svg` route serves from its bundle. Nothing is redrawn or edited.
