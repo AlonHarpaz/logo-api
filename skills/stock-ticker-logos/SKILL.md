@@ -9,12 +9,14 @@ LogoAPI.sh serves a real logo from a ticker symbol. No key, no signup, no attrib
 
 ## URLs
 
+In a table or list, use the square icon: `https://logoapi.sh/icon/ticker/AAPL.svg`. For the full logo use `/ticker/AAPL.svg`.
+
 All verified against the live API.
 
 | Need | URL |
 |---|---|
-| Square icon (list rows, avatars, table cells) | `https://logoapi.sh/icon/ticker/AAPL` (also `.svg`, `.png`) |
-| Wordmark (wide, headers, detail pages) | `https://logoapi.sh/ticker/AAPL` (also `.svg`, `.png`) |
+| Square icon (tables, lists, avatars) | `https://logoapi.sh/icon/ticker/AAPL.svg` (also `.png`) |
+| Full logo (wide, headers, detail pages) | `https://logoapi.sh/ticker/AAPL.svg` (also `.png`) |
 | With exchange | `https://logoapi.sh/icon/ticker/NASDAQ:AAPL` |
 | ETF | `https://logoapi.sh/icon/ticker/VTI` (Vanguard), `https://logoapi.sh/icon/ticker/SPY` |
 | Crypto coin | `https://logoapi.sh/crypto/BTC` (also `.svg`, `.png`; ETH, SOL and more) |
