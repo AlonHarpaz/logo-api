@@ -2,6 +2,10 @@
 
 > Offline company and stock ticker logos as SVG. No key, no network, zero dependencies. Logo files are CC0, code is MIT.
 
+https://logoapi.sh/stripe.com.svg
+https://logoapi.sh/ticker/AAPL.svg
+https://logoapi.sh/crypto/BTC.svg
+
 Install: npm install logoapi
 Use: const { getLogo } = require('logoapi'); getLogo('AAPL')  // SVG string, or null
 

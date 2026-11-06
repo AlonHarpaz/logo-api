@@ -2,6 +2,10 @@
 
 Crypto coin logos by symbol (BTC, ETH, SOL) as SVG, offline. Official coin marks, with the CC0 files from logoapi as fallback.
 
+```
+https://logoapi.sh/crypto/BTC.svg
+```
+
 ```js
 // npm install crypto-logos
 const { getLogo } = require('crypto-logos');

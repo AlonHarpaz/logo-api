@@ -21,7 +21,11 @@
     "stock",
     "company",
     "offline",
-    "embed"
+    "embed",
+    "stock ticker",
+    "ticker logos",
+    "crypto logos",
+    "company logos svg"
   ],
   "homepage": "https://logoapi.sh",
   "repository": {

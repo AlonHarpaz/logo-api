@@ -2,6 +2,10 @@
 
 Stock ticker logos as SVG, offline, no API key. Alias of logoapi.
 
+```
+https://logoapi.sh/ticker/AAPL.svg
+```
+
 ```js
 // npm install ticker-logos
 const { getLogo } = require('ticker-logos');

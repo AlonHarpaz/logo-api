@@ -10,6 +10,7 @@ fs.copyFileSync(path.join(root, 'LICENSE'), path.join(pkg, 'LICENSE'));
 const idx = JSON.parse(fs.readFileSync(path.join(pkg, 'index.json'), 'utf8'));
 for (const m of [idx.domains, idx.tickers]) {
   for (const p of Object.values(m)) {
+    if (typeof p !== 'string') continue; // API-only entries are objects, not repo paths
     if (!fs.existsSync(path.join(pkg, p))) throw new Error('index.json points to a missing file: ' + p);
   }
 }
@@ -22,6 +23,6 @@ const end = '<!-- tickers:end -->';
 const a = llms.indexOf(start);
 const b = llms.indexOf(end);
 if (a === -1 || b === -1 || b < a) throw new Error('llms.txt is missing the tickers markers');
-const syms = Object.keys(idx.tickers).sort();
+const syms = Object.keys(idx.tickers).filter((k) => typeof idx.tickers[k] === 'string').sort();
 const block = start + '\n' + syms.length + ' tickers: ' + syms.join(', ') + '\n' + end;
 fs.writeFileSync(llmsPath, llms.slice(0, a) + block + llms.slice(b + end.length));

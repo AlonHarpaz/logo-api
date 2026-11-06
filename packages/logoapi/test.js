@@ -16,4 +16,14 @@ assert(r[0].dataUri.startsWith('data:image/svg+xml;base64,'));
 assert.strictEqual(Buffer.from(r[0].dataUri.split(',')[1], 'base64').toString('utf8'), getLogo('AAPL'));
 assert.deepStrictEqual(r[2], { ticker: 'nope', dataUri: null, source: null, missing: true });
 assert.deepStrictEqual(getLogos([]), []);
+// Object (API-only) entries in index.json must never become a path.
+const idx = require('./index.json');
+idx.tickers.ZZAPI = { api: 'https://logoapi.sh/ticker/ZZAPI.svg', official: 'official/tickers/ZZAPI.svg' };
+idx.domains['zzapi.example'] = { api: 'x' };
+assert.strictEqual(getLogoPath('ZZAPI'), null);
+assert.strictEqual(getLogo('zzapi.example'), null);
+assert.strictEqual(hasLogo('ZZAPI'), false);
+assert(!list().tickers.includes('ZZAPI'));
+assert.strictEqual(getLogos(['ZZAPI'])[0].missing, true);
+delete idx.tickers.ZZAPI; delete idx.domains['zzapi.example'];
 console.log('ok');

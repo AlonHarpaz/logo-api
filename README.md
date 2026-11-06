@@ -7,14 +7,18 @@
   </a>
 </p>
 
-<h1 align="center">Free logo API: company logos by domain</h1>
+<h1 align="center">Free logo API: company logos by domain, stock ticker or crypto symbol</h1>
 
 <p align="center">
   <b>One URL returns the SVG. No API key, no signup, no attribution.</b><br>
   A free alternative to the Clearbit Logo API. 2M requests a month per site. Commercial use included.
 </p>
 
-<p align="center"><code>&lt;img src="https://logoapi.sh/stripe.com.svg" alt="Stripe"&gt;</code></p>
+<p align="center">
+  <code>https://logoapi.sh/stripe.com.svg</code><br>
+  <code>https://logoapi.sh/ticker/AAPL.svg</code><br>
+  <code>https://logoapi.sh/crypto/BTC.svg</code>
+</p>
 
 <p align="center">
   This repo holds part of the catalog. The <a href="https://logoapi.sh?utm_source=github&utm_medium=readme&utm_campaign=logo-api">logoapi.sh</a> CDN serves all 5,000+ logos. We add more here when the licence allows.
@@ -55,14 +59,14 @@
 
 - Start here: `https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/index.json`. Look up the domain or the stock ticker there, then fetch the path it gives you.
 - Files are NOT named by domain. `logos/apple.com.svg` and `logos/<domain>/logo.svg` do not exist. Names are slugs, such as `logos/apple.svg`, so always go through `index.json`.
-- Shape: `{"domains": {"apple.com": "logos/apple.svg"}, "tickers": {"AAPL": "logos/apple.svg"}}`
+- Shape: `{"domains": {"apple.com": "logos/apple.svg"}, "tickers": {"AAPL": "logos/apple.svg"}}`. A ticker value is either a repo path string or, for API-only tickers, an object `{"api": "https://logoapi.sh/ticker/VTI.svg", "icon": ..., "official": "official/tickers/VTI.svg"}`. There is also a `crypto` map and an `api` map of URL patterns. Check that a value is a string before treating it as a path.
 - Raw URL pattern: `https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/<path>`, for example `.../main/logos/apple.svg`.
 - Files in this repo are CC0 (public domain). Logos remain trademarks of their owners: use them to identify the company, and don't suggest the company endorses you. Full catalog and terms: https://logoapi.sh.
 - The full catalog (5,000+ logos, tickers, crypto, PNG) is on the API: `https://logoapi.sh/<domain>`, `https://logoapi.sh/ticker/<SYM>` and `https://logoapi.sh/icon/ticker/<SYM>`.
 - Tickers: `index.json` has a `tickers` map, and the API serves `https://logoapi.sh/ticker/<SYM>`. ETFs map to the issuer (SPY goes to ssga.com).
 - Stock tickers also sit at `tickers/<SYMBOL>.svg` (same files, predictable names), for example `.../main/tickers/AAPL.svg`.
 - Official square marks (trademarks, not CC0) for the top US tickers and main coins sit at `official/tickers/<SYMBOL>.svg` and `official/crypto/<SYMBOL>.svg`, map in `official/index.json`, terms in `official/LICENSE.md`. See [official/README.md](official/README.md).
-- Right now `index.json` lists 1,174 domains and 50 tickers, and every path in it exists.
+- Right now `index.json` lists 1,174 domains and 50 tickers, and every repo path in it exists.
 - If outside hosts are blocked, connect the MCP server `https://logoapi.sh/mcp`, or ask the user to allow `logoapi.sh`.
 
 ### Paste into CLAUDE.md or AGENTS.md
