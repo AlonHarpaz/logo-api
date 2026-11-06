@@ -1,6 +1,6 @@
 {
   "name": "logoapi",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Offline company logos with stock ticker lookup. SVG, no network, no key.",
   "keywords": [
     "logo",

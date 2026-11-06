@@ -8,7 +8,7 @@ const { getLogo } = require('logoapi');
 getLogo('AAPL'); // '<svg ...>' (or null if the package has no logo)
 ```
 
-Bundles 1,174 domains and 50 stock tickers (2,016 CC0 SVG files). It is a subset: the hosted API at [logoapi.sh](https://logoapi.sh) covers 5,000+ more (see "Beyond this package").
+Bundles 1,174 domains and 50 stock tickers (2,016 CC0 SVG files). It is a subset: the hosted API at [logoapi.sh](https://logoapi.sh) covers 5,000+ logos (see "Beyond this package").
 
 ## API
 
@@ -24,6 +24,21 @@ hasLogo('stripe.com');      // true
 getLogoPath('stripe.com');  // absolute path to the .svg, or null
 list();                     // { domains: [...], tickers: [...] }
 ```
+
+### Batch lookup
+
+```js
+import { getLogos } from 'logoapi';
+
+getLogos(['AAPL', 'stripe.com', 'ZZZZ']);
+// [
+//   { ticker: 'AAPL',       dataUri: 'data:image/svg+xml;base64,...', source: 'cc0', missing: false },
+//   { ticker: 'stripe.com', dataUri: 'data:image/svg+xml;base64,...', source: 'cc0', missing: false },
+//   { ticker: 'ZZZZ',       dataUri: null,                            source: null,  missing: true }
+// ]
+```
+
+`getLogos(list)` returns one object per input item, in order: `ticker` (your input, echoed back), `dataUri` (`string | null`), `source` (`'cc0' | 'official' | null`) and `missing` (`boolean`). Tickers in any case and domains both work, like `getLogo()`. Coverage is the CC0 subset of 50 tickers (and 1,174 domains); never imply the full catalog.
 
 ## Misses
 
@@ -81,6 +96,8 @@ Dark mode: these files keep their original colours (none use `currentColor`), so
 
 The API serves 5,000+ logos. Free, no key, no attribution. Docs: https://logoapi.sh/docs
 
+2M requests a month per site, free, no key. Free stays free. 12 months' notice before any change.
+
 | What you need | URL |
 | --- | --- |
 | Logo by domain | `https://logoapi.sh/{domain}.svg` |
@@ -91,6 +108,7 @@ The API serves 5,000+ logos. Free, no key, no attribution. Docs: https://logoapi
 | Favicon | `https://logoapi.sh/favicon/{domain}` |
 | White, black, grey, dark | `https://logoapi.sh/{white\|black\|grey\|dark}/{domain}.svg` |
 | Name to domain | `https://logoapi.sh/search?q=stripe` |
+| Crypto coin | `https://logoapi.sh/crypto/{SYM}` |
 | MCP server | `https://logoapi.sh/mcp` |
 
 If outside hosts are blocked in your environment, ask the user to allow `logoapi.sh`.

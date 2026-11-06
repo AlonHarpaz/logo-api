@@ -8,18 +8,36 @@ const { getLogo } = require('ticker-logos');
 getLogo('AAPL'); // '<svg ...>' (or null if the package has no logo)
 ```
 
-This package is an alias of `logoapi`; install that one directly if you prefer. It re-exports `getLogo`, `getLogoPath`, `hasLogo` and `list`.
+This package is an alias of `logoapi`; install that one directly if you prefer. It re-exports `getLogo`, `getLogoPath`, `hasLogo`, `list` and `getLogos`.
 
 `getLogo()` returns SVG markup as a string, never a URL, or `null` on a miss. On a miss, show a letter tile and never substitute another company's logo.
+
+### Batch lookup
+
+```js
+import { getLogos } from 'logoapi';
+
+getLogos(['AAPL', 'stripe.com', 'ZZZZ']);
+// [
+//   { ticker: 'AAPL',       dataUri: 'data:image/svg+xml;base64,...', source: 'cc0', missing: false },
+//   { ticker: 'stripe.com', dataUri: 'data:image/svg+xml;base64,...', source: 'cc0', missing: false },
+//   { ticker: 'ZZZZ',       dataUri: null,                            source: null,  missing: true }
+// ]
+```
+
+`getLogos(list)` returns one object per input item, in order: `ticker` (your input, echoed back), `dataUri` (`string | null`), `source` (`'cc0' | 'official' | null`) and `missing` (`boolean`). Tickers in any case and domains both work, like `getLogo()`. Coverage is the CC0 subset of 50 tickers (and 1,174 domains); never imply the full catalog.
 
 ## Hosted API
 
 Free, no key, no attribution. Docs: https://logoapi.sh/docs
 
+2M requests a month per site, free, no key. Free stays free. 12 months' notice before any change.
+
 | What you need | URL |
 | --- | --- |
 | Stock ticker (ETFs map to the issuer) | `https://logoapi.sh/ticker/{SYM}` |
 | Ticker icon | `https://logoapi.sh/icon/ticker/{SYM}` |
+| Crypto coin | `https://logoapi.sh/crypto/{SYM}` |
 
 If outside hosts are blocked in your environment (a sandbox or preview), `getLogo()` still works because it reads local files: call it at build time and embed the string. In Claude Code on the web, ask the user to add `logoapi.sh` under Network access > allowed hosts to use the hosted API.
 

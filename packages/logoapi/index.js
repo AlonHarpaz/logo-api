@@ -42,4 +42,19 @@ function list() {
   };
 }
 
-module.exports = { getLogo, getLogoPath, hasLogo, list };
+function getLogos(items) {
+  if (!Array.isArray(items)) throw new TypeError('getLogos expects an array');
+  return items.map((item) => {
+    const rel = resolve(item);
+    if (!rel) return { ticker: item, dataUri: null, source: null, missing: true };
+    const svg = fs.readFileSync(path.join(__dirname, rel));
+    return {
+      ticker: item,
+      dataUri: 'data:image/svg+xml;base64,' + svg.toString('base64'),
+      source: 'cc0',
+      missing: false
+    };
+  });
+}
+
+module.exports = { getLogo, getLogoPath, hasLogo, list, getLogos };

@@ -1,0 +1,18 @@
+const assert = require('assert');
+const { getLogo, hasLogo, list, getLogoPath, getLogos } = require('./index.js');
+assert(getLogo('BTC').includes('<svg'));
+assert.strictEqual(getLogo('btc'), getLogo('BTC'));
+assert(getLogoPath('eth').endsWith('ETH.svg'));
+assert(hasLogo('SOL'));
+assert(getLogo('AAPL').includes('<svg'));
+assert.strictEqual(getLogo('nope'), null);
+assert.strictEqual(getLogo('../index'), null);
+assert(list().crypto.includes('BTC'));
+assert(list().tickers.length > 0);
+const r = getLogos(['btc', 'AAPL', 'nope']);
+assert.strictEqual(r[0].source, 'official');
+assert.strictEqual(r[0].ticker, 'btc');
+assert(r[0].dataUri.startsWith('data:image/svg+xml;base64,'));
+assert.strictEqual(r[1].source, 'cc0');
+assert.deepStrictEqual(r[2], { ticker: 'nope', dataUri: null, source: null, missing: true });
+console.log('ok');

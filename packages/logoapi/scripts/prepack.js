@@ -13,3 +13,15 @@ for (const m of [idx.domains, idx.tickers]) {
     if (!fs.existsSync(path.join(pkg, p))) throw new Error('index.json points to a missing file: ' + p);
   }
 }
+
+// Regenerate the "Bundled tickers" section of llms.txt from index.json so it cannot drift.
+const llmsPath = path.join(pkg, 'llms.txt');
+const llms = fs.readFileSync(llmsPath, 'utf8');
+const start = '<!-- tickers:start -->';
+const end = '<!-- tickers:end -->';
+const a = llms.indexOf(start);
+const b = llms.indexOf(end);
+if (a === -1 || b === -1 || b < a) throw new Error('llms.txt is missing the tickers markers');
+const syms = Object.keys(idx.tickers).sort();
+const block = start + '\n' + syms.length + ' tickers: ' + syms.join(', ') + '\n' + end;
+fs.writeFileSync(llmsPath, llms.slice(0, a) + block + llms.slice(b + end.length));
