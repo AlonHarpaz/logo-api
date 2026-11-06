@@ -8,7 +8,7 @@ const { getLogo } = require('logoapi');
 getLogo('AAPL'); // '<svg ...>' (or null if the package has no logo)
 ```
 
-Bundles 1,174 domains and 50 stock tickers (2,016 SVG files from [gilbarbara/logos](https://github.com/gilbarbara/logos), CC0). It is a subset: the hosted API at [logoapi.sh](https://logoapi.sh) covers 5,000+ more (see "Beyond this package").
+Bundles 1,174 domains and 50 stock tickers (2,016 CC0 SVG files). It is a subset: the hosted API at [logoapi.sh](https://logoapi.sh) covers 5,000+ more (see "Beyond this package").
 
 ## API
 
@@ -101,4 +101,3 @@ Plain-text facts for agents: [llms.txt](./llms.txt).
 
 - Code (`index.js`, `index.mjs`, `index.d.ts`): MIT, see `LICENSE-MIT`.
 - Files in this package are CC0 (public domain). Logos remain trademarks of their owners: use them to identify the company, and don't suggest the company endorses you. Full catalog and terms: https://logoapi.sh.
-- Logos remain the trademarks of their owners. You may show them, free and with no attribution, to identify a company in your site or app, including saving a few files into your project. Don't change them, don't suggest the company endorses you, and don't redistribute the catalog in bulk. Full terms: https://logoapi.sh/terms.

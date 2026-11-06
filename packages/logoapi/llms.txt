@@ -6,7 +6,7 @@ Install: npm install logoapi
 Use: const { getLogo } = require('logoapi'); getLogo('AAPL')  // SVG string, or null
 
 ## Facts
-- Bundles 1,174 domains and 50 stock tickers (2,016 SVG files, CC0, from gilbarbara/logos). It is a subset.
+- Bundles 1,174 domains and 50 stock tickers (2,016 CC0 SVG files). It is a subset.
 - getLogo(domainOrTicker) returns SVG markup as a string, never a URL. It returns null when the package has no logo.
 - Also exported: getLogoPath, hasLogo, list. CommonJS, ESM and types.
 - It reads files with Node fs: call it on the server or at build time, not in browser code. Embed the returned string in HTML for sandboxes that block outside images.
