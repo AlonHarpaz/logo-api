@@ -1,0 +1,25 @@
+{
+  "name": "logoapi",
+  "version": "0.1.0",
+  "description": "Company, stock ticker and crypto logos as SVG files in your project. Free, no key.",
+  "keywords": ["logo","logos","company-logo","brand-logo","favicon","ticker","stock-logo","stock-ticker","crypto-logo","svg","icons","clearbit-alternative","logo-api","ai-agent","vibe-coding"],
+  "homepage": "https://logoapi.sh",
+  "repository": {"type": "git", "url": "git+https://github.com/AlonHarpaz/logo-api.git", "directory": "packages/logoapi"},
+  "bugs": {"url": "https://github.com/AlonHarpaz/logo-api/issues"},
+  "license": "(MIT AND CC0-1.0)",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {"types": "./index.d.ts", "import": "./index.mjs", "require": "./index.js"},
+    "./index.json": "./index.json",
+    "./package.json": "./package.json"
+  },
+  "files": ["index.js","index.mjs","index.d.ts","index.json","logos/","LICENSE","LICENSE-MIT","README.md"],
+  "scripts": {
+    "prepack": "node scripts/prepack.js",
+    "test": "node test.js"
+  },
+  "engines": {"node": ">=14"},
+  "sideEffects": false
+}

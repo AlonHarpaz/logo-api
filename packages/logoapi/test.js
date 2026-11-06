@@ -1,0 +1,10 @@
+const assert = require('assert');
+const { getLogo, hasLogo, list, getLogoPath } = require('./index.js');
+assert(getLogo('AAPL').includes('<svg'));
+assert(getLogo('aapl') === getLogo('AAPL'));
+assert(getLogo('apple.com') === getLogo('https://www.Apple.com/x'));
+assert.strictEqual(getLogo('nope'), null);
+assert.strictEqual(hasLogo('nope'), false);
+assert(getLogoPath('apple.com').endsWith('.svg'));
+assert(list().domains.length > 1000);
+console.log('ok');
