@@ -14,7 +14,7 @@ Examples: `.../main/official/tickers/WMT.svg`, `.../main/official/crypto/BTC.svg
 - `tickers/`: 17 square marks for top-100 US companies by market cap whose square icon is a real vector: ABBV, ACN, AXP, BAC, BKNG, CSCO, CVX, GE, HON, MCD, PANW, PG, SCHW, T, TSLA, WFC, WMT.
 - `crypto/`: 14 coin marks: ADA, BCH, BNB, BTC, ETH, LINK, NEAR, SOL, TRX, USDC, USDT, XLM, XRP, ZEC.
 
-Every file is byte-for-byte what the API serves at `https://logoapi.sh/icon/<domain>.svg` (coins: `https://logoapi.sh/crypto/<SYMBOL>.svg`). Nothing is redrawn or edited.
+Every file is byte-for-byte what the API serves at `https://logoapi.sh/icon/<domain>.svg`. USDC and XRP are the marks the `https://logoapi.sh/crypto/<SYMBOL>.svg` route serves from its bundle. Nothing is redrawn or edited.
 
 ## What is not here
 
