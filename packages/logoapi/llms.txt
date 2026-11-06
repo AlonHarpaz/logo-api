@@ -2,15 +2,30 @@
 
 > Offline company and stock ticker logos as SVG. No key, no network, zero dependencies. Logo files are CC0, code is MIT.
 
+https://logoapi.sh/stripe.com.svg
+https://logoapi.sh/ticker/AAPL.svg
+https://logoapi.sh/crypto/BTC.svg
+
 Install: npm install logoapi
 Use: const { getLogo } = require('logoapi'); getLogo('AAPL')  // SVG string, or null
 
 ## Facts
 - Bundles 1,174 domains and 50 stock tickers (2,016 CC0 SVG files). It is a subset.
 - getLogo(domainOrTicker) returns SVG markup as a string, never a URL. It returns null when the package has no logo.
-- Also exported: getLogoPath, hasLogo, list. CommonJS, ESM and types.
+- Also exported: getLogoPath, hasLogo, list, getLogos. CommonJS, ESM and types.
+- getLogos(list) returns an array, one per input item in order: {ticker, dataUri, source, missing}. ticker is the input echoed back; dataUri is "data:image/svg+xml;base64,..." or null; source is "cc0" | "official" | null; missing is a boolean. Tickers (any case) and domains both work.
+- Coverage is the CC0 subset of 50 tickers (and 1,174 domains); never imply the full catalog.
 - It reads files with Node fs: call it on the server or at build time, not in browser code. Embed the returned string in HTML for sandboxes that block outside images.
 - Files keep their original colours (no currentColor), so CSS cannot recolour them.
+
+## Bundled tickers
+<!-- tickers:start -->
+50 tickers: AAPL, ABNB, ADBE, AKAM, AMD, AMPL, ARM, ASAN, AVGO, BOX, BRZE, CBRS, COUR, CRM, CRWV, DBX, DDOG, DOCN, DT, FROG, FSLY, GOOGL, HUBS, IBM, INTC, MA, MDB, META, MNDY, MSFT, MU, NET, NFLX, NVDA, OKTA, OPRA, ORCL, PD, PINS, PS, PYPL, QCOM, RDDT, RXT, SAP, SNOW, TSM, TWLO, UPWK, V
+<!-- tickers:end -->
+
+## Limits
+- 2M requests a month per site, free, no key.
+- Free stays free. 12 months' notice before any change.
 
 ## Misses
 - On null, show a letter tile. Never guess or substitute another company's logo.
@@ -20,6 +35,7 @@ Use: const { getLogo } = require('logoapi'); getLogo('AAPL')  // SVG string, or 
 - Square icon: https://logoapi.sh/icon/{domain}.svg
 - Stock ticker (ETFs map to the issuer): https://logoapi.sh/ticker/{SYM}
 - Ticker icon: https://logoapi.sh/icon/ticker/{SYM}
+- Crypto coin: https://logoapi.sh/crypto/{SYM}
 - PNG for email: https://logoapi.sh/{domain}.png
 - Favicon: https://logoapi.sh/favicon/{domain}
 - Variants: https://logoapi.sh/{white|black|grey|dark}/{domain}.svg

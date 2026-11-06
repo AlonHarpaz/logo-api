@@ -1,6 +1,10 @@
 # crypto-logos
 
-Crypto coin logos by symbol (BTC, ETH, SOL) as SVG. Alias of logoapi; the hosted API adds /crypto/<SYM>.
+Crypto coin logos by symbol (BTC, ETH, SOL) as SVG, offline. Official coin marks, with the CC0 files from logoapi as fallback.
+
+```
+https://logoapi.sh/crypto/BTC.svg
+```
 
 ```js
 // npm install crypto-logos
@@ -8,13 +12,30 @@ const { getLogo } = require('crypto-logos');
 getLogo('BTC'); // '<svg ...>' (or null if the package has no logo)
 ```
 
-This package is an alias of `logoapi`; install that one directly if you prefer. It re-exports `getLogo`, `getLogoPath`, `hasLogo` and `list`.
+This package ships 14 official coin marks (see `official/crypto/`) and falls back to `logoapi` (installed automatically as a dependency when you run `npm install crypto-logos`) for CC0 company and ticker logos. It exports `getLogo`, `getLogoPath`, `hasLogo`, `list` (adds `crypto: [...]`) and `getLogos`.
 
 `getLogo()` returns SVG markup as a string, never a URL, or `null` on a miss. On a miss, show a letter tile and never substitute another company's logo.
+
+### Batch lookup
+
+```js
+import { getLogos } from 'crypto-logos';
+
+getLogos(['AAPL', 'stripe.com', 'ZZZZ']);
+// [
+//   { ticker: 'AAPL',       dataUri: 'data:image/svg+xml;base64,...', source: 'cc0', missing: false },
+//   { ticker: 'stripe.com', dataUri: 'data:image/svg+xml;base64,...', source: 'cc0', missing: false },
+//   { ticker: 'ZZZZ',       dataUri: null,                            source: null,  missing: true }
+// ]
+```
+
+`getLogos(list)` returns one object per input item, in order: `ticker` (your input, echoed back), `dataUri` (`string | null`), `source` (`'cc0' | 'official' | null`) and `missing` (`boolean`). Tickers in any case and domains both work, like `getLogo()`. For coins, `source` is `'official'`. Coverage is the CC0 subset of 50 tickers (and 1,174 domains) plus the 14 coin marks; never imply the full catalog.
 
 ## Hosted API
 
 Free, no key, no attribution. Docs: https://logoapi.sh/docs
+
+2M requests a month per site, free, no key. Free stays free. 12 months' notice before any change.
 
 | What you need | URL |
 | --- | --- |
@@ -37,5 +58,10 @@ Paste this once and your coding agent uses LogoAPI.sh for every logo.
 
 ## License
 
-- Code (`index.js`, `index.mjs`, `index.d.ts`): MIT.
-- Logo files (from `logoapi`) are CC0 (public domain). Logos remain trademarks of their owners: use them to identify the company, and don't suggest the company endorses you. Full catalog and terms: https://logoapi.sh.
+This package has three parts, so `package.json` says `SEE LICENSE IN README.md`.
+
+- Code (`index.js`, `index.mjs`, `index.d.ts`, `scripts/`): MIT.
+- CC0 fallback files come from `logoapi` and are CC0 (public domain). Logos remain trademarks of their owners: use them to identify the company, and don't suggest the company endorses you.
+- The official coin marks in `official/crypto/` are trademarks of their owners, covered by `official/LICENSE.md`. They are not CC0 and not MIT. Use them unchanged, to identify the coin; no bulk redistribution.
+
+Full catalog and terms: https://logoapi.sh.
