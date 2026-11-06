@@ -9,6 +9,9 @@ else is left out. Stdlib only.
 """
 import json, os, sys
 
+# Domains whose catalog entry is a topic page, not the site's own brand.
+SKIP = {"developer.mozilla.org"}
+
 def main():
     cat = sys.argv[1]
     logos = sys.argv[2] if len(sys.argv) > 2 else "logos"
@@ -19,8 +22,8 @@ def main():
         if e.get("origin") != "gilbarbara":
             continue  # same file name in another source can be a different drawing
         f = e.get("files", {})
-        name = f.get("icon") or f.get("wordmark")
-        if name not in have or not e.get("domain"):
+        name = next((n for n in (f.get("icon"), f.get("wordmark")) if n in have), None)
+        if not name or not e.get("domain") or e["domain"].lower() in SKIP:
             continue
         domains.setdefault(e["domain"].lower(), "logos/" + name)
         t = e.get("ticker")

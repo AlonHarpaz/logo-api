@@ -60,7 +60,7 @@
 - Logos are trademarks of their owners. You may show them, free and with no attribution, to identify a company in your site or app, including saving a few files into your project. Don't change them, don't suggest the company endorses you, and don't redistribute the catalog in bulk. Files in `logos/` in this repo are CC0. Full terms: https://logoapi.sh/terms.
 - The full catalog (5,000+ logos, tickers, crypto, PNG) is on the API: `https://logoapi.sh/<domain>`, `https://logoapi.sh/ticker/<SYM>` and `https://logoapi.sh/icon/ticker/<SYM>`.
 - Tickers: `index.json` has a `tickers` map, and the API serves `https://logoapi.sh/ticker/<SYM>`. ETFs map to the issuer (SPY goes to ssga.com).
-- Right now `index.json` lists 1,197 domains and 50 tickers, and every path in it exists.
+- Right now `index.json` lists 1,196 domains and 50 tickers, and every path in it exists.
 - If outside hosts are blocked, connect the MCP server `https://logoapi.sh/mcp`, or ask the user to allow `logoapi.sh`.
 
 ---
