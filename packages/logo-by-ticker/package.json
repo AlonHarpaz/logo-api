@@ -1,0 +1,56 @@
+{
+  "name": "logo-by-ticker",
+  "version": "0.1.0",
+  "description": "Get a company logo by stock ticker, as SVG, offline, no API key. Alias of logoapi.",
+  "keywords": [
+    "logo-by-ticker",
+    "ticker",
+    "stock",
+    "stock-logo",
+    "etf",
+    "logo",
+    "logos",
+    "company-logo",
+    "svg",
+    "no-api-key",
+    "clearbit-alternative",
+    "logo-api",
+    "offline",
+    "ai-agent"
+  ],
+  "homepage": "https://logoapi.sh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlonHarpaz/logo-api.git",
+    "directory": "packages/logo-by-ticker"
+  },
+  "bugs": {
+    "url": "https://github.com/AlonHarpaz/logo-api/issues"
+  },
+  "license": "(MIT AND CC0-1.0)",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "llms.txt",
+    "README.md"
+  ],
+  "dependencies": {
+    "logoapi": "^0.1.1"
+  },
+  "engines": {
+    "node": ">=16.7"
+  },
+  "sideEffects": false
+}

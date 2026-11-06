@@ -1,0 +1,35 @@
+# logo-by-ticker (npm package)
+
+Alias of logoapi.
+
+> Offline company and stock ticker logos as SVG. No key, no network, zero dependencies. Logo files are CC0, code is MIT.
+
+Install: npm install logoapi
+Use: const { getLogo } = require('logoapi'); getLogo('AAPL')  // SVG string, or null
+
+## Facts
+- Bundles 1,174 domains and 50 stock tickers (2,016 CC0 SVG files). It is a subset.
+- getLogo(domainOrTicker) returns SVG markup as a string, never a URL. It returns null when the package has no logo.
+- Also exported: getLogoPath, hasLogo, list. CommonJS, ESM and types.
+- It reads files with Node fs: call it on the server or at build time, not in browser code. Embed the returned string in HTML for sandboxes that block outside images.
+- Files keep their original colours (no currentColor), so CSS cannot recolour them.
+
+## Misses
+- On null, show a letter tile. Never guess or substitute another company's logo.
+
+## Beyond this package (hosted API, 5,000+ logos, free, no key)
+- Logo by domain: https://logoapi.sh/{domain}.svg
+- Square icon: https://logoapi.sh/icon/{domain}.svg
+- Stock ticker (ETFs map to the issuer): https://logoapi.sh/ticker/{SYM}
+- Ticker icon: https://logoapi.sh/icon/ticker/{SYM}
+- PNG for email: https://logoapi.sh/{domain}.png
+- Favicon: https://logoapi.sh/favicon/{domain}
+- Variants: https://logoapi.sh/{white|black|grey|dark}/{domain}.svg
+- Name to domain: https://logoapi.sh/search?q=stripe
+- MCP server: https://logoapi.sh/mcp
+- Docs: https://logoapi.sh/docs
+- If outside hosts are blocked, ask the user to allow logoapi.sh.
+
+## License
+- Code: MIT. Logo files: CC0 (public domain). Logos remain trademarks of their owners.
+- Terms: https://logoapi.sh/terms
