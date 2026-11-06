@@ -139,6 +139,23 @@ The Clearbit Logo API (`logo.clearbit.com`) has shut down. Change the host and k
 
 Step-by-step guide: [Clearbit Logo API migration](https://logoapi.sh/blog/clearbit-logo-api-migration?utm_source=github&utm_medium=readme&utm_campaign=logo-api)
 
+## Use as an agent skill
+
+An [Agent Skill](skills/company-logos/SKILL.md) teaches coding agents to add the right logo URL (domain, ticker, icon, PNG for email, no-code builders). Install:
+
+```sh
+npx skills add AlonHarpaz/logo-api
+```
+
+Or copy `skills/company-logos/` into your tool's skills folder:
+
+| Tool | Project path |
+|---|---|
+| Claude Code | `.claude/skills/company-logos/` |
+| Codex | `.agents/skills/company-logos/` |
+| GitHub Copilot | `.github/skills/company-logos/` |
+| Cursor | `.cursor/skills/company-logos/` |
+
 ## Pricing
 
 **Free:** 2M requests a month per site. No key, no attribution required.
