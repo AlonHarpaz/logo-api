@@ -2,7 +2,7 @@
 
 > Crypto coin logos as SVG, offline. 14 official coin marks, CC0 fallback from logoapi. Code is MIT.
 
-Install: npm install crypto-logos
+Install: npm install crypto-logos  (this also installs logoapi as a dependency)
 Use: const { getLogo } = require('crypto-logos'); getLogo('BTC')  // SVG string, or null
 
 ## Facts

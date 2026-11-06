@@ -8,14 +8,14 @@ const { getLogo } = require('crypto-logos');
 getLogo('BTC'); // '<svg ...>' (or null if the package has no logo)
 ```
 
-This package ships 14 official coin marks (see `official/crypto/`) and falls back to `logoapi` for CC0 company and ticker logos. It exports `getLogo`, `getLogoPath`, `hasLogo`, `list` (adds `crypto: [...]`) and `getLogos`.
+This package ships 14 official coin marks (see `official/crypto/`) and falls back to `logoapi` (installed automatically as a dependency when you run `npm install crypto-logos`) for CC0 company and ticker logos. It exports `getLogo`, `getLogoPath`, `hasLogo`, `list` (adds `crypto: [...]`) and `getLogos`.
 
 `getLogo()` returns SVG markup as a string, never a URL, or `null` on a miss. On a miss, show a letter tile and never substitute another company's logo.
 
 ### Batch lookup
 
 ```js
-import { getLogos } from 'logoapi';
+import { getLogos } from 'crypto-logos';
 
 getLogos(['AAPL', 'stripe.com', 'ZZZZ']);
 // [

@@ -15,7 +15,7 @@ This package is an alias of `logoapi`; install that one directly if you prefer. 
 ### Batch lookup
 
 ```js
-import { getLogos } from 'logoapi';
+import { getLogos } from 'ticker-logos';
 
 getLogos(['AAPL', 'stripe.com', 'ZZZZ']);
 // [
