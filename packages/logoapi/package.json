@@ -1,6 +1,6 @@
 {
   "name": "logoapi",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Offline company logos with stock ticker lookup. SVG, no network, no key.",
   "keywords": [
     "logo",
@@ -30,11 +30,11 @@
   "homepage": "https://logoapi.sh",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlonHarpaz/logo-api.git",
+    "url": "git+https://github.com/logoapi/logo-api.git",
     "directory": "packages/logoapi"
   },
   "bugs": {
-    "url": "https://github.com/AlonHarpaz/logo-api/issues"
+    "url": "https://github.com/logoapi/logo-api/issues"
   },
   "license": "(MIT AND CC0-1.0)",
   "main": "./index.js",

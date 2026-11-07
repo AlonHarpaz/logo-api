@@ -60,7 +60,7 @@ import { getLogo } from 'ticker-logos';
 const svg = getLogo('AAPL') ?? '<span class="tile">A</span>';
 ```
 
-- Raw files on GitHub: `https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/tickers/AAPL.svg`, and official files listed in `official/index.json` (path from the index, for example `official/tickers/ABBV.svg`). Inline them as a data URI.
+- Raw files on GitHub: `https://raw.githubusercontent.com/logoapi/logo-api/main/tickers/AAPL.svg`, and official files listed in `official/index.json` (path from the index, for example `official/tickers/ABBV.svg`). Inline them as a data URI.
 - Claude Code on the web: ask the user to add `logoapi.sh` under Network access > allowed hosts.
 
 ## Mistakes to avoid

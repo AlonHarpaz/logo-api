@@ -1,6 +1,6 @@
 {
   "name": "ticker-logos",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Stock ticker logos as SVG, offline, no API key. Alias of logoapi.",
   "keywords": [
     "ticker",
@@ -20,11 +20,11 @@
   "homepage": "https://logoapi.sh",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlonHarpaz/logo-api.git",
+    "url": "git+https://github.com/logoapi/logo-api.git",
     "directory": "packages/ticker-logos"
   },
   "bugs": {
-    "url": "https://github.com/AlonHarpaz/logo-api/issues"
+    "url": "https://github.com/logoapi/logo-api/issues"
   },
   "license": "(MIT AND CC0-1.0)",
   "main": "./index.js",

@@ -1,6 +1,6 @@
 {
   "name": "crypto-logos",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Crypto coin logos by symbol (BTC, ETH, SOL) as SVG, offline. Official coin marks, with a CC0 fallback from logoapi.",
   "keywords": [
     "crypto",
@@ -23,11 +23,11 @@
   "homepage": "https://logoapi.sh",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlonHarpaz/logo-api.git",
+    "url": "git+https://github.com/logoapi/logo-api.git",
     "directory": "packages/crypto-logos"
   },
   "bugs": {
-    "url": "https://github.com/AlonHarpaz/logo-api/issues"
+    "url": "https://github.com/logoapi/logo-api/issues"
   },
   "license": "SEE LICENSE IN README.md",
   "main": "./index.js",

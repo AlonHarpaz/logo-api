@@ -4,8 +4,8 @@ Square brand marks for about 100 large US-listed companies and the main coins, r
 
 Raw URL pattern:
 
-`https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/official/tickers/<SYMBOL>.svg`
-`https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/official/crypto/<SYMBOL>.svg`
+`https://raw.githubusercontent.com/logoapi/logo-api/main/official/tickers/<SYMBOL>.svg`
+`https://raw.githubusercontent.com/logoapi/logo-api/main/official/crypto/<SYMBOL>.svg`
 
 Examples: `.../main/official/tickers/WMT.svg`, `.../main/official/crypto/BTC.svg`. The map is in [index.json](index.json): `{"tickers": {"WMT": "official/tickers/WMT.svg"}, "crypto": {"BTC": "official/crypto/BTC.svg"}}`.
 

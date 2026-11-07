@@ -44,16 +44,28 @@ jobs:
         run: |
           set -euo pipefail
           [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "Bad tag: $TAG"; exit 1; }
-          version=$(node -p "require('./packages/logoapi/package.json').version")
-          [ "$TAG" = "v$version" ] || { echo "Tag $TAG does not match package.json version $version"; exit 1; }
           git merge-base --is-ancestor "$GITHUB_SHA" origin/main || { echo "Tag commit is not on main"; exit 1; }
+          for pkg in logoapi ticker-logos crypto-logos; do
+            version=$(node -p "require('./packages/$pkg/package.json').version")
+            [ "$TAG" = "v$version" ] || { echo "Tag $TAG does not match $pkg version $version"; exit 1; }
+          done
 
-      - name: Test
-        working-directory: packages/logoapi
+      # Order matters: logoapi first, the other two depend on it.
+      - name: Test all packages
         run: |
-          npm run prepack
-          npm test
+          set -euo pipefail
+          for pkg in logoapi ticker-logos crypto-logos; do
+            cd "packages/$pkg"
+            if npm run | grep -q '^  prepack'; then npm run prepack; fi
+            if npm run | grep -q '^  test'; then npm test; fi
+            cd ../..
+          done
 
       - name: Stage publish
-        working-directory: packages/logoapi
-        run: npm stage publish --provenance --access public
+        run: |
+          set -euo pipefail
+          for pkg in logoapi ticker-logos crypto-logos; do
+            echo "::group::stage $pkg"
+            (cd "packages/$pkg" && npm stage publish --provenance --access public)
+            echo "::endgroup::"
+          done
