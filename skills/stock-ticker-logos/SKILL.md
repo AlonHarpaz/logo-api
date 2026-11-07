@@ -51,7 +51,7 @@ Style `.tile` as a 32px rounded square with the first letter of the symbol.
 
 Some sandboxes (Claude artifacts, AI builder previews, CSP-locked pages) block outside images.
 
-Inside a chat canvas or artifact (ChatGPT, Claude, Base44, Lovable preview) outside images are blocked: fetch <url>.svg.txt and inline the SVG, or use the npm package.
+Inside a chat canvas or artifact (ChatGPT, Claude, Base44, Lovable preview) outside images are blocked: fetch <url>.svg.txt and inline the SVG, or use the npm package. If the fetch tool only opens URLs that came from search results or from the user, ask the user to paste the .svg.txt URL (for example https://logoapi.sh/ticker/AAPL.svg.txt).
 
 - npm `ticker-logos` (alias of `logoapi`): `getLogo('AAPL')` returns SVG markup as a string, offline, no key. It covers a CC0 subset of 50 tickers and returns `null` on a miss. It reads files with Node `fs`, so call it at build time or on the server and embed the string.
 
