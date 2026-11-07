@@ -239,7 +239,7 @@ Some brands answer on several domains, for example `aboutamazon.com` and `amazon
 | `404` | Brand page for an unknown domain, or a logo, icon or version (`/dark/`, `/white/`, `/black/`, `/grey/`) with `?fallback=404`. Plain text `not found`, no placeholder image, so your own fallback runs. Cached for an hour. `/favicon/{domain}` returns a JSON body instead: `{"error":"not_found", "message":..., "claim":...}`. |
 | `400` | Bad search input: `q` too short or too long, an unknown tag, or a comma list of tags. JSON with an `error` message. |
 | `403` | `page=2` or higher on a tag search. JSON with `error: "page_limit"`. |
-| `429` | Too many requests. Wait for `Retry-After`. |
+| `429` | Too many requests. Wait for `Retry-After`. A body with `error: "guess_limit"` means too many unknown names. It carries `message`, `agents`, `retry_after_seconds`, `note` and `contact`. The `note` says that requests for listed companies and tickers never count toward this limit; only unknown names do. The `contact` is `https://logoapi.sh/contact`. |
 | `503` | Search is briefly unavailable. JSON with `error: "search_unavailable"`. Try again later. |
 
 **404 body for `/favicon/{domain}` and 400 body for a bad search**
@@ -267,7 +267,7 @@ Logo updates go live everywhere within a day. Logos, icons, favicons and colour 
 
 **GET** `/ticker/{TICKER}.svg`
 
-Get the square icon of a listed company by its stock ticker. The URL answers `200` with the icon, the same image as `/icon/{domain}.svg`, on every form (no redirect, so fetchers that do not follow redirects work). Add `?variant=full` for the full logo instead (a 302 redirect to the normal logo URL). Use `.svg` or `.png`; the query string is kept. Tickers are not case sensitive. To pick an exchange, use `/ticker/{EXCHANGE}:{TICKER}.svg`, for example `NASDAQ:MNDY` (`%3A` also works). If a ticker is listed on several exchanges, the US listing is preferred. An unknown ticker returns a plain 404.
+Get the square icon of a listed company by its stock ticker. The URL answers `200` with the icon, the same image as `/icon/{domain}.svg`, on every form (no redirect, so fetchers that do not follow redirects work). Add `?variant=full` for the full logo instead (the image of `/{domain}.svg`, also without a redirect). Use `.svg` or `.png`; the query string is kept. Tickers are not case sensitive. To pick an exchange, use `/ticker/{EXCHANGE}:{TICKER}.svg`, for example `NASDAQ:MNDY` (`%3A` also works). If a ticker is listed on several exchanges, the US listing is preferred. An unknown ticker returns a plain 404.
 
 ```
 <img src="https://logoapi.sh/ticker/MNDY.svg" alt="monday.com" height="24">
@@ -276,7 +276,7 @@ https://logoapi.sh/ticker/NASDAQ:MNDY.svg
 
 **Response**
 
-`200` with the square icon: SVG, or the PNG on `.png`. Lower case, an exchange prefix, listings outside the catalog and the coin routes answer `200` too. Only `?variant=full` answers with a `302` redirect to the normal logo URL.
+`200` with the square icon: SVG, or the PNG on `.png`. Lower case, an exchange prefix, listings outside the catalog and the coin routes answer `200` too. `?variant=full` answers `200` with the full logo.
 
 For dark backgrounds, `/dark/ticker/{TICKER}.svg` is the square icon recoloured like `/dark/icon/{domain}` (add `?variant=full` for the full logo, recoloured like `/dark/{domain}`), and `/dark/icon/ticker/{TICKER}.svg` is always the icon. For coins, `/dark/crypto/{SYMBOL}.svg` is the dark version of `/crypto/{SYMBOL}`. An unknown coin symbol gives a name tile on the crypto routes; add `?fallback=404` to get a plain 404 instead. Colour versions are SVG only: `.png` answers a `raster_only` 404. `X-Logo-Kind: icon` is sent on the bare ticker form only, not on an explicit `.svg`. For chat canvases that block images, `/ticker/{TICKER}.svg.txt` returns the same SVG as plain text.
 
@@ -291,6 +291,8 @@ An unknown ticker returns a plain `404`. A known ticker with no logo in the cata
 2M requests a month per site. Free. No key. No attribution required. Embed our logos and use the search API in your site or app. Don't copy the whole catalog. No surprise bills: we never charge unless you choose a paid plan. Need more volume? Pro is $29 a month for up to 10M requests a month; contact us. Comparing free tiers? See the [best free logo API](https://logoapi.sh/best-free-logo-api).
 
 Tag search returns the first 48 results. A tag plus `q` gives up to 8.
+
+`X-Partner-Key` is a header for platform partners. Send it only on server-side requests, and never put it in browser code. Requests that carry a valid key never count toward the guess limit. To get a key, email hello@logoapi.sh.
 
 Need more (aggregators, bulk, heavy apps)? Email hello@logoapi.sh.
 
