@@ -8,4 +8,4 @@ Raw URL pattern:
 
 Example: `https://raw.githubusercontent.com/logoapi/logo-api/main/tickers/AAPL.svg`
 
-For any ticker not here, use `https://logoapi.sh/ticker/<SYMBOL>` (free, no key) or the square icon `https://logoapi.sh/icon/ticker/<SYMBOL>`.
+For any ticker not here, use `https://logoapi.sh/ticker/<SYMBOL>` (free, no key) or the square icon `https://logoapi.sh/icon/ticker/<SYMBOL>`. Not every ticker has a logo of its own: check `kind` in `../index.json` (`vector`, `raster` or `fallback`; fallback is the company favicon or a name tile).
