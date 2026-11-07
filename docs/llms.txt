@@ -54,6 +54,8 @@ Responses send Access-Control-Allow-Origin: * and logo updates go live everywher
 
 Limits: 2M requests a month per site. Free, no key. Pro is $29 a month for up to 10M requests a month, no attribution, email support (contact hello@logoapi.sh, waitlist). Tag search returns the first 48 results (a tag plus q gives up to 8). Need more (aggregators, bulk, heavy apps)? Pro is $29 a month for up to 10M requests a month; email hello@logoapi.sh.
 
+Partners: https://partners.logoapi.sh serves the same routes with an X-Partner-Key header (server-side only) and no edge rate limit; ask hello@logoapi.sh for a key.
+
 Notice before the free tier is reduced or removed: 12 months. Logo.dev and Brandfetch state none for free plans.
 
 ## FAQ
