@@ -267,7 +267,7 @@ Logo updates go live everywhere within a day. Logos, icons, favicons and colour 
 
 **GET** `/ticker/{TICKER}.svg`
 
-Get the logo of a listed company by its stock ticker. The URL redirects (302) to the normal logo URL. Use `.svg` or `.png`; the query string is kept. Tickers are not case sensitive. To pick an exchange, use `/ticker/{EXCHANGE}:{TICKER}.svg`, for example `NASDAQ:MNDY` (`%3A` also works). If a ticker is listed on several exchanges, the US listing is preferred. An unknown ticker returns a plain 404.
+Get the square icon of a listed company by its stock ticker. The URL answers `200` with the icon, the same image as `/icon/{domain}.svg`, on every form (no redirect, so fetchers that do not follow redirects work). Add `?variant=full` for the full logo instead (a 302 redirect to the normal logo URL). Use `.svg` or `.png`; the query string is kept. Tickers are not case sensitive. To pick an exchange, use `/ticker/{EXCHANGE}:{TICKER}.svg`, for example `NASDAQ:MNDY` (`%3A` also works). If a ticker is listed on several exchanges, the US listing is preferred. An unknown ticker returns a plain 404.
 
 ```
 <img src="https://logoapi.sh/ticker/MNDY.svg" alt="monday.com" height="24">
@@ -276,7 +276,9 @@ https://logoapi.sh/ticker/NASDAQ:MNDY.svg
 
 **Response**
 
-A `302` redirect to the normal logo URL.
+`200` with the square icon: SVG, or the PNG on `.png`. Lower case, an exchange prefix, listings outside the catalog and the coin routes answer `200` too. Only `?variant=full` answers with a `302` redirect to the normal logo URL.
+
+For dark backgrounds, `/dark/ticker/{TICKER}.svg` is the square icon recoloured like `/dark/icon/{domain}` (add `?variant=full` for the full logo, recoloured like `/dark/{domain}`), and `/dark/icon/ticker/{TICKER}.svg` is always the icon. For coins, `/dark/crypto/{SYMBOL}.svg` is the dark version of `/crypto/{SYMBOL}`. An unknown coin symbol gives a name tile on the crypto routes; add `?fallback=404` to get a plain 404 instead. Colour versions are SVG only: `.png` answers a `raster_only` 404. `X-Logo-Kind: icon` is sent on the bare ticker form only, not on an explicit `.svg`. For chat canvases that block images, `/ticker/{TICKER}.svg.txt` returns the same SVG as plain text.
 
 **Errors**
 
