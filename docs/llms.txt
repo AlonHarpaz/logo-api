@@ -106,6 +106,10 @@ H. Tech Innovation LLC. Questions: hello@logoapi.sh.
 - [Guide: logo by stock ticker](https://logoapi.sh/docs/logo-by-stock-ticker.md): /ticker/MNDY.svg, exchange prefix, errors
 - [Guide: MCP server](https://logoapi.sh/docs/mcp.md): remote MCP server at https://logoapi.sh/mcp; get_logo, search_logos, get_favicon; setup for Claude, Cursor, VS Code
 - [Guide: AI app builders](https://logoapi.sh/docs/ai-app-builders.md): paste one line into Lovable, Bolt, Base44, v0 or Cursor so logos need no key
+- [Guide: Lovable company logos](https://logoapi.sh/docs/lovable.md): the line to paste into Lovable, three steps, dark mode, square icons, missing logos
+- [Guide: Base44 company logos](https://logoapi.sh/docs/base44.md): the line to paste into Base44, three steps, dark mode, square icons, missing logos
+- [Guide: Softr company logos](https://logoapi.sh/docs/softr.md): the line to paste into Softr, three steps, dark mode, square icons, missing logos
+- [Guide: Glide company logos](https://logoapi.sh/docs/glide.md): the line to paste into Glide, three steps, dark mode, square icons, missing logos
 - [Pricing](https://logoapi.sh/pricing): Free, Pro and Enterprise plans, and the live free limits
 - [Startups program](https://logoapi.sh/startups): Enterprise free for 12 months for the first 100 startups, no card; send your original SVG once and it is served from LogoAPI.sh
 - [Logo Finder](https://logoapi.sh/finder): search any brand or browse the top 48 logos of each category
