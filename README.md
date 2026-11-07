@@ -58,7 +58,7 @@
 ## Using this from an AI agent or sandbox
 
 - This repo holds a sample (50 ticker files, 2,016 domain logos). The API at logoapi.sh answers every ticker in index.json (6,562) and 5,000+ domains; do not judge coverage by the repo.
-- Ticker coverage: 1,647 tickers have a catalog logo (1,455 vector), served with `?variant=full`. The default square icon is a catalog icon for 402; the rest get the company favicon or a name tile (`X-Logo-Fallback` says which). Each ticker object in index.json has `kind` for the square icon: `vector`, `raster` or `fallback`.
+- Ticker coverage: 1,647 tickers have a catalog logo (1,455 vector), served with `?variant=full`. The default square icon is a catalog icon for 402; the rest get the company favicon or a name tile (`X-Logo-Fallback` says which). Each ticker object in index.json has `kind` for the square icon: `vector`, `raster` or `fallback`; a plain-string entry is a vector file in this repo.
 - Start here: `https://raw.githubusercontent.com/logoapi/logo-api/main/index.json`. Look up the domain or the stock ticker there, then fetch the path it gives you.
 - Files are NOT named by domain. `logos/apple.com.svg` and `logos/<domain>/logo.svg` do not exist. Names are slugs, such as `logos/apple.svg`, so always go through `index.json`.
 - Shape: `{"domains": {"apple.com": "logos/apple.svg"}, "tickers": {"AAPL": "logos/apple.svg"}}`. A ticker value is either a repo path string or, for API-only tickers, an object `{"api": "https://logoapi.sh/ticker/VTI.svg", "icon": ..., "official": "official/tickers/VTI.svg"}`. There is also a `crypto` map and an `api` map of URL patterns. Check that a value is a string before treating it as a path.
@@ -68,7 +68,7 @@
 - Tickers: `index.json` has a `tickers` map, and the API serves `https://logoapi.sh/ticker/<SYM>`. ETFs map to the issuer (SPY goes to ssga.com).
 - Stock tickers also sit at `tickers/<SYMBOL>.svg` (same files, predictable names), for example `.../main/tickers/AAPL.svg`.
 - Official square marks (trademarks, not CC0) for the top US tickers and main coins sit at `official/tickers/<SYMBOL>.svg` and `official/crypto/<SYMBOL>.svg`, map in `official/index.json`, terms in `official/LICENSE.md`. See [official/README.md](official/README.md).
-- Right now `index.json` lists 1,174 domains and 50 tickers, and every repo path in it exists.
+- Right now `index.json` lists 1,174 domains and 6,562 tickers (50 with a file in this repo), and every repo path in it exists.
 - If outside hosts are blocked, connect the MCP server `https://logoapi.sh/mcp`, or ask the user to allow `logoapi.sh`.
 
 ### Paste into CLAUDE.md or AGENTS.md
