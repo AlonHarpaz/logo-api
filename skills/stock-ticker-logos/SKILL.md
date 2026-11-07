@@ -9,24 +9,26 @@ LogoAPI.sh serves a real logo from a ticker symbol. No key, no signup, no attrib
 
 ## URLs
 
-In a table or list, use the square icon: `https://logoapi.sh/icon/ticker/AAPL.svg`. For the full logo use `/ticker/AAPL.svg`.
+`/ticker/AAPL.svg` and `/icon/ticker/AAPL.svg` both return the square icon. For the full logo use `/ticker/AAPL.svg?variant=full`.
 
 All verified against the live API.
 
 | Need | URL |
 |---|---|
 | Square icon (tables, lists, avatars) | `https://logoapi.sh/icon/ticker/AAPL.svg` (also `.png`) |
-| Full logo (wide, headers, detail pages) | `https://logoapi.sh/ticker/AAPL.svg` (also `.png`) |
+| Full logo (wide, headers, detail pages) | `https://logoapi.sh/ticker/AAPL.svg?variant=full` |
+| Dark background | `https://logoapi.sh/dark/ticker/AAPL.svg` (full), `/dark/icon/ticker/AAPL.svg` (icon), `/dark/crypto/BTC.svg` (SVG only) |
+| SVG as text (sandboxes) | `https://logoapi.sh/ticker/AAPL.svg.txt`, `/icon/ticker/AAPL.svg.txt`, `/crypto/BTC.svg.txt` |
 | With exchange | `https://logoapi.sh/icon/ticker/NASDAQ:AAPL` |
 | ETF | `https://logoapi.sh/icon/ticker/VTI` (Vanguard), `https://logoapi.sh/icon/ticker/SPY` |
 | Crypto coin | `https://logoapi.sh/crypto/BTC` (also `.svg`, `.png`; ETH, SOL and more) |
 | Check a symbol | `https://logoapi.sh/search?q=VTI` (JSON) |
 
-Upper-case bare and `.svg` forms of catalog tickers are static files and answer 200. Other forms (`.png`, lower case, exchange prefix, crypto) answer 302 to the logo; `<img>` follows it.
+Only `/icon/ticker/<SYM>` and `.svg` in upper case are static files. `/ticker/<SYM>` answers 200 from the Worker for catalog icons (no 302). `.png`, extended tickers and crypto catalog coins answer 302; `<img>` follows it.
 
 ## Rules
 
-1. **Square slot: use `/icon/ticker/<SYM>`.** Set `object-fit: contain`. Use `/ticker/<SYM>` only where a wide wordmark fits.
+1. **Square slot: use `/ticker/<SYM>` or `/icon/ticker/<SYM>`** (both return the square icon). Set `object-fit: contain`. For a wide logo add `?variant=full` to `/ticker/<SYM>.svg`.
 2. **ETFs map to their issuer.** VTI shows Vanguard, SPY shows SSGA. That is the real brand, not a fund-specific mark.
 3. **Crypto uses `/crypto/<SYM>`, never `/ticker/`.** `/ticker/BTC` and `/ticker/ETH` are stock tickers and resolve to the Grayscale trusts, not the coin.
 4. **Cash, unknown or unlisted symbols: draw a letter tile yourself.** An unknown ticker returns a plain 404. Never invent a logo, never swap in another company's logo. Check a symbol with `https://logoapi.sh/search?q=<SYM>` first.
@@ -49,6 +51,8 @@ Style `.tile` as a 32px rounded square with the first letter of the symbol.
 
 Some sandboxes (Claude artifacts, AI builder previews, CSP-locked pages) block outside images.
 
+Inside a chat canvas or artifact (ChatGPT, Claude, Base44, Lovable preview) outside images are blocked: fetch <url>.svg.txt and inline the SVG, or use the npm package.
+
 - npm `ticker-logos` (alias of `logoapi`): `getLogo('AAPL')` returns SVG markup as a string, offline, no key. It covers a CC0 subset of 50 tickers and returns `null` on a miss. It reads files with Node `fs`, so call it at build time or on the server and embed the string.
 
 ```js
@@ -63,6 +67,7 @@ const svg = getLogo('AAPL') ?? '<span class="tile">A</span>';
 
 - Guessing a domain from a ticker (`AAPL` + `.com`). Use the ticker routes.
 - `/ticker/` for crypto. Use `/crypto/`.
+- Expecting the wide logo from `/ticker/<SYM>`; it returns the square icon unless `?variant=full`.
 - Trusting a name tile or favicon as a logo.
 - `object-fit: cover` on logos.
 - Re-hosting or scraping the catalog. Hot-link, or use the npm package offline.
