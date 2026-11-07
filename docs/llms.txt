@@ -129,7 +129,7 @@ H. Tech Innovation LLC. Questions: hello@logoapi.sh.
 - [Privacy](https://logoapi.sh/privacy): analytics and processors
 - [About](https://logoapi.sh/about): who runs LogoAPI.sh (H. Tech Innovation LLC, Dallas, Texas)
 - [Contact](https://logoapi.sh/contact): Pro, Enterprise or support; contact form or hello@logoapi.sh, reply in 2 business days
-- [Source](https://github.com/logoapi/logo-api): public GitHub repo with the issue forms. The API is not open source; the full catalog is served by the CDN (logoapi.sh)
+- [Source](https://github.com/AlonHarpaz/logo-api): public GitHub repo with the issue forms. The API is not open source; the full catalog is served by the CDN (logoapi.sh)
 
 ## Contact
 
