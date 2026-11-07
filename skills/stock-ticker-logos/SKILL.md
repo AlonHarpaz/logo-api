@@ -17,7 +17,7 @@ All verified against the live API.
 |---|---|
 | Square icon (tables, lists, avatars) | `https://logoapi.sh/icon/ticker/AAPL.svg` (also `.png`) |
 | Full logo (wide, headers, detail pages) | `https://logoapi.sh/ticker/AAPL.svg?variant=full` |
-| Dark background | `https://logoapi.sh/dark/ticker/AAPL.svg` (full), `/dark/icon/ticker/AAPL.svg` (icon), `/dark/crypto/BTC.svg` (SVG only) |
+| Dark background | `https://logoapi.sh/dark/ticker/AAPL.svg` (square icon; `?variant=full` for the full logo), `/dark/icon/ticker/AAPL.svg` (icon), `/dark/crypto/BTC.svg` (SVG only; `.png` is a 404) |
 | SVG as text (sandboxes) | `https://logoapi.sh/ticker/AAPL.svg.txt`, `/icon/ticker/AAPL.svg.txt`, `/crypto/BTC.svg.txt` |
 | With exchange | `https://logoapi.sh/icon/ticker/NASDAQ:AAPL` |
 | ETF | `https://logoapi.sh/icon/ticker/VTI` (Vanguard), `https://logoapi.sh/icon/ticker/SPY` |
