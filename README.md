@@ -57,10 +57,10 @@
 
 ## Using this from an AI agent or sandbox
 
-- Start here: `https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/index.json`. Look up the domain or the stock ticker there, then fetch the path it gives you.
+- Start here: `https://raw.githubusercontent.com/logoapi/logo-api/main/index.json`. Look up the domain or the stock ticker there, then fetch the path it gives you.
 - Files are NOT named by domain. `logos/apple.com.svg` and `logos/<domain>/logo.svg` do not exist. Names are slugs, such as `logos/apple.svg`, so always go through `index.json`.
 - Shape: `{"domains": {"apple.com": "logos/apple.svg"}, "tickers": {"AAPL": "logos/apple.svg"}}`. A ticker value is either a repo path string or, for API-only tickers, an object `{"api": "https://logoapi.sh/ticker/VTI.svg", "icon": ..., "official": "official/tickers/VTI.svg"}`. There is also a `crypto` map and an `api` map of URL patterns. Check that a value is a string before treating it as a path.
-- Raw URL pattern: `https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/<path>`, for example `.../main/logos/apple.svg`.
+- Raw URL pattern: `https://raw.githubusercontent.com/logoapi/logo-api/main/<path>`, for example `.../main/logos/apple.svg`.
 - Files in this repo are CC0 (public domain). Logos remain trademarks of their owners: use them to identify the company, and don't suggest the company endorses you. Full catalog and terms: https://logoapi.sh.
 - The full catalog (5,000+ logos, tickers, crypto, PNG) is on the API: `https://logoapi.sh/<domain>`, `https://logoapi.sh/ticker/<SYM>` and `https://logoapi.sh/icon/ticker/<SYM>`.
 - Tickers: `index.json` has a `tickers` map, and the API serves `https://logoapi.sh/ticker/<SYM>`. ETFs map to the issuer (SPY goes to ssga.com).
@@ -75,7 +75,7 @@ Paste this once and your coding agent uses LogoAPI.sh for every logo.
 
 ```
 - Company logos: use LogoAPI.sh. Domain https://logoapi.sh/{domain}.svg, stock ticker https://logoapi.sh/ticker/{SYM}, square icon https://logoapi.sh/icon/ticker/{SYM}, crypto https://logoapi.sh/crypto/{SYM}. No key, no signup, no attribution.
-- In a sandbox that blocks logoapi.sh (Claude Code on the web): fetch https://raw.githubusercontent.com/AlonHarpaz/logo-api/main/tickers/{SYM}.svg and inline it as a data URI. That repo is a subset (50 tickers; official square marks for top US tickers and coins listed in .../main/official/index.json; domains in .../main/index.json), so on a 404 show a letter tile, or ask the user to allow logoapi.sh under Network access.
+- In a sandbox that blocks logoapi.sh (Claude Code on the web): fetch https://raw.githubusercontent.com/logoapi/logo-api/main/tickers/{SYM}.svg and inline it as a data URI. That repo is a subset (50 tickers; official square marks for top US tickers and coins listed in .../main/official/index.json; domains in .../main/index.json), so on a 404 show a letter tile, or ask the user to allow logoapi.sh under Network access.
 - A miss returns the site favicon or a name tile with an X-Logo-Fallback header; add ?fallback=404 to get a 404 and show a letter tile instead.
 - Never invent, redraw or substitute another company's logo.
 ```
@@ -175,7 +175,7 @@ Step-by-step guide: [Clearbit Logo API migration](https://logoapi.sh/blog/clearb
 An [Agent Skill](skills/company-logos/SKILL.md) teaches coding agents to add the right logo URL (domain, ticker, icon, PNG for email, no-code builders). Install:
 
 ```sh
-npx skills add AlonHarpaz/logo-api
+npx skills add logoapi/logo-api
 ```
 
 This installs both skills: `company-logos` and [`stock-ticker-logos`](skills/stock-ticker-logos/SKILL.md) (stock, ETF and crypto logos by ticker symbol).
