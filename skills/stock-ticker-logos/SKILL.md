@@ -24,7 +24,7 @@ All verified against the live API.
 | Crypto coin | `https://logoapi.sh/crypto/BTC` (also `.svg`, `.png`; ETH, SOL and more) |
 | Check a symbol | `https://logoapi.sh/search?q=VTI` (JSON) |
 
-Only `/icon/ticker/<SYM>` and `.svg` in upper case are static files. `/ticker/<SYM>` answers 200 from the Worker for catalog icons (no 302). `.png`, extended tickers and crypto catalog coins answer 302; `<img>` follows it.
+Only `/icon/ticker/<SYM>` and `.svg` in upper case are static files. Everything else (`/ticker/`, `/icon/ticker/` and `/crypto/` in any case, `.png`, exchange prefix, extended tickers, coins) is answered by the Worker with 200 and the image, never a redirect. The only redirect is `/ticker/<SYM>[.svg|.png]?variant=full`, a 302 to the full logo.
 
 ## Rules
 

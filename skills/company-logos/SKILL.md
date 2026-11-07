@@ -37,13 +37,13 @@ All verified against the live API.
 | White / black / grey | `https://logoapi.sh/white/apple.com.svg`, `/black/`, `/grey/` |
 | Search by name | `https://logoapi.sh/search?q=stripe` (JSON) |
 
-Ticker and crypto routes are case-insensitive. Only `/icon/ticker/<SYM>` and `/icon/ticker/<SYM>.svg` in upper case are static files. `/ticker/<SYM>` answers 200 from the Worker for catalog icons (no 302). `.png`, extended tickers and crypto catalog coins answer with a 302, which `<img>` follows.
+Ticker and crypto routes are case-insensitive. Only `/icon/ticker/<SYM>` and `/icon/ticker/<SYM>.svg` in upper case are static files. Everything else (`/ticker/`, `/icon/ticker/` and `/crypto/` in any case, `.png`, exchange prefix, extended tickers, coins) is answered by the Worker with 200 and the image, never a redirect. The only redirect is `/ticker/<SYM>[.svg|.png]?variant=full`, a 302 to the full logo.
 
 ## Rules
 
 1. **Domain in hand: use `logoapi.sh/<domain>`.** Nothing else is needed.
 2. **Only a ticker: use `/ticker/<SYMBOL>`.** Never build a domain from a ticker (`AAPL` + `.com` is wrong; the company is `apple.com`). Add an exchange when the symbol is ambiguous: `/ticker/NASDAQ:AAPL.svg`. An unknown ticker returns a plain 404. `/ticker/<SYMBOL>` returns the square icon, same as `/icon/ticker/<SYMBOL>`, so it fits a watchlist row, portfolio avatar or table cell. For the full logo (can be a wide wordmark) use `/ticker/<SYMBOL>.svg?variant=full`. When a ticker has no square icon, it serves the favicon or a name tile and sets `X-Logo-Fallback`.
-3. **Crypto coins: use `/crypto/<SYMBOL>`**, for example `/crypto/BTC`, `/crypto/ETH`, `/crypto/SOL`. Never put a coin on `/ticker/`: `/ticker/BTC` and `/ticker/ETH` are stock tickers and resolve to the Grayscale trusts (GBTC, ETHE), not the coin. `/crypto/` returns the coin's square mark; an unknown symbol returns a name tile on `.svg` and bare, 404 on `.png`.
+3. **Crypto coins: use `/crypto/<SYMBOL>`**, for example `/crypto/BTC`, `/crypto/ETH`, `/crypto/SOL`. Never put a coin on `/ticker/`: `/ticker/BTC` and `/ticker/ETH` are stock tickers and resolve to the Grayscale trusts (GBTC, ETHE), not the coin. `/crypto/` returns the coin's square mark; an unknown symbol returns a name tile on `.svg` and bare, 404 on `.png`; `?fallback=404` (or none) gives a plain 404 instead of the tile.
 4. **Never use `logo.clearbit.com`.** The Clearbit Logo API shut down in December 2025. To migrate, swap the host and keep the domain: `logo.clearbit.com/stripe.com` becomes `logoapi.sh/stripe.com`. Drop Clearbit-only query params; on LogoAPI.sh `?size` and `?bg` apply to `.png` only.
 5. **Square slots (avatars, list rows, table cells, favicons): use `/icon/<domain>`** and set `object-fit: contain` so wide wordmarks are never cropped.
    ```html
