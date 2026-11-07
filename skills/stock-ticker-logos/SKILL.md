@@ -30,7 +30,7 @@ Only `/icon/ticker/<SYM>` and `.svg` in upper case are static files. Everything 
 
 1. **Square slot: use `/ticker/<SYM>` or `/icon/ticker/<SYM>`** (both return the square icon). Set `object-fit: contain`. For a wide logo add `?variant=full` to `/ticker/<SYM>.svg`.
 2. **ETFs map to their issuer.** VTI shows Vanguard, SPY shows SSGA. That is the real brand, not a fund-specific mark.
-3. **Crypto uses `/crypto/<SYM>`, never `/ticker/`.** `/ticker/BTC` and `/ticker/ETH` are stock tickers and resolve to the Grayscale trusts, not the coin.
+3. **Crypto uses `/crypto/<SYM>`; coins work on `/ticker/` too.** `/ticker/BTC` and `/crypto/BTC` answer the same coin mark; `/ticker/GBTC` and `/ticker/ETHE` stay the Grayscale trusts.
 4. **Cash, unknown or unlisted symbols: draw a letter tile yourself.** An unknown ticker returns a plain 404. Never invent a logo, never swap in another company's logo. Check a symbol with `https://logoapi.sh/search?q=<SYM>` first.
 5. **A tile or favicon is not a real logo.** The `X-Logo-Fallback` response header says a fallback was served. Do not present it as the company mark.
 6. **Write alt text:** `alt="<Company> logo"`. For a logo next to the company name in text, use `alt=""`.
@@ -66,7 +66,6 @@ const svg = getLogo('AAPL') ?? '<span class="tile">A</span>';
 ## Mistakes to avoid
 
 - Guessing a domain from a ticker (`AAPL` + `.com`). Use the ticker routes.
-- `/ticker/` for crypto. Use `/crypto/`.
 - Expecting the wide logo from `/ticker/<SYM>`; it returns the square icon unless `?variant=full`.
 - Trusting a name tile or favicon as a logo.
 - `object-fit: cover` on logos.
