@@ -57,7 +57,8 @@
 
 ## Using this from an AI agent or sandbox
 
-- This repo holds a sample (50 ticker files, 2,016 domain logos). The API at logoapi.sh serves every ticker in index.json (6,500+) and 5,000+ domains; do not judge coverage by the repo.
+- This repo holds a sample (50 ticker files, 2,016 domain logos). The API at logoapi.sh answers every ticker in index.json (6,562) and 5,000+ domains; do not judge coverage by the repo.
+- Ticker coverage: 1,647 tickers have a catalog logo (1,455 vector), served with `?variant=full`. The default square icon is a catalog icon for 402; the rest get the company favicon or a name tile (`X-Logo-Fallback` says which). Each ticker object in index.json has `kind` for the square icon: `vector`, `raster` or `fallback`.
 - Start here: `https://raw.githubusercontent.com/logoapi/logo-api/main/index.json`. Look up the domain or the stock ticker there, then fetch the path it gives you.
 - Files are NOT named by domain. `logos/apple.com.svg` and `logos/<domain>/logo.svg` do not exist. Names are slugs, such as `logos/apple.svg`, so always go through `index.json`.
 - Shape: `{"domains": {"apple.com": "logos/apple.svg"}, "tickers": {"AAPL": "logos/apple.svg"}}`. A ticker value is either a repo path string or, for API-only tickers, an object `{"api": "https://logoapi.sh/ticker/VTI.svg", "icon": ..., "official": "official/tickers/VTI.svg"}`. There is also a `crypto` map and an `api` map of URL patterns. Check that a value is a string before treating it as a path.

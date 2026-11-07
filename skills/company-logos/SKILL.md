@@ -63,6 +63,7 @@ Every valid domain returns an image, never a broken image:
 - Bare URLs may return the site's favicon as it is, then the tile.
 - `.png` URLs return the logo or favicon as PNG, else 404.
 - The `X-Logo-Fallback` response header says a fallback was served. A fallback is not a real logo.
+- Tickers: 6,562 work, but the default square icon is a catalog icon for only 402; most others get the company favicon or a name tile. 1,647 have a catalog logo (add `?variant=full`). The `kind` field per ticker in the public repo's index.json says which (`vector`, `raster`, `fallback`).
 - Add `?fallback=404` (or `?fallback=none`) to get a 404 instead, then show your own placeholder with `onerror`.
 
 Check that a real logo exists: `GET https://logoapi.sh/search?q=stripe.com`. It returns JSON with `domain`, `name`, `logo`, `icon`, `wordmark` (true when the bare route serves a wide wordmark), `format`, and for listed companies `ticker` and `exchange`.
